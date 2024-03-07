@@ -1,3 +1,14 @@
+// document.addEventListener('DOMContentLoaded', function() {
+//     var menuButton = document.getElementById('menuButton');
+//     var rectangle = document.getElementById('rectangle');
+  
+//     menuButton.addEventListener('click', function() {
+//         rectangle.classList.toggle('animate');
+//         menuButton.classList.toggle('hiddenButtonani');
+//     });
+// });
+
+
 document.addEventListener('DOMContentLoaded', function() {
     var menuButton = document.getElementById('menuButton');
     var offButton = document.getElementById('offButton');
@@ -15,6 +26,34 @@ document.addEventListener('DOMContentLoaded', function() {
         rectangle.classList.add('animateoff');
     });
 });
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     var menuButton = document.getElementById('menuButton');
+//     var rectangle = document.getElementById('rectangle');
+  
+//     menuButton.addEventListener('click', function() {
+//         rectangle.classList.toggle('animate');
+//         menuButton.classList.toggle('hiddenButtonani');
+//     });
+// });
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     var offButton = document.getElementById('offButton');
+//     var rectangle = document.getElementById('rectangle');
+//     var menuButton = document.getElementById('menuButton');
+  
+//     offButton.addEventListener('click', function() {
+//         rectangle.classList.add('animateoff');
+//         setTimeout(function() {
+//             menuButton.classList.toggle('hiddenButtonani');
+//         }, 1000); // 1초 후에 hiddenButtonani 클래스를 토글
+//     });
+// });
+    
+
+
+
+
 
 // document.addEventListener('DOMContentLoaded', function() {
 //     var menuButton = document.getElementById('menuButton');
