@@ -18,7 +18,7 @@ body {
     border-radius: 100px 0px 0px 100px;
 }
 .rectangle.animate {
-    animation: menuMove 1s ease-in-out;
+    animation: menuMove 1s ease-in-out both;
 }
 @keyframes menuMove {
     0% {
