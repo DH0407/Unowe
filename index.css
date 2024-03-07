@@ -160,9 +160,7 @@ footer {
   width: 100%;
 }
 
-<<<<<<< HEAD
 
-=======
 @keyframes rectangleMove {
   0% {
       transform: translateX(0);
@@ -181,7 +179,6 @@ footer {
       transform: translateX(0);
     }
 }
->>>>>>> 92f9f5165b152a33fc290263ca999154a2b1a725
 
 @keyframes hiddenButton {
   0% {
@@ -204,3 +201,12 @@ footer {
 
 
 
+#menuButton {
+  /* 기존 스타일 */
+  transition: opacity 0.5s ease; /* opacity가 변할 때 0.5초 동안 ease 함수를 사용하여 변화를 적용 */
+}
+
+#menuButton.hidden {
+  opacity: 0; /* 숨김 상태에서는 투명하게 */
+  pointer-events: none; /* 이벤트를 비활성화하여 숨겨진 상태에서의 클릭 이벤트를 방지 */
+}
