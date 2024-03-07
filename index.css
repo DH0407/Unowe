@@ -76,15 +76,32 @@ body {
   width: 70%;
   height: 100%;
   background-color: #F1ECE2;
-  border-radius: 100px 0px 0px 100px;
 }
 .rectangle.animate {
-  animation: rectangleMove 1s ease-in-out both;
+  animation: rectangleMoveRight 1s ease-in-out both;
 }
 .rectangle.animateoff {
-  animation: rectangleMove2 1s ease-in-out both;
+  animation: rectangleMoveLeft 1s ease-in-out both;
 }
-
+@keyframes rectangleMoveRight {
+  0% {
+      transform: translateX(0);
+    }
+  100% {
+      transform: translateX(15%);
+      border-radius: 100px 0 0 100px;
+    }
+}
+@keyframes rectangleMoveLeft {
+  0% {
+      transform: translateX(15%);
+      border-radius: 100px 0 0 100px;
+    }
+  100% {
+      transform: translateX(0);
+      border-radius: 0 0 0 0;
+    }
+}
 
 .menuButton{
 opacity: 1;
@@ -134,24 +151,7 @@ footer {
   width: 100%;
 }
 
-@keyframes rectangleMove {
-  0% {
-      transform: translateX(0);
-    }
-  100% {
 
-      transform: translateX(15%);
-    }
-}
-@keyframes rectangleMove0ff {
-  0% {
-      transform: translateX(15%);
-    }
-  100% {
-
-      transform: translateX(0);
-    }
-}
 
 @keyframes hiddenButton {
   0% {
