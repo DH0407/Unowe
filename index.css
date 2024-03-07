@@ -69,9 +69,6 @@ body {
 }
 
 
-
-
-
 .rectangle {
   position: absolute;
   left: 0; /* 메뉴창 크기(언제든지 바꾸기 ㄱㄴ) */
@@ -83,6 +80,9 @@ body {
 }
 .rectangle.animate {
   animation: rectangleMove 1s ease-in-out both;
+}
+.rectangle.animateoff {
+  animation: rectangleMove2 1s ease-in-out both;
 }
 
 
@@ -98,6 +98,9 @@ width: 70px;
 }
 .menuButton.hiddenButtonani {
   animation: hiddenButton 1s ease-in both;
+}
+.menuButton.hiddenButtonanioff {
+  animation: hiddenButtonoff 1s ease-in both;
 }
 
 
@@ -140,6 +143,16 @@ footer {
       transform: translateX(15%);
     }
 }
+@keyframes rectangleMove0ff {
+  0% {
+      transform: translateX(15%);
+    }
+  100% {
+
+      transform: translateX(0);
+    }
+}
+
 @keyframes hiddenButton {
   0% {
       opacity: 1;
@@ -149,3 +162,15 @@ footer {
       opacity: 0;
     }
 }
+@keyframes hiddenButtonoff {
+  0% {
+      opacity: 0;
+    }
+  100% {
+      pointer-events : none;
+      opacity: 1;
+    }
+}
+
+
+
