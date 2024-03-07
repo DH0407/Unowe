@@ -155,3 +155,25 @@ footer {
   height: 150px;
   width: 100%;
 }
+
+@keyframes hiddenButton {
+  0% {
+      opacity: 1;
+    }
+  100% {
+      pointer-events : none;
+      opacity: 0;
+    }
+}
+@keyframes hiddenButtonoff {
+  0% {
+      opacity: 0;
+    }
+  100% {
+      pointer-events : none;
+      opacity: 1;
+    }
+}
+
+
+
