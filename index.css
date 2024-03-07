@@ -104,7 +104,6 @@ body {
 }
 
 .menuButton{
-opacity: 1;
 position: absolute;
 border: 1px solid black;
 border-radius: 20px;
@@ -120,6 +119,16 @@ width: 70px;
   animation: hiddenButtonoff 1s ease-in both;
 }
 
+.homeButton {
+  position: fixed;
+  border: 1px solid black;
+  border-radius: 20px;
+  top: 45px;
+  left: 260px;
+  height: 80px;
+  width: 120px;
+
+}
 
 .rectangle2 {
   position: absolute;
@@ -151,7 +160,28 @@ footer {
   width: 100%;
 }
 
+<<<<<<< HEAD
 
+=======
+@keyframes rectangleMove {
+  0% {
+      transform: translateX(0);
+    }
+  100% {
+      transform: translateX(15%);
+      border-radius: 100px 0 0 100px;
+    }
+}
+@keyframes rectangleMove0ff {
+  0% {
+      transform: translateX(15%);
+    }
+  100% {
+
+      transform: translateX(0);
+    }
+}
+>>>>>>> 92f9f5165b152a33fc290263ca999154a2b1a725
 
 @keyframes hiddenButton {
   0% {
