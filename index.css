@@ -6,6 +6,15 @@ body {
   width: 100%;
   height: 100%;
 }
+.offButton {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 20px;
+  top: 50px;
+  left: 50px;
+  height: 70px;
+  width: 70px;
+}
 
 .container {
   position: relative;
@@ -16,16 +25,48 @@ body {
 .button1 {
   position: absolute;
   border: 1px solid black;
-  
+  border-radius: 20px;
+  height: 60px;
+  width: 60px;
+  left: 3%;
+  top: 15%;
 }
-
-
-
-
-
-
-
-
+.button2 {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 20px;
+  height: 60px;
+  width: 60px;
+  left: 3%;
+  top: 25%;
+}
+.button3 {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 20px;
+  height: 60px;
+  width: 60px;
+  left: 3%;
+  top: 35%;
+}
+.button4 {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 20px;
+  height: 60px;
+  width: 60px;
+  left: 3%;
+  top: 45%;
+}
+.button5 {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 20px;
+  height: 60px;
+  width: 60px;
+  left: 3%;
+  top: 55%;
+}
 
 
 
@@ -46,6 +87,7 @@ body {
 
 
 .menuButton{
+opacity: 1;
 position: absolute;
 border: 1px solid black;
 border-radius: 20px;
@@ -53,6 +95,9 @@ top: 50px;
 left: 50px;
 height: 70px;
 width: 70px;
+}
+.menuButton.hiddenButtonani {
+  animation: hiddenButton 1s ease-in both;
 }
 
 
@@ -91,6 +136,16 @@ footer {
       transform: translateX(0);
     }
   100% {
+
       transform: translateX(15%);
+    }
+}
+@keyframes hiddenButton {
+  0% {
+      opacity: 1;
+    }
+  100% {
+      pointer-events : none;
+      opacity: 0;
     }
 }
