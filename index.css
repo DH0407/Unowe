@@ -76,7 +76,6 @@ body {
   width: 70%;
   height: 100%;
   background-color: #F1ECE2;
-  border-radius: 100px 0px 0px 100px;
 }
 .rectangle.animate {
   animation: rectangleMove 1s ease-in-out both;
@@ -87,7 +86,6 @@ body {
 
 
 .menuButton{
-opacity: 1;
 position: absolute;
 border: 1px solid black;
 border-radius: 20px;
@@ -103,6 +101,16 @@ width: 70px;
   animation: hiddenButtonoff 1s ease-in both;
 }
 
+.homeButton {
+  position: fixed;
+  border: 1px solid black;
+  border-radius: 20px;
+  top: 40px;
+  left: 250px;
+  height: 80px;
+  width: 120px;
+
+}
 
 .rectangle2 {
   position: absolute;
@@ -139,8 +147,8 @@ footer {
       transform: translateX(0);
     }
   100% {
-
       transform: translateX(15%);
+      border-radius: 100px 0 0 100px;
     }
 }
 @keyframes rectangleMove0ff {
