@@ -131,6 +131,16 @@ body {
   opacity: 0; /* 숨김 상태에서는 투명하게 */
   pointer-events: none; /* 이벤트를 비활성화하여 숨겨진 상태에서의 클릭 이벤트를 방지 */
 }
+.mainAreaSearch {
+ position: absolute;
+ width: 80%;
+ height: 60px;
+ top: 5%;
+ left: 10%;
+ border-radius: 40%;
+}
+
+
 
 .subArea {
   position: absolute;
