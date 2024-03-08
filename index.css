@@ -2,6 +2,7 @@
 body {
   margin: 0; /* 페이지 바깥 여백 제거 */
 }
+<<<<<<< HEAD
 .container {
   width: 100%; /* 컨테이너 너비 100% */
   height: 100%; /* 컨테이너 높이 100% */
@@ -59,6 +60,89 @@ body {
 }
 
 @keyframes mainAreaMoveRight {
+=======
+.wepContainer {
+  width: 100%;
+  height: 100%;
+}
+.offButton {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 20px;
+  top: 50px;
+  left: 50px;
+  height: 70px;
+  width: 70px;
+}
+
+.container {
+  position: relative;
+  background-color: #E37B58;
+  width: 100%;
+  height: 800px;
+}
+.button1 {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 20px;
+  height: 60px;
+  width: 60px;
+  left: 3%;
+  top: 15%;
+}
+.button2 {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 20px;
+  height: 60px;
+  width: 60px;
+  left: 3%;
+  top: 25%;
+}
+.button3 {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 20px;
+  height: 60px;
+  width: 60px;
+  left: 3%;
+  top: 35%;
+}
+.button4 {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 20px;
+  height: 60px;
+  width: 60px;
+  left: 3%;
+  top: 45%;
+}
+.button5 {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 20px;
+  height: 60px;
+  width: 60px;
+  left: 3%;
+  top: 55%;
+}
+
+.rectangle {
+  position: absolute;
+  left: 0;
+  top : 0;
+  width: 70%;
+  height: 100%;
+  background-color: #F1ECE2;
+}
+.rectangle.animate {
+  animation: rectangleMoveRight 1s ease-in-out both;
+}
+.rectangle.animateoff {
+  animation: rectangleMoveLeft 1s ease-in-out both;
+}
+@keyframes rectangleMoveRight {
+>>>>>>> parent of 36fd80d (태그들 이름병경 및 쓸모없는 코드 정리)
   0% {
     transform: translateX(0); /* 이동 변환 시작점 */
   }
@@ -67,8 +151,12 @@ body {
     border-radius: 100px 0 0 100px; /* 테두리 반경 설정 */
   }
 }
+<<<<<<< HEAD
 
 @keyframes mainAreaMoveLeft {
+=======
+@keyframes rectangleMoveLeft {
+>>>>>>> parent of 36fd80d (태그들 이름병경 및 쓸모없는 코드 정리)
   0% {
     transform: translateX(15%); /* 이동 변환 시작점 */
     border-radius: 100px 0 0 100px; /* 테두리 반경 설정 */
@@ -79,6 +167,7 @@ body {
   }
 }
 
+<<<<<<< HEAD
 .mainAreaMenuButton {
   opacity: 1; /* 불투명도 설정 */
   position: absolute; /* 절대 위치 설정 */
@@ -115,10 +204,54 @@ body {
   left: 35%; /* 좌측 여백 설정 */
   height: 70px; /* 높이 설정 */
   width: 40%; /* 너비 설정 */
+=======
+.menuButton {
+  opacity: 1;
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 20px;
+  top: 50px;
+  left: 50px;
+  height: 70px;
+  width: 70px;
+  transition: opacity 1s; /* opacity 변화에 대한 transition 설정 */
+}
+.menuButton.hiddenButtonani {
+  animation: hideMenuButton 1s forwards; /* hideMenuButton 애니메이션 적용 */
+}
+
+@keyframes hideMenuButton {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
+.rectangle2 {
+  position: absolute;
+  left: 65.09%;
+  top: 0;
+  width: 35%;
+  height: 100%;
+  background-color: gray;
+  border-radius: 100px 0px 0px 100px;
+}
+.loginButton {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 20px;
+  top: 15%;
+  left: 35%;
+  height: 70px;
+  width: 40%;
+>>>>>>> parent of 36fd80d (태그들 이름병경 및 쓸모없는 코드 정리)
 }
 
 /* Footer */
 footer {
+<<<<<<< HEAD
   position: absolute; /* 절대 위치 설정 */
   border: 1px solid black; /* 테두리 스타일 설정 */
   text-align: center; /* 텍스트 가운데 정렬 */
@@ -127,3 +260,36 @@ footer {
   left: 0; /* 좌측 정렬 */
   width: 100%; /* 너비 설정 */
 }
+=======
+  position: absolute;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 150px;
+  bottom: 0%;
+  left: 0;
+  height: 150px;
+  width: 100%;
+}
+
+@keyframes hiddenButton {
+  0% {
+      opacity: 1;
+    }
+  100% {
+      pointer-events : none;
+      opacity: 0;
+    }
+}
+@keyframes hiddenButtonoff {
+  0% {
+      opacity: 0;
+    }
+  100% {
+      pointer-events : none;
+      opacity: 1;
+    }
+}
+
+
+
+>>>>>>> parent of 36fd80d (태그들 이름병경 및 쓸모없는 코드 정리)
