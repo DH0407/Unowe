@@ -1,157 +1,129 @@
 /* Container */
 body {
-  margin: 0;
+  margin: 0; /* 페이지 바깥 여백 제거 */
 }
 .container {
-  width: 100%;
-  height: 100%; 
+  width: 100%; /* 컨테이너 너비 100% */
+  height: 100%; /* 컨테이너 높이 100% */
 }
 
+/* Menu Area */
 .menuArea {
-  position: relative;
-  background-color: #E37B58;
-  width: 100%;
-  height: 800px;
-
-  display: grid;
+  position: relative; /* 상대 위치 설정 */
+  background-color: #E37B58; /* 배경색 설정 */
+  width: 100%; /* 메뉴 영역 너비 100% */
+  height: 800px; /* 메뉴 영역 높이 800px */
+  display: grid; /* 그리드 레이아웃 사용 */
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 그리드 컨테이너를 자동으로 채우면서 최소 200px의 너비를 가진 열들로 설정 */
   gap: 10px; /* 그리드 아이템 간의 간격 설정 */
-  padding: 20px;
-}
-.menuAreaButton {
-  position: absolute;
-  border: 1px solid black;
-  border-radius: 20px;
-  top: 50px;
-  left: 50px;
-  height: 70px;
-  width: 70px;
-}
-.button1 {
-  position: absolute;
-  border: 1px solid black;
-  border-radius: 20px;
-  height: 60px;
-  width: 60px;
-  left: 3%;
-  top: 15%;
-}
-.button2 {
-  position: absolute;
-  border: 1px solid black;
-  border-radius: 20px;
-  height: 60px;
-  width: 60px;
-  left: 3%;
-  top: 25%;
-}
-.button3 {
-  position: absolute;
-  border: 1px solid black;
-  border-radius: 20px;
-  height: 60px;
-  width: 60px;
-  left: 3%;
-  top: 35%;
-}
-.button4 {
-  position: absolute;
-  border: 1px solid black;
-  border-radius: 20px;
-  height: 60px;
-  width: 60px;
-  left: 3%;
-  top: 45%;
-}
-.button5 {
-  position: absolute;
-  border: 1px solid black;
-  border-radius: 20px;
-  height: 60px;
-  width: 60px;
-  left: 3%;
-  top: 55%;
+  padding: 20px; /* 안쪽 여백 설정 */
 }
 
-.mainArea {
-  position: absolute;
-  left: 0;
-  top : 0;
-  width: 70%;
-  height: 100%;
-  background-color: #F1ECE2;
+.menuAreaButton {
+  position: absolute; /* 절대 위치 설정 */
+  border: 1px solid black; /* 테두리 스타일 설정 */
+  border-radius: 20px; /* 테두리 반경 설정 */
+  top: 50px; /* 상단 여백 설정 */
+  left: 50px; /* 좌측 여백 설정 */
+  height: 70px; /* 높이 설정 */
+  width: 70px; /* 너비 설정 */
 }
+
+/* Button 1 ~ 5 */
+.button1, .button2, .button3, .button4, .button5 {
+  position: absolute; /* 절대 위치 설정 */
+  border: 1px solid black; /* 테두리 스타일 설정 */
+  border-radius: 20px; /* 테두리 반경 설정 */
+  height: 60px; /* 높이 설정 */
+  width: 60px; /* 너비 설정 */
+  left: 3%; /* 좌측 여백 설정 */
+  /* top 속성은 각각 버튼마다 다르게 설정됨 */
+}
+
+/* Main Area */
+.mainArea {
+  position: absolute; /* 절대 위치 설정 */
+  left: 0; /* 왼쪽 정렬 */
+  top: 0; /* 상단 정렬 */
+  width: 70%; /* 너비 설정 */
+  height: 100%; /* 높이 설정 */
+  background-color: #F1ECE2; /* 배경색 설정 */
+}
+
+/* Main Area Animation */
 .mainArea.mainAreaMoveRight {
-  animation: mainAreaMoveRight 1s ease-in-out forwards;
+  animation: mainAreaMoveRight 1s ease-in-out forwards; /* 오른쪽 이동 애니메이션 적용 */
 }
 .mainArea.mainAreaMoveLeft {
-  animation: mainAreaMoveLeft 1s ease-in-out forwards;
+  animation: mainAreaMoveLeft 1s ease-in-out forwards; /* 왼쪽 이동 애니메이션 적용 */
 }
+
 @keyframes mainAreaMoveRight {
   0% {
-      transform: translateX(0);
+    transform: translateX(0); /* 이동 변환 시작점 */
   }
   100% {
-      transform: translateX(15%);
-      border-radius: 100px 0 0 100px;
+    transform: translateX(15%); /* 이동 변환 끝점 */
+    border-radius: 100px 0 0 100px; /* 테두리 반경 설정 */
   }
 }
+
 @keyframes mainAreaMoveLeft {
   0% {
-      transform: translateX(15%);
-      border-radius: 100px 0 0 100px;
+    transform: translateX(15%); /* 이동 변환 시작점 */
+    border-radius: 100px 0 0 100px; /* 테두리 반경 설정 */
   }
   100% {
-      transform: translateX(0);
-      border-radius: 0 0 0 0;
+    transform: translateX(0); /* 이동 변환 끝점 */
+    border-radius: 0 0 0 0; /* 테두리 반경 설정 */
   }
 }
 
 .mainAreaMenuButton {
-  opacity: 1;
-  position: absolute;
-  border: 1px solid black;
-  border-radius: 20px;
-  top: 50px;
-  left: 50px;
-  height: 70px;
-  width: 70px;
-  transition: opacity 1s; /* opacity 변화에 대한 transition 설정 */
+  opacity: 1; /* 불투명도 설정 */
+  position: absolute; /* 절대 위치 설정 */
+  border: 1px solid black; /* 테두리 스타일 설정 */
+  border-radius: 20px; /* 테두리 반경 설정 */
+  top: 50px; /* 상단 여백 설정 */
+  left: 50px; /* 좌측 여백 설정 */
+  height: 70px; /* 높이 설정 */
+  width: 70px; /* 너비 설정 */
+  transition: opacity 1s; /* 불투명도에 대한 전환 효과 설정 */
 }
+
 .mainAreaMenuButton.mainAreaMenuButtonHidden {
   opacity: 0; /* 숨김 상태에서는 투명하게 */
   pointer-events: none; /* 이벤트를 비활성화하여 숨겨진 상태에서의 클릭 이벤트를 방지 */
 }
 
+/* Sub Area */
 .subArea {
-  position: absolute;
-  left: 65.09%;
-  top: 0;
-  width: 35%;
-  height: 100%;
-  background-color: gray;
-  border-radius: 100px 0px 0px 100px;
+  position: absolute; /* 절대 위치 설정 */
+  left: 65.09%; /* 왼쪽 여백 설정 */
+  top: 0; /* 상단 정렬 */
+  width: 35%; /* 너비 설정 */
+  height: 100%; /* 높이 설정 */
+  background-color: gray; /* 배경색 설정 */
+  border-radius: 100px 0px 0px 100px; /* 테두리 반경 설정 */
 }
+
 .subLoginButton {
-  position: absolute;
-  border: 1px solid black;
-  border-radius: 20px;
-  top: 15%;
-  left: 35%;
-  height: 70px;
-  width: 40%;
+  position: absolute; /* 절대 위치 설정 */
+  border: 1px solid black; /* 테두리 스타일 설정 */
+  border-radius: 20px; /* 테두리 반경 설정 */
+  top: 15%; /* 상단 여백 설정 */
+  left: 35%; /* 좌측 여백 설정 */
+  height: 70px; /* 높이 설정 */
+  width: 40%; /* 너비 설정 */
 }
 
+/* Footer */
 footer {
-  position: absolute;
-  border: 1px solid black;
-  text-align: center;
-  line-height: 150px;
-  bottom: 0%;
-  left: 0;
-  width: 100%;
+  position: absolute; /* 절대 위치 설정 */
+  border: 1px solid black; /* 테두리 스타일 설정 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+  line-height: 150px; /* 라인 높이 설정 */
+  bottom: 0%; /* 하단 여백 설정 */
+  left: 0; /* 좌측 정렬 */
+  width: 100%; /* 너비 설정 */
 }
-
-
-
-
