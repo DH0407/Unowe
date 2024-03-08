@@ -2,25 +2,30 @@
 body {
   margin: 0;
 }
-.wepContainer {
+.container {
   width: 100%;
-  height: 100%;
-}
-.offButton {
-  position: absolute;
-  border: 1px solid black;
-  border-radius: 20px;
-  top: 50px;
-  left: 50px;
-  height: 70px;
-  width: 70px;
+  height: 100%; 
 }
 
-.container {
+.menuArea {
   position: relative;
   background-color: #E37B58;
   width: 100%;
   height: 800px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 그리드 컨테이너를 자동으로 채우면서 최소 200px의 너비를 가진 열들로 설정 */
+  gap: 10px; /* 그리드 아이템 간의 간격 설정 */
+  padding: 20px;
+}
+.menuAreaButton {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 20px;
+  top: 5%;
+  left: 3%;
+  height: 60px;
+  width: 60px;
 }
 .button1 {
   position: absolute;
@@ -29,7 +34,7 @@ body {
   height: 60px;
   width: 60px;
   left: 3%;
-  top: 15%;
+  top: 20%;
 }
 .button2 {
   position: absolute;
@@ -38,7 +43,7 @@ body {
   height: 60px;
   width: 60px;
   left: 3%;
-  top: 25%;
+  top: 30%;
 }
 .button3 {
   position: absolute;
@@ -47,7 +52,7 @@ body {
   height: 60px;
   width: 60px;
   left: 3%;
-  top: 35%;
+  top: 40%;
 }
 .button4 {
   position: absolute;
@@ -56,7 +61,7 @@ body {
   height: 60px;
   width: 60px;
   left: 3%;
-  top: 45%;
+  top: 50%;
 }
 .button5 {
   position: absolute;
@@ -65,10 +70,19 @@ body {
   height: 60px;
   width: 60px;
   left: 3%;
-  top: 55%;
+  top: 75%;
+}
+.button6 {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 20px;
+  height: 60px;
+  width: 60px;
+  left: 3%;
+  top: 90%;
 }
 
-.rectangle {
+.mainArea {
   position: absolute;
   left: 0;
   top : 0;
@@ -76,13 +90,13 @@ body {
   height: 100%;
   background-color: #F1ECE2;
 }
-.rectangle.animate {
-  animation: rectangleMoveRight 1s ease-in-out both;
+.mainArea.mainAreaMoveRight {
+  animation: mainAreaMoveRight 1s ease-in-out forwards;
 }
-.rectangle.animateoff {
-  animation: rectangleMoveLeft 1s ease-in-out both;
+.mainArea.mainAreaMoveLeft {
+  animation: mainAreaMoveLeft 1s ease-in-out forwards;
 }
-@keyframes rectangleMoveRight {
+@keyframes mainAreaMoveRight {
   0% {
       transform: translateX(0);
   }
@@ -91,7 +105,7 @@ body {
       border-radius: 100px 0 0 100px;
   }
 }
-@keyframes rectangleMoveLeft {
+@keyframes mainAreaMoveLeft {
   0% {
       transform: translateX(15%);
       border-radius: 100px 0 0 100px;
@@ -102,40 +116,40 @@ body {
   }
 }
 
-.menuButton {
+.mainAreaMenuButton {
   opacity: 1;
   position: absolute;
   border: 1px solid black;
   border-radius: 20px;
-  top: 50px;
-  left: 50px;
-  height: 70px;
-  width: 70px;
+  top: 5%;
+  left: 3%;
+  height: 60px;
+  width: 60px;
   transition: opacity 1s; /* opacity 변화에 대한 transition 설정 */
 }
-<<<<<<< HEAD
-.menuButton.hiddenButtonani {
-  animation: hideMenuButton 1s forwards; /* hideMenuButton 애니메이션 적용 */
-}
-
-@keyframes hideMenuButton {
-  0% {
-      opacity: 1;
-  }
-  100% {
-      opacity: 0;
-  }
-}
-
-.rectangle2 {
-=======
 .mainAreaMenuButton.mainAreaMenuButtonHidden {
   opacity: 0; /* 숨김 상태에서는 투명하게 */
   pointer-events: none; /* 이벤트를 비활성화하여 숨겨진 상태에서의 클릭 이벤트를 방지 */
 }
+.mainAreaSearch {
+ position: absolute;
+ width: 80%;
+ height: 60px;
+ top: 5%;
+ left: 10%;
+ border-radius: 100px;
+}
+.mainAreaHomeButton {
+  position: absolute;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  top: 5%;
+  left: 11%;
+}
+
 
 .subArea {
->>>>>>> parent of ce6b783 (수정)
   position: absolute;
   left: 65.09%;
   top: 0;
@@ -144,7 +158,7 @@ body {
   background-color: gray;
   border-radius: 100px 0px 0px 100px;
 }
-.loginButton {
+.subLoginButton {
   position: absolute;
   border: 1px solid black;
   border-radius: 20px;
@@ -161,32 +175,9 @@ footer {
   line-height: 150px;
   bottom: 0%;
   left: 0;
-  height: 150px;
   width: 100%;
-<<<<<<< HEAD
-}
-=======
-}
-
-@keyframes hiddenButton {
-  0% {
-      opacity: 1;
-    }
-  100% {
-      pointer-events : none;
-      opacity: 0;
-    }
-}
-@keyframes hiddenButtonoff {
-  0% {
-      opacity: 0;
-    }
-  100% {
-      pointer-events : none;
-      opacity: 1;
-    }
 }
 
 
 
->>>>>>> parent of 36fd80d (태그들 이름병경 및 쓸모없는 코드 정리)
+
