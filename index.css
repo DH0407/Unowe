@@ -69,10 +69,10 @@ body {
   position: absolute;
   border: 1px solid black;
   border-radius: 20px;
-  top: 50px;
-  left: 50px;
-  height: 70px;
-  width: 70px;
+  top: 5%;
+  left: 3%;
+  height: 60px;
+  width: 60px;
 }
 
 .container {
@@ -88,7 +88,7 @@ body {
   height: 60px;
   width: 60px;
   left: 3%;
-  top: 15%;
+  top: 20%;
 }
 .button2 {
   position: absolute;
@@ -97,7 +97,7 @@ body {
   height: 60px;
   width: 60px;
   left: 3%;
-  top: 25%;
+  top: 30%;
 }
 .button3 {
   position: absolute;
@@ -106,7 +106,7 @@ body {
   height: 60px;
   width: 60px;
   left: 3%;
-  top: 35%;
+  top: 40%;
 }
 .button4 {
   position: absolute;
@@ -115,7 +115,7 @@ body {
   height: 60px;
   width: 60px;
   left: 3%;
-  top: 45%;
+  top: 50%;
 }
 .button5 {
   position: absolute;
@@ -124,7 +124,16 @@ body {
   height: 60px;
   width: 60px;
   left: 3%;
-  top: 55%;
+  top: 75%;
+}
+.button6 {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 20px;
+  height: 60px;
+  width: 60px;
+  left: 3%;
+  top: 90%;
 }
 
 .rectangle {
@@ -210,10 +219,10 @@ body {
   position: absolute;
   border: 1px solid black;
   border-radius: 20px;
-  top: 50px;
-  left: 50px;
-  height: 70px;
-  width: 70px;
+  top: 5%;
+  left: 3%;
+  height: 60px;
+  width: 60px;
   transition: opacity 1s; /* opacity 변화에 대한 transition 설정 */
 }
 .menuButton.hiddenButtonani {
