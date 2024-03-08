@@ -116,16 +116,6 @@ body {
 .menuButton.hiddenButtonani {
   animation: hideMenuButton 1s forwards; /* hideMenuButton 애니메이션 적용 */
 }
-.mainAreaSearch {
- position: absolute;
- width: 80%;
- height: 60px;
- top: 5%;
- left: 10%;
- border-radius: 40%;
-}
-
-
 
 @keyframes hideMenuButton {
   0% {
