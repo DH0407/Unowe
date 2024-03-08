@@ -113,6 +113,7 @@ body {
   width: 70px;
   transition: opacity 1s; /* opacity 변화에 대한 transition 설정 */
 }
+<<<<<<< HEAD
 .menuButton.hiddenButtonani {
   animation: hideMenuButton 1s forwards; /* hideMenuButton 애니메이션 적용 */
 }
@@ -127,6 +128,14 @@ body {
 }
 
 .rectangle2 {
+=======
+.mainAreaMenuButton.mainAreaMenuButtonHidden {
+  opacity: 0; /* 숨김 상태에서는 투명하게 */
+  pointer-events: none; /* 이벤트를 비활성화하여 숨겨진 상태에서의 클릭 이벤트를 방지 */
+}
+
+.subArea {
+>>>>>>> parent of ce6b783 (수정)
   position: absolute;
   left: 65.09%;
   top: 0;
