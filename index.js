@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var mainAreaMenuButton = document.getElementById('mainAreaMenuButton');
+    var mainAreaMenuButton = document.querySelector('.mainAreaMenuButton');
     var menuAreaButton = document.getElementById('menuAreaButton');
     var mainArea = document.getElementById('mainArea');
   

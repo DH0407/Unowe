@@ -20,9 +20,17 @@ body {
   border-radius: 20px;
 }
 .menuAreaButton {
+  opacity: 1;
+  position: absolute;
+  border: none;
+  border-radius: 50%; /* 원 모양으로 변경 */
   top: 5%;
+  left: 3%;
   height: 60px;
   width: 60px;
+  transition: opacity 1s;
+  background: url('your-menu-button-image-url.png') no-repeat center center; /* 이미지를 배경으로 설정 */
+  background-size: cover; /* 배경 이미지를 요소에 맞게 조정 */
 }
 .button1 {
   height: 60px;
@@ -200,20 +208,24 @@ body {
   }
 }
 
+.mainArea {
+  position: relative; /* 이미지를 상대 위치로 설정하기 위해 부모 요소에 대해 상대 위치로 설정 */
+}
+
 .mainAreaMenuButton {
   opacity: 1;
   position: absolute;
-  border: 1px solid black;
-  border-radius: 20px;
-  top: 5%;  
+  border-radius: 50%; /* 원 모양으로 변경 */
+  top: 5%;
   left: 3%;
   height: 60px;
   width: 60px;
-  transition: opacity 1s; /* opacity 변화에 대한 transition 설정 */
+  transition: opacity 1s;
 }
-.mainAreaMenuButton.mainAreaMenuButtonHidden {
-  opacity: 0; /* 숨김 상태에서는 투명하게 */
-  pointer-events: none; /* 이벤트를 비활성화하여 숨겨진 상태에서의 클릭 이벤트를 방지 */
+
+.menuButtonImage.menuButtonImageHidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 
