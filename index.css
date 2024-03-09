@@ -133,6 +133,34 @@ body {
 
   font-size: 2em;
 }
+.boxZoon {
+  position: absolute;
+  width: 50%;
+  height: 200px;
+  top: 65%;
+  left: 13%;
+}
+.box1 {
+  z-index: 2;
+  background-color: gray;
+  border-radius: 50px;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0;
+  
+}
+.box2 {
+  z-index: 2;
+  background-color: gray;
+  border: none;
+  border-radius: 50px;
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  right: 0;
+}
+
 
 .mainArea {
   position: absolute;
