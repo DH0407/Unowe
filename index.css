@@ -29,7 +29,7 @@ body {
   height: 60px;
   width: 60px;
   transition: opacity 1s;
-  background: url('your-menu-button-image-url.png') no-repeat center center; /* 이미지를 배경으로 설정 */
+  background: url('./') no-repeat center center; /* 이미지를 배경으로 설정 */
   background-size: cover; /* 배경 이미지를 요소에 맞게 조정 */
 }
 .button1 {
