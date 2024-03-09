@@ -244,7 +244,7 @@ body {
 .ClientInformationZoon {
   position: absolute;
   background-color: #ffc0eb;
-  border-radius: 50px 0 0 50px;
+  border-radius: 0 0 0 50px;
   width: 100%;
   height: 25%;
 
@@ -292,9 +292,8 @@ footer {
   position: absolute;
   border: 1px solid black;
   text-align: center;
-  line-height: 150px;
-  bottom: 0%;
-  left: 0;
+  line-height: 100px;
+  bottom: 0;
   width: 100%;
 }
 
