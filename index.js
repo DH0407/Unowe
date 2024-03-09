@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         mainArea.classList.remove('mainAreaMoveLeft'); // mainAreaMoveLeft 클래스 제거
         
         // 메뉴 버튼 서서히 사라지게 하기
-        mainAreaMenuButton.classList.add('mainAreaMenuButtonHidden');
+        mainAreaMenuButton.classList.add('menuAreaMenuButtonHidden'); // 클래스 이름 변경
     });
    
     menuAreaButton.addEventListener('click', function() {
@@ -18,6 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
         mainArea.classList.add('mainAreaMoveLeft');
         
         // 메뉴 버튼 서서히 나타나게 하기
-        mainAreaMenuButton.classList.remove('mainAreaMenuButtonHidden');
+        mainAreaMenuButton.classList.remove('menuAreaMenuButtonHidden'); // 클래스 이름 변경
     });
 });

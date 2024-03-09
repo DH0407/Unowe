@@ -212,6 +212,7 @@ body {
   position: relative; /* 이미지를 상대 위치로 설정하기 위해 부모 요소에 대해 상대 위치로 설정 */
 }
 
+/* 추가된 부분 */
 .mainAreaMenuButton {
   opacity: 1;
   position: absolute;
@@ -220,13 +221,14 @@ body {
   left: 3%;
   height: 60px;
   width: 60px;
-  transition: opacity 1s;
+  transition: opacity 1s; /* 투명도 변화에 대한 트랜지션 설정 */
 }
 
-.menuButtonImage.menuButtonImageHidden {
-  opacity: 0;
-  pointer-events: none;
+.mainAreaMenuButton.menuAreaMenuButtonHidden {
+  opacity: 0; /* 숨김 상태에서는 투명하게 */
+  pointer-events: none; /* 이벤트를 비활성화하여 숨겨진 상태에서의 클릭 이벤트를 방지 */
 }
+
 
 
 
