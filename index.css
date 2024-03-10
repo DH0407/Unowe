@@ -44,32 +44,32 @@ body {
 .button1 {
   height: 60px;
   width: 60px;
-  top: 20%;
+  top: 200px;
 }
 .button2 {
   height: 60px;
   width: 60px;
-  top: 30%;
+  top: 300px;
 }
 .button3 {
   height: 60px;
   width: 60px;
-  top: 40%;
+  top: 400px;
 }
 .button4 {
   height: 60px;
   width: 60px;
-  top: 50%;
+  top: 500px;
 }
 .button5 {
   height: 60px;
   width: 60px;
-  top: 80%;
+  top: 950px;
 }
 .button6 {
   height: 60px;
   width: 60px;
-  top: 88%;
+  top: 1100px;
 }
 .searchZoon {
   position: absolute;
