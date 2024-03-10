@@ -38,7 +38,7 @@ body {
   height: 60px;
   width: 60px;
   transition: opacity 1s;
-  background: url('./') no-repeat center center; /* 이미지를 배경으로 설정 */
+  background: url('./img/menu.png') no-repeat center center; /* 이미지를 배경으로 설정 */
   background-size: cover; /* 배경 이미지를 요소에 맞게 조정 */
 }
 .button1 {
@@ -221,15 +221,10 @@ body {
   }
 }
 
-.mainArea {
-  position: relative; /* 이미지를 상대 위치로 설정하기 위해 부모 요소에 대해 상대 위치로 설정 */
-}
-
 /* 추가된 부분 */
 .mainAreaMenuButton {
   opacity: 1;
   position: absolute;
-  border: 1px solid black;
   border-radius: 20px;
   top: 60px;  
   left: 3%;
@@ -258,7 +253,7 @@ body {
 .ClientInformationZoon {
   position: absolute;
   background-color: #ffc0eb;
-  border-radius: 0 0 0 50px;
+  border-radius: 50px 0 0 50px;
   width: 100%;
   height: 250px;
 
@@ -283,8 +278,11 @@ body {
   top: 20%;
   left: 240px;
   display: flex;
-  justify-content: center;
   align-items: center;
+
+  font-size: 5em;
+  font-weight: bolder;
+  text-align: left;
  }
  .readMoreButton {
   position: absolute;
