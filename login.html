@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 유효성검사
+
+
+        //패스워드
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+
+            applyStylesToPasswordInput();
+        }
+        function applyStylesToPasswordInput() {
+            var passwordInput = document.getElementById("password");
+
+            passwordInput.style.position = "absolute";
+            passwordInput.style.top = "55%";
+            passwordInput.style.width = "85.5%";
+            passwordInput.style.padding =  "2.5%";
+            passwordInput.style.border =  "none";
+            passwordInput.style.borderRadius = "5px";
+            passwordInput.style.textAlign = "center";
+            passwordInput.style.fontSize = "1.3em";
+            passwordInput.style.backgroundColor = "rgba(255, 255, 255, 0.4)";
+
+            passwordInput.placeholder.style.textAlign = "center";
+            passwordInput.placeholder.style.fontSize = "76.923%";
+        }
+        function togglePasswordImage() {
+            var passwordButton = document.getElementById("toggle-password-visibility");
+            var passwordImage = document.querySelector("#toggle-password-visibility .passwordOffIcon");
+
+            if (passwordImage.src.includes("passwordOff.webp")) {
+                passwordImage.src = "./img/passwordOn.webp";
+            } else {
+                passwordImage.src = "./img/passwordOff.webp";
+            }
+}
+    </script>
+</head>
+<link rel="stylesheet" href="./login.css">
+<body>
+    <div class="container">
+        <div class="topRectangle"></div>
+        <div class="leftRectangle"></div>
+        <div class="bottomRectangle"></div>
+        <div class="loginTextArea">
+            <p class="loginText">Login</p>
+        </div>
+        <div class="signinTextArea">
+            <p class="signinText">Sign In</p>
+        </div>
+        <div class="logoArea">
+            <img src="./img/login.webp" alt="" class="loginImg">
+        </div>
+        <div class="inputArea">
+            <form>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="password" class="passwordLabel">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                    <button type="button" id="toggle-password-visibility" onclick="togglePasswordVisibility(); togglePasswordImage();">
+                        <img src="./img/passwordOff.webp" alt="" class="passwordOffIcon">
+                    </button>
+                </div>
+                <button type="submit">Login</button>
+                <a href="#none" class="rememberPassword">Forgot Password??</a>
+            </form>
+        </div>
+        <div class="otherLoginArea">
+            <div class="orLogin">Or Login with</div>
+            <div class="google">Google</div>
+            <div class="facebook">Facebook</div>
+        </div>
+    </div>
+</body>
+</html>
