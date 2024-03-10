@@ -1,17 +1,24 @@
 /* Container */
 body {
   margin: 0;
-}
-.container {
-  width: 100%;
-  height: 100%; 
+  padding: 0;
 }
 
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative; 
+  min-height: 120vh;
+}
+
+
 .menuArea {
-  position: relative;
+  position: absolute;
   background-color: #E37B58;
   width: 100%;
-  height: 800px;
+  height: 100vh;
+
 }
 .button > div,button{
   left: 3%;
@@ -62,12 +69,12 @@ body {
   width: 60px;
   top: 90%;
 }
-.search-div {
+.searchZoon {
   position: absolute;
   width: 50%;
   height: 60px;
-  top: 5%;
-  left: 13%;
+  top: 45px;
+  left: 325px;
 }
 .homeButton {
   position: absolute;
@@ -82,15 +89,15 @@ body {
  z-index: 2;
  width: 100%;
  height: 60px;
- border-radius: 100px;
+ border-radius: 20px;
  border: none;
 }
 .imgeSlide {
   position: absolute;
   width: 50%;
-  height: 330px;
-  top: 17%;
-  left: 13%;
+  height: 450px;
+  top: 200px;
+  left: 325px;
   border-radius: 50px;
 
   display: flex;
@@ -112,9 +119,16 @@ body {
   background-color: rgb(172, 231, 209);
   top: 0;
 
+<<<<<<< HEAD
   display: flex;
   justify-content: center;
   align-items: center;
+=======
+  font-size: 3.5em;
+  text-align: center;
+  line-height: 300px;
+
+>>>>>>> 12545b5ae6cf8bca7412221a4e8ee6b45b72beea
 }
 
 .startZoon {
@@ -148,16 +162,16 @@ body {
 .boxZoon {
   position: absolute;
   width: 50%;
-  height: 200px;
-  top: 65%;
-  left: 13%;
+  height: 300px;
+  top: 730px;
+  left: 325px;
 }
 .box1 {
   z-index: 2;
   background-color: gray;
   border-radius: 50px;
   position: absolute;
-  width: 50%;
+  width: 500px;
   height: 100%;
   left: 0;
   
@@ -246,55 +260,60 @@ body {
   background-color: #ffc0eb;
   border-radius: 0 0 0 50px;
   width: 100%;
-  height: 25%;
+  height: 250px;
 
 }
  .ClientImagZoon {
   position: absolute;
   background-color: rgb(172, 231, 209);
   border-radius: 30px;
-  width: 25%;
-  height: 72%;
-  top: 14%;
+  width: 160px;
+  height: 160px;
+  top: 45px;
   left: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
  }
  .ClinetNameZoon {
+  border: 1px solid black;
   position: absolute;
   width: 55%;
-  line-height: 80px;
-  top: 14%;
-  left: 40%;
-
- }
- .readMoreButtonZoon {
-  position: absolute;
-  width: 55%;
-  height: 26%;
-  top: 58%;
-  left: 40%;
+  line-height: 90px;
+  top: 20%;
+  left: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
  }
  .readMoreButton {
   position: absolute;
   background-color: #E37B58;
-  width: 100%;
-  height: 100%;
-  left: -0.2%;
+  width: 55%;
+  height: 45px;
+  top: 160px;
+  left: 240px;
 
   color: white;
   font-size: 1.5em;
   font-weight: bolder;
  }
 
-footer {
+ footer {
+  z-index: 3;
   position: absolute;
   border: 1px solid black;
   text-align: center;
+<<<<<<< HEAD
   line-height: 100px;
   bottom: 0;
+=======
+  line-height: 150px;
+  bottom: 0;
+  left: 0;
+>>>>>>> 12545b5ae6cf8bca7412221a4e8ee6b45b72beea
   width: 100%;
+  margin-top: auto;
 }
 
 
