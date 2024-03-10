@@ -249,18 +249,25 @@ body {
   background-color: #F1ECE2;
 }
 .ClientInformationZoon {
-  position: fixed;
-  background-color: #ffc0eb;
-  border-radius: 50px 0 0 50px;
-  width: 30%;
-  left: calc(100% - 0px);
-  height: 250px;
+  z-index: 2;
+    position: fixed;
+    background-color: #ffc0eb;
+    border-radius: 50px 0 0 50px;
+    width: 100%;
+    left: calc(100% - 0px);
+    height: 250px;
 }
 .ClientInformationZoon.ClientInformationMoveLeft {
   animation: ClientInformationMoveLeft 1s ease-in-out forwards;
 }
 .ClientInformationZoon.ClientInformationMoveRight {
   animation: ClientInformationMoveRight 1s ease-in-out forwards;
+}
+.ClientInformationZoon.ClientInformationMoveDown{
+  animation: ClientInformationMoveDown 1s ease-in-out forwards;
+}
+.ClientInformationZoon.ClientInformationMoveUp {
+  animation: ClientInformationMoveUp 1s ease-in-out forwards;
 }
 @keyframes ClientInformationMoveLeft {
   0% {
@@ -272,10 +279,32 @@ body {
 }
 @keyframes ClientInformationMoveRight {
   0% {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
+    position: absolute;
+  }
+  99% {
+    transform: translateX(0);
+    position: absolute;
   }
   100% {
-      transform: translateX(0);
+
+    position: fixed;
+  }
+}
+@keyframes ClientInformationMoveDown {
+  0% {
+    height: 250px;
+  }
+  100% {
+    height: 250px;
+  }
+}
+@keyframes ClientInformationMoveUp {
+  0% {
+    height: 500px;
+  }
+  100% {
+    height: 250px;
   }
 }
 
