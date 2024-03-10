@@ -12,13 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
         ClientInformationZoon.classList.remove('ClientInformationMoveRight');
         mainAreaMenuButton.classList.add('menuAreaMenuButtonHidden');
         ClientInformationZoon.classList.remove('ClientInformationMoveUpRight');
-
     });
 
     menuAreaButton.addEventListener('click', function() {
         if(readMoreButton.id == 'readMoreButton') {
             ClientInformationZoon.classList.add('ClientInformationMoveRight');
             ClientInformationZoon.classList.remove('ClientInformationMoveUpRight');
+            ClientInformationZoon.classList.remove('ClientInformationMoveUp');
         }else if(readMoreButton.id == 'readMoreOff') {
             ClientInformationZoon.classList.add('ClientInformationMoveUpRight');
             ClientInformationZoon.classList.remove('ClientInformationMoveDown');
@@ -49,4 +49,3 @@ document.addEventListener('DOMContentLoaded', function() {
             }
     });
 });
-
