@@ -251,6 +251,7 @@ body {
 
 .ClientInformationZoon {
     z-index: 2;
+    z-index: 2;
     position: fixed;
     background-color: #ffc0eb;
     border-radius: 50px 0 0 50px;
@@ -357,6 +358,7 @@ body {
   position: absolute;
   width: 55%;
   line-height: 90px;
+  top: 45px;
   top: 45px;
   left: 240px;
   display: flex;
