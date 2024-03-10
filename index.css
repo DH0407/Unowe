@@ -250,7 +250,7 @@ body {
 }
 
 .ClientInformationZoon {
-  z-index: 2;
+    z-index: 2;
     position: fixed;
     background-color: #ffc0eb;
     border-radius: 50px 0 0 50px;
@@ -269,6 +269,9 @@ body {
 }
 .ClientInformationZoon.ClientInformationMoveUp {
   animation: ClientInformationMoveUp 1s ease-in-out forwards;
+}
+.ClientInformationZoon.ClientInformationMoveUpRight {
+  animation: ClientInformationMoveUpRight 1s ease-in-out forwards;
 }
 @keyframes ClientInformationMoveLeft {
   0% {
@@ -298,18 +301,42 @@ body {
 }
 @keyframes ClientInformationMoveDown {
   0% {
+    transform: translateX(-100%);
+    position: absolute;
     height: 250px;
   }
   100% {
+    transform: translateX(-100%);
+    position: absolute;
+    height: 100%;
+  }
+}
+
+@keyframes ClientInformationMoveUp {
+  0% {
+    position: absolute;
+    height: 100%;
+    transform: translateX(-100%);
+  }
+  100% {
+    position: absolute;
+    transform: translateX(-100%);
     height: 250px;
   }
 }
-@keyframes ClientInformationMoveUp {
+@keyframes ClientInformationMoveUpRight {
   0% {
-    height: 500px;
+    position: absolute;
+    height: 100%;
+    transform: translateX(-100%);
+  }
+  99% {
+    transform: translateX(0);
+    height: 250px;
+    position: absolute;
   }
   100% {
-    height: 250px;
+    position: fixed;
   }
 }
 
@@ -330,7 +357,7 @@ body {
   position: absolute;
   width: 55%;
   line-height: 90px;
-  top: 20%;
+  top: 45px;
   left: 240px;
   display: flex;
   align-items: center;
