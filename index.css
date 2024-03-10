@@ -65,8 +65,8 @@ body {
   position: absolute;
   width: 50%;
   height: 60px;
-  top: 5%;
-  left: 230px;
+  top: 45px;
+  left: 325px;
 }
 .homeButton {
   position: absolute;
@@ -87,9 +87,9 @@ body {
 .imgeSlide {
   position: absolute;
   width: 50%;
-  height: 330px;
-  top: 17%;
-  left: 230px;
+  height: 450px;
+  top: 200px;
+  left: 325px;
   border-radius: 50px;
   /* overflow: hidden; */
 
@@ -109,7 +109,7 @@ body {
 
   font-size: 3.5em;
   text-align: center;
-  line-height: 200px;
+  line-height: 300px;
 
 }
 .startZoon {
@@ -143,16 +143,16 @@ body {
 .boxZoon {
   position: absolute;
   width: 50%;
-  height: 200px;
-  top: 65%;
-  left: 230px;
+  height: 300px;
+  top: 730px;
+  left: 325px;
 }
 .box1 {
   z-index: 2;
   background-color: gray;
   border-radius: 50px;
   position: absolute;
-  width: 50%;
+  width: 500px;
   height: 100%;
   left: 0;
   
@@ -260,8 +260,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
- 
  }
  .readMoreButton {
   position: absolute;
