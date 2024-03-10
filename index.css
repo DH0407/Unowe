@@ -1,18 +1,32 @@
 /* Container */
 body {
   margin: 0;
-}
-.container {
-  width: 100%;
-  height: 100%; 
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 1350px;
 }
 
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* 추가: relative 위치 설정 */
+  min-height: 1450px; 
+}
+
+
 .menuArea {
-  position: relative;
+  position: absolute;
   background-color: #E37B58;
   width: 100%;
-  height: 800px;
+  height: 1300px;  
 }
+.menuArea.menuAreaFixedHeight {
+  height: auto; /* 혹은 다른 원하는 높이로 설정하세요. */
+  position: fixed;
+}
+
 .button > div,button{
   left: 3%;
   border: 1px solid black;
@@ -20,46 +34,50 @@ body {
   border-radius: 20px;
 }
 .menuAreaButton {
-  top: 5%;
+  top: 60px;
   height: 60px;
   width: 60px;
+  transition: opacity 1s;
+  background: url('./img/menu.png') no-repeat center center; /* 이미지를 배경으로 설정 */
+  background-size: cover; /* 배경 이미지를 요소에 맞게 조정 */
 }
+
 .button1 {
   height: 60px;
   width: 60px;
-  top: 20%;
+  top: 200px;
 }
 .button2 {
   height: 60px;
   width: 60px;
-  top: 30%;
+  top: 300px;
 }
 .button3 {
   height: 60px;
   width: 60px;
-  top: 40%;
+  top: 400px;
 }
 .button4 {
   height: 60px;
   width: 60px;
-  top: 50%;
+  top: 500px;
 }
 .button5 {
   height: 60px;
   width: 60px;
-  top: 75%;
+  top: 950px;
 }
 .button6 {
   height: 60px;
   width: 60px;
-  top: 90%;
+  top: 1100px;
 }
-.search-div {
+.searchZoon {
   position: absolute;
   width: 50%;
   height: 60px;
-  top: 5%;
-  left: 13%;
+  top: 60px;
+  left: 325px;
 }
 .homeButton {
   position: absolute;
@@ -74,21 +92,25 @@ body {
  z-index: 2;
  width: 100%;
  height: 60px;
- border-radius: 100px;
+ border-radius: 20px;
  border: none;
 }
 .imgeSlide {
   position: absolute;
   width: 50%;
-  height: 330px;
-  top: 17%;
-  left: 13%;
+  height: 450px;
+  top: 200px;
+  left: 325px;
   border-radius: 50px;
-  /* overflow: hidden; */
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.imges img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .imges{
@@ -100,11 +122,15 @@ body {
   background-color: rgb(172, 231, 209);
   top: 0;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 3.5em;
   text-align: center;
-  line-height: 200px;
+  line-height: 300px;
 
 }
+
 .startZoon {
   z-index: 2;
   border: 1px solid red;
@@ -136,16 +162,16 @@ body {
 .boxZoon {
   position: absolute;
   width: 50%;
-  height: 200px;
-  top: 65%;
-  left: 13%;
+  height: 300px;
+  top: 730px;
+  left: 325px;
 }
 .box1 {
   z-index: 2;
   background-color: gray;
   border-radius: 50px;
   position: absolute;
-  width: 50%;
+  width: 500px;
   height: 100%;
   left: 0;
   
@@ -196,45 +222,22 @@ body {
   }
 }
 
+/* 추가된 부분 */
 .mainAreaMenuButton {
   opacity: 1;
   position: absolute;
-  border: 1px solid black;
   border-radius: 20px;
-  top: 5%;  
+  top: 60px;  
   left: 3%;
   height: 60px;
   width: 60px;
-  transition: opacity 1s; /* opacity 변화에 대한 transition 설정 */
+  transition: opacity 1s; /* 투명도 변화에 대한 트랜지션 설정 */
 }
-.mainAreaMenuButton.mainAreaMenuButtonHidden {
+
+.mainAreaMenuButton.menuAreaMenuButtonHidden {
   opacity: 0; /* 숨김 상태에서는 투명하게 */
   pointer-events: none; /* 이벤트를 비활성화하여 숨겨진 상태에서의 클릭 이벤트를 방지 */
 }
-
-.search {
-  position: absolute;
-  width: 50%;
-  height: 60px;
-  top: 5%;
-  left: 13%;
-}
-.mainAreaHomeButton {
-  position: absolute;
-  z-index: 3;
-  width: 30px;
-  height: 30px;
-  top: 27.5%;
-  left: 30px;
-}
-.mainAreaSearch {
- position: absolute;
- z-index: 2;
- width: 100%;
- height: 60px;
- border-radius: 100px;
-}
-
 
 
 .subArea {
@@ -245,61 +248,95 @@ body {
   height: 100%;
   background-color: #F1ECE2;
 }
-.ClientInformationZoon {
-  position: absolute;
-  background-color: gray;
-  border-radius: 50px 0 0 50px;
-  width: 100%;
-  height: 25%;
 
+.ClientInformationZoon {
+    position: fixed;
+    background-color: #ffc0eb;
+    border-radius: 50px 0 0 50px;
+    width: 100%;
+    left: calc(100% - 0px);
+    height: 250px;
 }
+.ClientInformationZoon.ClientInformationMoveLeft {
+  animation: ClientInformationMoveLeft 1s ease-in-out forwards;
+}
+.ClientInformationZoon.ClientInformationMoveRight {
+  animation: ClientInformationMoveRight 1s ease-in-out forwards;
+}
+@keyframes ClientInformationMoveLeft {
+  0% {
+    position: absolute;
+  }
+  1% {
+    transform: translateX(0);
+  }
+  100% {
+    position: absolute;
+    transform: translateX(-100%);
+  }
+}
+@keyframes ClientInformationMoveRight {
+  0% {
+    transform: translateX(-100%);
+    position: absolute;
+  }
+  99% {
+    transform: translateX(0);
+    position: absolute;
+  }
+  100% {
+
+    position: fixed;
+  }
+}
+
  .ClientImagZoon {
   position: absolute;
   background-color: rgb(172, 231, 209);
   border-radius: 30px;
-  width: 25%;
-  height: 72%;
-  top: 14%;
+  width: 160px;
+  height: 160px;
+  top: 45px;
   left: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
  }
  .ClinetNameZoon {
+  border: 1px solid black;
   position: absolute;
   width: 55%;
-  line-height: 80px;
-  top: 14%;
-  left: 40%;
+  line-height: 90px;
+  top: 20%;
+  left: 240px;
+  display: flex;
+  align-items: center;
 
- }
- .readMoreButtonZoon {
-  position: absolute;
-  width: 55%;
-  height: 26%;
-  top: 58%;
-  left: 40%;
+  font-size: 5em;
+  font-weight: bolder;
+  text-align: left;
  }
  .readMoreButton {
   position: absolute;
   background-color: #E37B58;
-  width: 100%;
-  height: 100%;
-  left: -0.2%;
+  width: 55%;
+  height: 45px;
+  top: 160px;
+  left: 240px;
 
   color: white;
   font-size: 1.5em;
   font-weight: bolder;
  }
 
-footer {
-  position: absolute;
+ footer {
+  position: absolute; /* 변경: position을 absolute로 설정 */
+  bottom: 0;
+  left: 0;
+  width: 100%;
   border: 1px solid black;
   text-align: center;
   line-height: 150px;
-  bottom: 0%;
-  left: 0;
-  width: 100%;
 }
 
 
