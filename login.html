@@ -36,16 +36,21 @@
             passwordInput.placeholder.style.textAlign = "center";
             passwordInput.placeholder.style.fontSize = "76.923%";
         }
-        function togglePasswordImage() {
-            var passwordButton = document.getElementById("toggle-password-visibility");
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
             var passwordImage = document.querySelector("#toggle-password-visibility .passwordOffIcon");
 
-            if (passwordImage.src.includes("passwordOff.webp")) {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
                 passwordImage.src = "./img/passwordOn.webp";
             } else {
+                passwordInput.type = "password";
                 passwordImage.src = "./img/passwordOff.webp";
             }
-}
+
+            applyStylesToPasswordInput();
+        }
+
     </script>
 </head>
 <link rel="stylesheet" href="./login.css">
