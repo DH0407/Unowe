@@ -119,16 +119,13 @@ body {
   background-color: rgb(172, 231, 209);
   top: 0;
 
-<<<<<<< HEAD
   display: flex;
   justify-content: center;
   align-items: center;
-=======
   font-size: 3.5em;
   text-align: center;
   line-height: 300px;
 
->>>>>>> 12545b5ae6cf8bca7412221a4e8ee6b45b72beea
 }
 
 .startZoon {
@@ -304,14 +301,11 @@ body {
   position: absolute;
   border: 1px solid black;
   text-align: center;
-<<<<<<< HEAD
   line-height: 100px;
   bottom: 0;
-=======
   line-height: 150px;
   bottom: 0;
   left: 0;
->>>>>>> 12545b5ae6cf8bca7412221a4e8ee6b45b72beea
   width: 100%;
   margin-top: auto;
 }
