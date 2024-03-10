@@ -41,6 +41,7 @@ body {
   background: url('./img/menu.png') no-repeat center center; /* 이미지를 배경으로 설정 */
   background-size: cover; /* 배경 이미지를 요소에 맞게 조정 */
 }
+
 .button1 {
   height: 60px;
   width: 60px;
@@ -239,9 +240,6 @@ body {
 }
 
 
-
-
-
 .subArea {
   position: absolute;
   left: 70%;
@@ -251,13 +249,36 @@ body {
   background-color: #F1ECE2;
 }
 .ClientInformationZoon {
-  position: absolute;
+  position: fixed;
   background-color: #ffc0eb;
   border-radius: 50px 0 0 50px;
-  width: 100%;
+  width: 30%;
+  left: calc(100% - 0px);
   height: 250px;
-
 }
+.ClientInformationZoon.ClientInformationMoveLeft {
+  animation: ClientInformationMoveLeft 1s ease-in-out forwards;
+}
+.ClientInformationZoon.ClientInformationMoveRight {
+  animation: ClientInformationMoveRight 1s ease-in-out forwards;
+}
+@keyframes ClientInformationMoveLeft {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+@keyframes ClientInformationMoveRight {
+  0% {
+      transform: translateX(-100%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
  .ClientImagZoon {
   position: absolute;
   background-color: rgb(172, 231, 209);
