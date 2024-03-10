@@ -248,14 +248,13 @@ body {
   height: 100%;
   background-color: #F1ECE2;
 }
-
 .ClientInformationZoon {
-    position: fixed;
-    background-color: #ffc0eb;
-    border-radius: 50px 0 0 50px;
-    width: 100%;
-    left: calc(100% - 0px);
-    height: 250px;
+  position: fixed;
+  background-color: #ffc0eb;
+  border-radius: 50px 0 0 50px;
+  width: 30%;
+  left: calc(100% - 0px);
+  height: 250px;
 }
 .ClientInformationZoon.ClientInformationMoveLeft {
   animation: ClientInformationMoveLeft 1s ease-in-out forwards;
@@ -265,28 +264,18 @@ body {
 }
 @keyframes ClientInformationMoveLeft {
   0% {
-    position: absolute;
-  }
-  1% {
-    transform: translateX(0);
+      transform: translateX(0);
   }
   100% {
-    position: absolute;
-    transform: translateX(-100%);
+      transform: translateX(-100%);
   }
 }
 @keyframes ClientInformationMoveRight {
   0% {
-    transform: translateX(-100%);
-    position: absolute;
-  }
-  99% {
-    transform: translateX(0);
-    position: absolute;
+      transform: translateX(-100%);
   }
   100% {
-
-    position: fixed;
+      transform: translateX(0);
   }
 }
 
