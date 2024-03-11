@@ -4,53 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        // 유효성검사
-
-
-        //패스워드
-        function togglePasswordVisibility() {
-            var passwordInput = document.getElementById("password");
-
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-            } else {
-                passwordInput.type = "password";
-            }
-
-            applyStylesToPasswordInput();
-        }
-        function applyStylesToPasswordInput() {
-            var passwordInput = document.getElementById("password");
-
-            passwordInput.style.position = "absolute";
-            passwordInput.style.top = "55%";
-            passwordInput.style.width = "85.5%";
-            passwordInput.style.padding =  "2.5%";
-            passwordInput.style.border =  "none";
-            passwordInput.style.borderRadius = "5px";
-            passwordInput.style.textAlign = "center";
-            passwordInput.style.fontSize = "1.3em";
-            passwordInput.style.backgroundColor = "rgba(255, 255, 255, 0.4)";
-
-            passwordInput.placeholder.style.textAlign = "center";
-            passwordInput.placeholder.style.fontSize = "76.923%";
-        }
-        function togglePasswordVisibility() {
-            var passwordInput = document.getElementById("password");
-            var passwordImage = document.querySelector("#toggle-password-visibility .passwordOffIcon");
-
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                passwordImage.src = "./img/passwordOn.webp";
-            } else {
-                passwordInput.type = "password";
-                passwordImage.src = "./img/passwordOff.webp";
-            }
-
-            applyStylesToPasswordInput();
-        }
-    </script>
 </head>
 <link rel="stylesheet" href="./css/login.css">
 <body>
@@ -68,14 +21,14 @@
             <img src="./img/login.webp" alt="" class="loginImg">
         </div>
         <div class="inputArea">
-            <form>
+            <form action="./loginPro.html" method="get">
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
                 <div class="form-group">
                     <label for="password" class="passwordLabel">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
                     <button type="button" id="toggle-password-visibility" onclick="togglePasswordVisibility(); togglePasswordImage();">
                         <img src="./img/passwordOff.webp" alt="" class="passwordOffIcon">
                     </button>
@@ -90,5 +43,6 @@
             <div class="facebook">Facebook</div>
         </div>
     </div>
+    <script src="./js/login.js"></script>
 </body>
 </html>
