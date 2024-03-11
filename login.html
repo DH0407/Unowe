@@ -36,16 +36,20 @@
             passwordInput.placeholder.style.textAlign = "center";
             passwordInput.placeholder.style.fontSize = "76.923%";
         }
-        function togglePasswordImage() {
-            var passwordButton = document.getElementById("toggle-password-visibility");
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
             var passwordImage = document.querySelector("#toggle-password-visibility .passwordOffIcon");
 
-            if (passwordImage.src.includes("passwordOff.webp")) {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
                 passwordImage.src = "./img/passwordOn.webp";
             } else {
+                passwordInput.type = "password";
                 passwordImage.src = "./img/passwordOff.webp";
             }
-}
+
+            applyStylesToPasswordInput();
+        }
     </script>
 </head>
 <link rel="stylesheet" href="./login.css">
@@ -55,10 +59,10 @@
         <div class="leftRectangle"></div>
         <div class="bottomRectangle"></div>
         <div class="loginTextArea">
-            <p class="loginText">Login</p>
+            <p class="loginText">로그인</p>
         </div>
         <div class="signinTextArea">
-            <p class="signinText">Sign In</p>
+            <p class="signinText">가입</p>
         </div>
         <div class="logoArea">
             <img src="./img/login.webp" alt="" class="loginImg">
@@ -76,8 +80,8 @@
                         <img src="./img/passwordOff.webp" alt="" class="passwordOffIcon">
                     </button>
                 </div>
-                <button type="submit">Login</button>
-                <a href="#none" class="rememberPassword">Forgot Password??</a>
+                <button type="submit">로그인</button>
+                <a href="#none" class="rememberPassword">비밀번호를 잊어버리셨습니까?</a>
             </form>
         </div>
         <div class="otherLoginArea">
