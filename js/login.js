@@ -43,3 +43,66 @@
 
             applyStylesToPasswordInput();
         }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var signinTextArea = document.querySelector('.signinTextArea');
+            var loginTextArea = document.querySelector('.loginTextArea');
+            var isLoginAreaClicked = false; 
+    
+            signinTextArea.addEventListener('click', function () {
+                if (!isLoginAreaClicked) { 
+                    toggleTextAreaPosition();
+                }
+            });
+    
+            function toggleTextAreaPosition() {
+                loginTextArea.classList.toggle('moveDown');
+                signinTextArea.classList.toggle('moveUp');
+            }
+            loginTextArea.addEventListener('click', function (event) {
+                event.stopPropagation();
+            });
+        });
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            var signinTextArea = document.querySelector('.signinTextArea');
+            var topRectangle = document.querySelector('.topRectangle');
+            var bottomRectangle = document.querySelector('.bottomRectangle');
+        
+            signinTextArea.addEventListener('click', function () {
+                toggleRectanglesHeight();
+            });
+        
+            function toggleRectanglesHeight() {
+                if (signinTextArea.classList.contains('moveUp')) {
+                    // signTextArea가 위에 있을 때
+                    topRectangle.style.height = '46%';
+                    bottomRectangle.style.height = '41%';
+                } else {
+                    // signTextArea가 아래에 있을 때
+                    topRectangle.style.height = '33%';
+                    bottomRectangle.style.height = '54%';
+                }
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var signinTextArea = document.querySelector('.signinTextArea');
+            var signinText = document.querySelector('.signinText');
+            var loginText = document.querySelector('.loginText');
+        
+            signinTextArea.addEventListener('click', function () {
+                toggleTextColors();
+            });
+        
+            function toggleTextColors() {
+                if (signinTextArea.classList.contains('moveUp')) {
+                    signinText.style.color = 'white';
+                    loginText.style.color = '#999999';
+                } else {
+                    signinText.style.color = '';
+                    loginText.style.color = '';
+                }
+            }
+        });
+        

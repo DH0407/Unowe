@@ -14,7 +14,7 @@ body {
     left: 0;
     top: 0;
     width: 35%;
-    height: 46%;
+    height: 33%;
     background-color: #F1ECE2;
     border-radius: 0 0 90px 0;
 }
@@ -22,7 +22,7 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    width: 30%;
+    width: 26%;
     height: 100%;
     background-color: #F1ECE2;
 }
@@ -31,7 +31,7 @@ body {
     left: 0;
     bottom: 0%;
     width: 35%;
-    height: 41%;
+    height: 54%;
     background-color: #F1ECE2;
     border-radius: 0 90px 0 0;
 }
@@ -45,10 +45,9 @@ body {
     background-color: #E37B58;
     border-radius: 90px 0 0 90px;
 }
-.loginText {
+.loginTextArea .loginText {
     position: absolute;
-    left: 25%;
-    top: 33%;
+    left: 20%;
     font-size: 210%;
     color: white;
     font-weight: bold;
@@ -56,14 +55,13 @@ body {
 .signinTextArea {
     position: absolute;
     left: 23%;
-    top: 46%;
+    top: 47%;
     width: 14%;
     height: 13%;
 }
-.signinText {
+.signinTextArea .signinText {
     position: absolute;
-    left: 26%;
-    top: 45.7%;
+    left: 20%;
     font-size: 210%;
     color: #999999;
     font-weight: bold;
@@ -232,48 +230,4 @@ button:hover {
     text-align: center;
     color: white;
     font-weight: bold;
-}
-
-/* 여기 밑으론 애니메이션 영역 */
-
-.loginTextArea, .signinTextArea {
-    transition: transform 1s ease-in-out;
-}
-.moveDown {
-    transform: translateY(100%);
-}
-.moveUp {
-    transform: translateY(-100%);
-}
-
-.topRectangle, .bottomRectangle {
-    transition: height 1.5s ease; /* height 속성에 1초 동안의 트랜지션 효과를 적용 */
-}
-
-.signinTextArea.moveUp .topRectangle {
-    height: 46%; /* signTextArea가 위에 있을 때 topRectangle의 높이를 변경 */
-}
-
-.signinTextArea.moveUp .bottomRectangle {
-    height: 41%; /* signTextArea가 위에 있을 때 bottomRectangle의 높이 변경 */
-}
-
-.signinTextArea:not(.moveUp) .topRectangle {
-    height: 33%; /* signTextArea가 아래에 있을 때 topRectangle의 높이를 변경 */
-}
-
-.signinTextArea:not(.moveUp) .bottomRectangle {
-    height: 54%; /* signTextArea가 아래에 있을 때 bottomRectangle의 높이를 변경 */
-}
-
-.signinTextArea.moveUp .signinText {
-    color: white; /* signTextArea가 위에 있을 때 signinText의 색을 변경 */
-}
-
-.signinTextArea.moveUp .loginText {
-    color: #999999; /* signTextArea가 위에 있을 때 loginText의 색을 변경 */
-}
-
-.loginText, .signinText {
-    transition: color 1s ease;  
 }
