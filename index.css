@@ -103,9 +103,12 @@ body {
   text-align: right;
 }
 .imgeSlide {
+  z-index: 5;
+  border: 2px solid black;
   position: absolute;
-  width: 50%;
-  height: 450px;
+  background-color: blueviolet;
+  width: 80%;
+  height: 500px;
   top: 200px;
   left: 325px;
   border-radius: 50px;
@@ -117,7 +120,7 @@ body {
 .listDot{
   z-index: 3;
   position: absolute;
-  width: 90%;
+  width: 1000px;
   height: 20%;
   top: 0;
   text-align: right;
