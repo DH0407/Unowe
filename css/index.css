@@ -1,0 +1,297 @@
+/* Container */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 1350px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* 추가: relative 위치 설정 */
+  min-height: 1600px; 
+}
+
+.menuArea {
+  position: absolute;
+  background-color: #E37B58;
+  width: 100%;
+  height: 1300px;  
+}
+.menuArea.menuAreaFixedHeight {
+  height: auto; /* 혹은 다른 원하는 높이로 설정하세요. */
+  position: fixed;
+}
+
+.button > a, button{
+  left: 3%;
+  position: absolute;
+  border-radius: 20px;
+  height: 60px;
+  width: 60px;  
+}
+.menuAreaButton {
+  top: 60px;
+  border: none;
+  transition: opacity 1s;
+  background: url('../img/menu.png') no-repeat center center; /* 이미지를 배경으로 설정 */
+  background-size: cover; /* 배경 이미지를 요소에 맞게 조정 */
+}
+
+.msgButton {
+  top: 260px;
+  background: no-repeat center center;
+}
+.friendButton {
+  top: 350px;
+  background: no-repeat center center;
+}
+.frendeButton {
+  border: none;
+  background-color: none;
+  color: none;
+}
+.button3 {
+  top: 450px;
+  background: no-repeat center center; 
+}
+.acornButton {
+  top: 550px;
+  background: no-repeat center center; 
+}
+.settingButton {
+  top: 650px;
+  background: no-repeat center center;
+}
+.helpButton {
+  top: 1150px;
+  background: no-repeat center center;
+}
+.searchZoon {
+  position: absolute;
+  width: 50%;
+  height: 60px;
+  top: 60px;
+  left: 325px;
+}
+.homeButton {
+  position: absolute;
+  z-index: 3;
+  width: 30px;
+  height: 30px;
+  top: 25%;
+  left: 30px;
+}
+.search {
+ position: absolute;
+ z-index: 2;
+ width: 92%;
+ height: 60px;
+ border-radius: 20px;
+ border: none;
+ padding-left: 8%;
+}
+.searchImg {
+  position: absolute;
+  z-index: 2;
+  width: 40px;
+  top: 10px;
+  left: 94%;
+  text-align: right;
+}
+.imgeSlide {
+  position: absolute;
+  width: 70%;
+  height: 700px;
+  top: 200px;
+  left: 325px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imges{
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5em;
+  text-align: center;
+  line-height: 300px;
+
+}
+.imges img {
+  max-width: 150%;
+  max-height: 100%;
+}
+
+.startZoon {
+  z-index: 2;
+  border: 1px solid red;
+  position: absolute;
+  width: 100%;
+  top: 70%;
+  height: 30%;
+  background-color: #E37B58;
+  border-radius: 50px;
+}
+.startButton {
+  z-index: 2;
+  position: absolute;
+  width: 20%;
+  height: 70%;
+  top: 15%;
+  left: 74%;
+}
+.startButton button {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #F1ECE2;
+  border: none;
+  border-radius: 100px;
+
+  font-size: 2em;
+}
+
+.mainArea {
+  position: absolute;
+  left: 0;
+  top : 0;
+  width: 70%;
+  height: 100%;
+  background-color: #F1ECE2;
+}
+.mainArea.mainAreaMoveRight {
+  animation: mainAreaMoveRight 1s ease-in-out forwards;
+}
+.mainArea.mainAreaMoveLeft {
+  animation: mainAreaMoveLeft 1s ease-in-out forwards;
+}
+@keyframes mainAreaMoveRight {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(13%);
+      border-radius: 100px 0 0 100px;
+  }
+}
+@keyframes mainAreaMoveLeft {
+  0% {
+      transform: translateX(12%);
+      border-radius: 100px 0 0 100px;
+  }
+  100% {
+      transform: translateX(0);
+      border-radius: 0 0 0 0;
+  }
+}
+
+/* 추가된 부분 */
+.mainAreaMenuButton {
+  opacity: 1;
+  position: absolute;
+  border-radius: 20px;
+  top: 60px;  
+  left: 3%;
+  height: 60px;
+  width: 60px;
+  transition: opacity 1s; /* 투명도 변화에 대한 트랜지션 설정 */
+}
+
+.mainAreaMenuButton.menuAreaMenuButtonHidden {
+  opacity: 0; /* 숨김 상태에서는 투명하게 */
+  pointer-events: none; /* 이벤트를 비활성화하여 숨겨진 상태에서의 클릭 이벤트를 방지 */
+}
+
+
+.subArea {
+  position: absolute;
+  left: 70%;
+  top: 0;
+  width: 30.07%;
+  height: 100%;
+  background-color: #F1ECE2;
+}
+
+.loginZoon {
+    z-index: 2;
+    z-index: 2;
+    position: fixed;
+    background-color: #ffc0eb;
+    border-radius: 50px 0 0 50px;
+    width: 100%;
+    left: calc(100% - 0px);
+    height: 170px;
+}
+.loginZoon.loginZoonMoveLeft {
+  animation: loginZoonMoveLeft 1s ease-in-out forwards;
+}
+.loginZoon.loginZoonMoveRight {
+  animation: loginZoonMoveRight 1s ease-in-out forwards;
+}
+
+@keyframes loginZoonMoveLeft {
+  0% {
+    position: absolute;
+  }
+  1% {
+    transform: translateX(0);
+  }
+  100% {
+    position: absolute;
+    transform: translateX(-100%);
+  }
+}
+@keyframes loginZoonMoveRight {
+  0% {
+    transform: translateX(-100%);
+    position: absolute;
+  }
+  99% {
+    transform: translateX(0);
+    position: absolute;
+  }
+  100% {
+
+    position: fixed;
+  }
+}
+
+ .loginButton {
+  position: absolute;
+  background-color: #E37B58;
+  border: none;
+  width: 55%;
+  height: 100px;
+  top: 35px;
+  left: 120px;
+  border-radius: 25px;
+
+  color: white;
+  font-size: 3em;
+  font-weight: bolder;
+ }
+
+ footer {
+  position: absolute; /* 변경: position을 absolute로 설정 */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 150px;
+}
+
+
+
+
