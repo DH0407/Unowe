@@ -18,10 +18,29 @@
         <div class="logoArea">
             <img src="./img/login.webp" alt="" class="loginImg">
         </div>
-        <div class="inputArea">
-            <form action="./loginPro.html" method="get">
+        <div class="loginInputArea">
+            <form action="./loginPro.html" method="post">
+                <div class="loginForm-group">
+                    <label for="email" class="loginEmailLabel">Email</label>
+                    <input type="email" id="loginEmailText" class="loginEmail" name="loginEmailText" placeholder="Enter your email" required>
+                </div>
+                <div class="loginForm-group">
+                    <label for="password" class="loginPasswordLabel">Password</label>
+                    <input type="password" id="loginPassword" class="loginPassword" name="password" placeholder="Enter your password" required>
+                    <button type="button" id="toggle-loginPassword-visibility"
+                    onclick="togglePasswordVisibility(); togglePasswordImage();">
+                        <img src="./img/passwordOff.webp" alt="" class="loginPasswordOffIcon">
+                    </button>
+                </div>
+                <button type="submit">로그인</button>
+                <a href="#none" class="rememberPassword">비밀번호를 잊어버리셨습니까?</a>
+            </form>
+        </div>
+        <!-- ----------------위는 로그인 아래는 회원가입 폼--------------- -->
+        <!-- <div class="signinArea">
+            <form action="" method="get">
                 <div class="form-group">
-                    <label for="email">Email</label>
+                    <label for="email" class="signinEmail">Email</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
                 <div class="form-group">
@@ -34,7 +53,7 @@
                 <button type="submit">로그인</button>
                 <a href="#none" class="rememberPassword">비밀번호를 잊어버리셨습니까?</a>
             </form>
-        </div>
+        </div> -->
         <div class="otherLoginArea">
             <div class="orLogin">Or Login with</div>
             <div class="google">Google</div>

@@ -79,8 +79,8 @@ body {
 .logoArea .loginImg {
     width: 99%;
 }
-
-.inputArea {
+/* ---------------------- 여기는 로그인 창 --------------------- */
+.loginInputArea {
     position: absolute;
     left: 45%;
     top: 40%;
@@ -91,22 +91,22 @@ body {
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.form-group {
+.loginForm-group {
     margin-bottom: 10%;
 }
-label {
+.loginEmailLabel, .loginPasswordLabel {
     display: block;
     font-weight: bold;
     padding-bottom: 2%;
     font-size: 120%;
     text-align: center;
 }
-.passwordLabel {
+.loginPasswordLabel {
     position: absolute;
     top: 43%;
     left: 45%;
 }
-input[type="email"] {
+input[type="email"].loginEmail {
     width: 95%;
     padding: 2.5%;
     border: none;
@@ -115,11 +115,11 @@ input[type="email"] {
     font-size: 130%;
     background-color: rgba(255, 255, 255, 0.4); 
 }
-input[type="email"]::placeholder {
+input[type="email"].loginEmail::placeholder {
     text-align: center;
     font-size: 76.923%;
 }
-input[type="password"] {
+input[type="password"].loginPassword {
     position: absolute;
     top: 55%;
     width: 85.5%;
@@ -130,11 +130,11 @@ input[type="password"] {
     font-size: 130%;
     background-color: rgba(255, 255, 255, 0.4); 
 }
-input[type="password"]::placeholder {
+input[type="password"].loginPassword::placeholder {
     text-align: center;
     font-size: 76.923%;
 }
-#toggle-password-visibility {
+#toggle-loginPassword-visibility {
     position: absolute;
     top: 56%;
     right: 7%;
@@ -185,12 +185,13 @@ button:hover {
 .rememberArea:hover {
     background-color: #e9e5e3;
 }
-#toggle-password-visibility .passwordOffIcon {
+#toggle-loginPassword-visibility .loginPasswordOffIcon {
     position: absolute;
     right: 10%;
     top: 18%;
     width: 35%;
 }
+/* ------------------------------------------------------ */
 
 .otherLoginArea {
     position: absolute;
