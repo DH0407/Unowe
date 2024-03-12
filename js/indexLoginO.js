@@ -4,15 +4,21 @@ document.addEventListener('DOMContentLoaded', function() {
     var menuAreaButton = document.getElementById('menuAreaButton');
     var mainArea = document.getElementById('mainArea');
     var ClientInformationZoon = document.querySelector('.ClientInformationZoon');
-    var readMoreButton = document.getElementById('readMoreButton')
+    var readMoreButton = document.getElementById('readMoreButton');
+    var logOutButtonZoon = document.getElementById('logOutButtonZoon');
 
     mainAreaMenuButton.addEventListener('click', function() {
         mainArea.classList.add('mainAreaMoveRight');
         mainArea.classList.remove('mainAreaMoveLeft');
+        mainAreaMenuButton.classList.add('menuAreaMenuButtonHidden');
+        //사용자 정보창 애니메이션
         ClientInformationZoon.classList.add('ClientInformationMoveLeft');
         ClientInformationZoon.classList.remove('ClientInformationMoveRight');
-        mainAreaMenuButton.classList.add('menuAreaMenuButtonHidden');
         ClientInformationZoon.classList.remove('ClientInformationMoveUpRight');
+        //로그 아웃 버튼 애니메이션
+        logOutButtonZoon.classList.add('logOutButtonZoonHidden');
+        logOutButtonZoon.classList.add('logOutButtonZoonHidden'); 
+        logOutButtonZoon.classList.add('logOutButtonZoonHidden');    
     });
 
     menuAreaButton.addEventListener('click', function() {
@@ -27,10 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         mainArea.classList.remove('mainAreaMoveRight');
         mainArea.classList.add('mainAreaMoveLeft');
-        ClientInformationZoon.classList.remove('ClientInformationMoveLeft');
         mainAreaMenuButton.classList.remove('menuAreaMenuButtonHidden');
-        
-            
+        ClientInformationZoon.classList.remove('ClientInformationMoveLeft');
+        logOutButtonZoon.classList.remove('logOutButtonZoonHidden');
     });
 
     readMoreButton.addEventListener('click', function() {
