@@ -419,6 +419,50 @@ body {
   font-size: 1.5em;
   font-weight: bolder;
  }
+ .logOutButtonZoon {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 20px;
+  opacity: 1;
+ }
+ .logOutButtonZoon.logOutButtonZoonHidden {
+  pointer-events: none;
+ }
+ .logOutButtonZoon.logOutButtonZoonHiddenAniOn {
+  animation: logOutButtonZoonHiddenAniOn 1ms linear forwards;
+ }
+ .logOutButtonZoon.logOutButtonZoonHiddenAniOff {
+  animation: logOutButtonZoonHiddenAniOff 2s ease-in-out  forwards;
+ }
+ @keyframes logOutButtonZoonHiddenAniOn{
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+ }
+ @keyframes logOutButtonZoonHiddenAniOff{
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  54% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+ }
+
+ .logOutButton {
+  text-decoration: none;
+  color: #000;
+  font-size: 2em;
+ }
 
  footer {
   position: absolute; /* 변경: position을 absolute로 설정 */

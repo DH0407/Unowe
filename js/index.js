@@ -25,29 +25,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 //쿠키 관련 js코드
-function getCookies(name) {
-    var nameEQ = name + "=";
-    var cookies = document.cookie.split(';');
+document.addEventListener("DOMContentLoaded", function() {
+    // 페이지가 로드될 때 실행되는 코드 작성
+    var checkLogin = getCookie('email');
+    if (checkLogin) {
+        location.href = '../indexLoginO.html'
+    }
+});
 
+// 특정 이름의 쿠키 값을 가져오는 함수
+function getCookie(name) {
+    var cookies = document.cookie.split(';');
     for (var i = 0; i < cookies.length; i++) {
-        var cookie = cookies[i];
-        while (cookie.charAt(0) == ' ') {
-            cookie = cookie.substring(1, cookie.length);
-        }
-        if (cookie.indexOf(nameEQ) == 0) {
-            return cookie.substring(nameEQ.length, cookie.length);
+        var cookie = cookies[i].trim();
+        // 쿠키 이름과 값 분리
+        var parts = cookie.split('=');
+        if (parts[0] === name) {
+            return decodeURIComponent(parts[1]);
         }
     }
     return null;
-}
-
-document.addEventListener("DOMContentLoaded", onPageLoad);
-
-function onPageLoad() {
-    var loginCheck = getCookies("isLoggedIn");
-
-    if (loginCheck == "true") {
-        location.href = '../indexLoginO.html';
-    }
-    
 }

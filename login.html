@@ -7,6 +7,7 @@
 </head>
 <link rel="stylesheet" href="./css/login.css">
 <body>
+<form action="./loginPro.html" name="f1">
     <div class="container">
         <div class="topRectangle"></div>
         <div class="leftRectangle"></div>
@@ -33,10 +34,11 @@
                         <img src="./img/passwordOff.webp" alt="" class="passwordOffIcon">
                     </button>
                 </div>
-                <button type="submit">로그인</button>
+                <button type="button" onclick="checkForm()" >로그인</button>
                 <a href="#none" class="rememberPassword">비밀번호를 잊어버리셨습니까?</a>
             </form>
         </div>
+</form>
         <div class="otherLoginArea">
             <div class="orLogin">Or Login with</div>
             <div class="google">Google</div>
