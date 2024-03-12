@@ -406,35 +406,42 @@ body {
   font-weight: bolder;
   text-align: left;
  }
- .readMoreButton {
+
+ .readMoreButton, .logOutButton, .logOutButtonZoon {
   position: absolute;
   background-color: #E37B58;
   border: none;
   width: 55%;
   height: 45px;
-  top: 160px;
-  left: 240px;
-
   color: white;
   font-size: 1.5em;
   font-weight: bolder;
- }
- .logOutButtonZoon {
-  border: 1px solid black;
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  bottom: 0;
-  opacity: 1;
-  transition: opacity 1ms;
- }
- .logOutButtonZoon.logOutButtonZoonHidden {
-  pointer-events: none;
- }
- .logOutButtonZoon.logOutButtonZoonHiddenAniOn {
- }
- .logOutButtonZoon.logOutButtonZoonHiddenAniOff {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  text-decoration: none; /* 텍스트에 밑줄 제거 */
 }
+
+.readMoreButton {
+  top: 160px;
+  left: 240px;
+}
+
+.logOutButton {
+  bottom: 30px;
+  left: 240px;
+}
+
+.logOutButtonZoon {
+  bottom: 10px;
+  left: 240px;
+}
+
+.readMoreButton:hover, .logOutButton:hover, .logOutButtonZoon:hover {
+  background-color: #FF6347; /* 호버시 배경색 변경 */
+}
+
 @keyframes logOutButtonZoonHiddenAniOn {
   0% {
     opacity: 0;
@@ -452,22 +459,6 @@ body {
     opacity: 0;
   }
 }
-
- /* .mainAreaMenuButton {
-  opacity: 1;
-  position: absolute;
-  border-radius: 20px;
-  top: 60px;  
-  left: 3%;
-  height: 60px;
-  width: 60px;
-  transition: opacity 1s;
-}
-
-.mainAreaMenuButton.menuAreaMenuButtonHidden {
-  opacity: 0;
-  pointer-events: none;
-} */
 
  footer {
   position: absolute; /* 변경: position을 absolute로 설정 */
