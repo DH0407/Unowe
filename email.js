@@ -24,12 +24,10 @@ let transporter = nodemailer.createTransport({
 // 이메일 본문에 포함될 인증 코드 생성
 let verificationCode = generateRandomCode();
 let expirationTime = generateExpirationTime();
-let emailBody = `아래의 코드를 인증화면에서 입력해주세요. \n \n 인증 코드 : ${verificationCode} \n \n `;
+let emailBody = `아래의 코드를 인증화면에서 입력해주세요. \n \n 인증 코드 : ${verificationCode} \n \n 인증 코드는 3분 후 만료됩니다.`;
 
 let emailSMTP = '${verificationCode}'; //인증 코드 저장. 나중에 인증코드랑 비교할 때 써야함
 
-// 만료 시간을 이메일 본문에 추가
-emailBody += `인증 코드는 3분 후 만료됩니다.`;
 
 // 메일 옵션 설정
 let mailOptions = {
