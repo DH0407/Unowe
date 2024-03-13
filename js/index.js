@@ -1,4 +1,3 @@
-//애니메이션 js코드
 document.addEventListener('DOMContentLoaded', function() {
     var mainAreaMenuButton = document.querySelector('.mainAreaMenuButton');
     var menuAreaButton = document.getElementById('menuAreaButton');
@@ -49,5 +48,4 @@ function onPageLoad() {
     if (loginCheck == "true") {
         location.href = '../indexLoginO.html';
     }
-    
 }

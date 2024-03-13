@@ -1,18 +1,24 @@
-//애니메이션 관련 js코드
 document.addEventListener('DOMContentLoaded', function() {
     var mainAreaMenuButton = document.querySelector('.mainAreaMenuButton');
     var menuAreaButton = document.getElementById('menuAreaButton');
     var mainArea = document.getElementById('mainArea');
     var ClientInformationZoon = document.querySelector('.ClientInformationZoon');
-    var readMoreButton = document.getElementById('readMoreButton')
+    var readMoreButton = document.getElementById('readMoreButton');
+    var logOutButtonZoon = document.getElementById('logOutButtonZoon');
+    var logOutButton = document.getElementById('logOutButton'); // 수정된 부분: 로그아웃 버튼 id
 
     mainAreaMenuButton.addEventListener('click', function() {
         mainArea.classList.add('mainAreaMoveRight');
         mainArea.classList.remove('mainAreaMoveLeft');
+        mainAreaMenuButton.classList.add('menuAreaMenuButtonHidden');
+        // 사용자 정보창 애니메이션
         ClientInformationZoon.classList.add('ClientInformationMoveLeft');
         ClientInformationZoon.classList.remove('ClientInformationMoveRight');
-        mainAreaMenuButton.classList.add('menuAreaMenuButtonHidden');
         ClientInformationZoon.classList.remove('ClientInformationMoveUpRight');
+        // 로그 아웃 버튼 애니메이션
+        logOutButtonZoon.classList.add('logOutButtonZoonHidden');
+        logOutButtonZoon.classList.add('logOutButtonZoonHidden');
+        logOutButtonZoon.classList.add('logOutButtonZoonHidden');
     });
 
     menuAreaButton.addEventListener('click', function() {
@@ -27,10 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         mainArea.classList.remove('mainAreaMoveRight');
         mainArea.classList.add('mainAreaMoveLeft');
-        ClientInformationZoon.classList.remove('ClientInformationMoveLeft');
         mainAreaMenuButton.classList.remove('menuAreaMenuButtonHidden');
-        
-            
+        ClientInformationZoon.classList.remove('ClientInformationMoveLeft');
+        logOutButtonZoon.classList.remove('logOutButtonZoonHidden');
     });
 
     readMoreButton.addEventListener('click', function() {
@@ -49,34 +54,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     break;
             }
     });
-});
-//쿠키 관련 js코드
-function getCookies(name) {
-    var nameEQ = name + "=";
-    var cookies = document.cookie.split(';');
 
-    for (var i = 0; i < cookies.length; i++) {
-        var cookie = cookies[i];
-        while (cookie.charAt(0) == ' ') {
-            cookie = cookie.substring(1, cookie.length);
-        }
-        if (cookie.indexOf(nameEQ) == 0) {
-            return cookie.substring(nameEQ.length, cookie.length);
-        }
-    }
-    return null;
-}
-
-document.addEventListener("DOMContentLoaded", onPageLoad);
-
-
-function onPageLoad() {
-    // 여기에 실행하고자 하는 코드를 추가
-    var loginCheck = getCookies("isLoggedIn");
-
-    if (loginCheck == "false") {
+    // 로그아웃 버튼 클릭 이벤트 처리
+    logOutButton.addEventListener('click', function() {
+        // 쿠키 삭제
+        document.cookie = "isLoggedIn=false; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        // 로그인 페이지로 리디렉션
         location.href = '../index.html';
-    }
-
-    
-}
+    });
+});

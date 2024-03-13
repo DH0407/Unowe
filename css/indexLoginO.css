@@ -291,7 +291,7 @@ body {
     z-index: 2;
     z-index: 2;
     position: fixed;
-    background-color: #ffc0eb;
+    background-color: #f7e2a8;
     border-radius: 50px 0 0 50px;
     width: 100%;
     left: calc(100% - 0px);
@@ -406,19 +406,59 @@ body {
   font-weight: bolder;
   text-align: left;
  }
- .readMoreButton {
+
+ .readMoreButton, .logOutButton, .logOutButtonZoon {
   position: absolute;
   background-color: #E37B58;
   border: none;
   width: 55%;
   height: 45px;
-  top: 160px;
-  left: 240px;
-
   color: white;
   font-size: 1.5em;
   font-weight: bolder;
- }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  text-decoration: none; /* 텍스트에 밑줄 제거 */
+}
+
+.readMoreButton {
+  top: 160px;
+  left: 240px;
+}
+
+.logOutButton {
+  bottom: 30px;
+  left: 240px;
+}
+
+.logOutButtonZoon {
+  bottom: 10px;
+  left: 240px;
+}
+
+.readMoreButton:hover, .logOutButton:hover, .logOutButtonZoon:hover {
+  background-color: #FF6347; /* 호버시 배경색 변경 */
+}
+
+@keyframes logOutButtonZoonHiddenAniOn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes logOutButtonZoonHiddenAniOff {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
  footer {
   position: absolute; /* 변경: position을 absolute로 설정 */
