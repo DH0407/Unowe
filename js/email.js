@@ -16,24 +16,22 @@ function generateExpirationTime() {
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'unoweteam652@gmail.com', // 보내는 이메일 주소
-        pass: 'vhda fngg tkhq wtun' // Gmail 앱 비밀번호
+        user: 'unoweteam@gmail.com', // 보내는 이메일 주소
+        pass: 'cahu ddjp wtrw mqup' // Gmail 앱 비밀번호
     }
 });
 
 // 이메일 본문에 포함될 인증 코드 생성
 let verificationCode = generateRandomCode();
 let expirationTime = generateExpirationTime();
-let emailBody = `아래의 코드를 인증화면에서 입력해주세요. \n \n 인증 코드 : ${verificationCode} \n \n `;
+let emailBody = `아래의 코드를 인증화면에서 입력해주세요. \n \n 인증 코드 : ${verificationCode} \n \n 인증 코드는 3분 후 만료됩니다.`;
 
 let emailSMTP = '${verificationCode}'; //인증 코드 저장. 나중에 인증코드랑 비교할 때 써야함
 
-// 만료 시간을 이메일 본문에 추가
-emailBody += `인증 코드는 3분 후 만료됩니다.`;
 
 // 메일 옵션 설정
 let mailOptions = {
-    from: 'unoweteam652@gmail.com', // 발신자 주소
+    from: 'unoweteam@gmail.com', // 발신자 주소
     to: 'byeolb96@gmail.com', // 수신자 주소 나중에 변수로 받아와야함!!
     subject: 'Unowe 인증번호',
     text: emailBody // 이메일 본문
