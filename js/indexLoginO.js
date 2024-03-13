@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var mainArea = document.getElementById('mainArea');
     var ClientInformationZoon = document.querySelector('.ClientInformationZoon');
     var readMoreButton = document.getElementById('readMoreButton');
-    var logOutButtonZoon = document.getElementById('logOutButtonZoon');
     var logOutButton = document.getElementById('logOutButton'); // 수정된 부분: 로그아웃 버튼 id
 
     mainAreaMenuButton.addEventListener('click', function() {
@@ -16,9 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
         ClientInformationZoon.classList.remove('ClientInformationMoveRight');
         ClientInformationZoon.classList.remove('ClientInformationMoveUpRight');
         // 로그 아웃 버튼 애니메이션
-        logOutButtonZoon.classList.add('logOutButtonZoonHidden');
-        logOutButtonZoon.classList.add('logOutButtonZoonHidden');
-        logOutButtonZoon.classList.add('logOutButtonZoonHidden');
+        logOutButton.classList.add('logOutButtonHidden');
+        logOutButton.classList.add('logOutButtonHiddenAniOff');
+        logOutButton.classList.remove('logOutButtonHiddenAniOn');
     });
 
     menuAreaButton.addEventListener('click', function() {
@@ -35,7 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
         mainArea.classList.add('mainAreaMoveLeft');
         mainAreaMenuButton.classList.remove('menuAreaMenuButtonHidden');
         ClientInformationZoon.classList.remove('ClientInformationMoveLeft');
-        logOutButtonZoon.classList.remove('logOutButtonZoonHidden');
+
+        logOutButton.classList.add('logOutButtonHiddenAniOff');
+        logOutButton.classList.remove('logOutButtonHidden');
+        logOutButton.classList.remove('logOutButtonHidden');
     });
 
     readMoreButton.addEventListener('click', function() {
@@ -44,12 +46,20 @@ document.addEventListener('DOMContentLoaded', function() {
                     readMoreButton.id = 'readMoreOff';
                     ClientInformationZoon.classList.add('ClientInformationMoveDown');
                     ClientInformationZoon.classList.remove('ClientInformationMoveUp');
+
+                    logOutButton.classList.add('logOutButtonHiddenAniOn');
+                    logOutButton.classList.remove('logOutButtonHidden');
+                    logOutButton.classList.remove('logOutButtonHiddenAniOff');
                     console.log('On');
                     break;
                 case 'readMoreOff':
                     readMoreButton.id = 'readMoreButton';
                     ClientInformationZoon.classList.add('ClientInformationMoveUp');
                     ClientInformationZoon.classList.remove('ClientInformationMoveDown');
+
+                    logOutButton.classList.add('logOutButtonHidden');
+                    logOutButton.classList.add('logOutButtonHiddenAniOff');
+                    logOutButton.classList.remove('logOutButtonHiddenAniOn');
                     console.log('Off');
                     break;
             }

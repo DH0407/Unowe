@@ -431,34 +431,44 @@ body {
 .logOutButton {
   bottom: 30px;
   left: 240px;
+  opacity: 0;
+  background-color: none;
+}
+.logOutButton.logOutButtonHidden {
+  pointer-events: none;
+}
+.logOutButton.logOutButtonHiddenAniOn {
+  animation: logOutButtonHiddenAniOn 1.2s linear forwards;
+}
+.logOutButton.logOutButtonHiddenAniOff {
+  animation: logOutButtonHiddenAniOff 1s linear forwards;
+}
+@keyframes logOutButtonHiddenAniOn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.logOutButtonZoon {
-  bottom: 10px;
-  left: 240px;
+@keyframes logOutButtonHiddenAniOff {
+  0% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .readMoreButton:hover, .logOutButton:hover, .logOutButtonZoon:hover {
   background-color: #FF6347; /* 호버시 배경색 변경 */
 }
 
-@keyframes logOutButtonZoonHiddenAniOn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
-@keyframes logOutButtonZoonHiddenAniOff {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 
  footer {
   position: absolute; /* 변경: position을 absolute로 설정 */
