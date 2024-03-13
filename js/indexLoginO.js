@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
         mainAreaMenuButton.classList.remove('menuAreaMenuButtonHidden');
         ClientInformationZoon.classList.remove('ClientInformationMoveLeft');
 
-        logoutButtonZoon.classList.add('logOutButtonHiddenAniOff');
         logoutButtonZoon.classList.remove('logOutButtonHiddenAniOffStart');
         logoutButtonZoon.classList.remove('logOutButtonHidden');
     });
