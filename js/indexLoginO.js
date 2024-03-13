@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var mainArea = document.getElementById('mainArea');
     var ClientInformationZoon = document.querySelector('.ClientInformationZoon');
     var readMoreButton = document.getElementById('readMoreButton');
-    var logOutButton = document.getElementById('logOutButton'); // 수정된 부분: 로그아웃 버튼 id
+    var logoutButtonZoon = document.getElementById('logoutButtonZoon'); // 수정된 부분: 로그아웃 버튼 id
 
     mainAreaMenuButton.addEventListener('click', function() {
         mainArea.classList.add('mainAreaMoveRight');
@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
         ClientInformationZoon.classList.remove('ClientInformationMoveRight');
         ClientInformationZoon.classList.remove('ClientInformationMoveUpRight');
         // 로그 아웃 버튼 애니메이션
-        logOutButton.classList.add('logOutButtonHidden');
-        logOutButton.classList.add('logOutButtonHiddenAniOff');
-        logOutButton.classList.remove('logOutButtonHiddenAniOn');
+        logoutButtonZoon.classList.add('logOutButtonHidden');
+        logoutButtonZoon.classList.add('logOutButtonHiddenAniOffStart');
+        logoutButtonZoon.classList.remove('logOutButtonHiddenAniOn');
     });
 
     menuAreaButton.addEventListener('click', function() {
@@ -35,9 +35,9 @@ document.addEventListener('DOMContentLoaded', function() {
         mainAreaMenuButton.classList.remove('menuAreaMenuButtonHidden');
         ClientInformationZoon.classList.remove('ClientInformationMoveLeft');
 
-        logOutButton.classList.add('logOutButtonHiddenAniOff');
-        logOutButton.classList.remove('logOutButtonHidden');
-        logOutButton.classList.remove('logOutButtonHidden');
+        logoutButtonZoon.classList.add('logOutButtonHiddenAniOff');
+        logoutButtonZoon.classList.remove('logOutButtonHiddenAniOffStart');
+        logoutButtonZoon.classList.remove('logOutButtonHidden');
     });
 
     readMoreButton.addEventListener('click', function() {
@@ -47,9 +47,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     ClientInformationZoon.classList.add('ClientInformationMoveDown');
                     ClientInformationZoon.classList.remove('ClientInformationMoveUp');
 
-                    logOutButton.classList.add('logOutButtonHiddenAniOn');
-                    logOutButton.classList.remove('logOutButtonHidden');
-                    logOutButton.classList.remove('logOutButtonHiddenAniOff');
+                    logoutButtonZoon.classList.add('logOutButtonHiddenAniOn');
+                    logoutButtonZoon.classList.remove('logOutButtonHidden');
+                    logoutButtonZoon.classList.remove('logOutButtonHiddenAniOff');
+                    logoutButtonZoon.classList.remove('logOutButtonHiddenAniOffStart');
                     console.log('On');
                     break;
                 case 'readMoreOff':
@@ -57,9 +58,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     ClientInformationZoon.classList.add('ClientInformationMoveUp');
                     ClientInformationZoon.classList.remove('ClientInformationMoveDown');
 
-                    logOutButton.classList.add('logOutButtonHidden');
-                    logOutButton.classList.add('logOutButtonHiddenAniOff');
-                    logOutButton.classList.remove('logOutButtonHiddenAniOn');
+                    logoutButtonZoon.classList.add('logOutButtonHidden');
+                    logoutButtonZoon.classList.add('logOutButtonHiddenAniOff');
+                    logoutButtonZoon.classList.remove('logOutButtonHiddenAniOn');
+                    logoutButtonZoon.classList.remove('logOutButtonHiddenAniOffStart');
                     console.log('Off');
                     break;
             }
