@@ -218,7 +218,7 @@ body {
   position: absolute;
   left: 70%;
   top: 0;
-  width: 30.07%;
+  width: 32%;
   height: 100%;
   background-color: #F1ECE2;
 }
@@ -227,7 +227,7 @@ body {
     z-index: 2;
     z-index: 2;
     position: fixed;
-    background-color: #ffc0eb;
+    background-color: #f7e2a8;
     border-radius: 50px 0 0 50px;
     width: 100%;
     left: calc(100% - 0px);
