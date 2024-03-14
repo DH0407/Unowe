@@ -32,7 +32,7 @@ let emailSMTP = '${verificationCode}'; //인증 코드 저장. 나중에 인증�
 // 메일 옵션 설정
 let mailOptions = {
     from: 'unoweteam@gmail.com', // 발신자 주소
-    to: 'byeolb96@gmail.com', // 수신자 주소 나중에 변수로 받아와야함!!
+    to: 'byeolb96@gmail.com', // 수신자 주소 나중에 변수로 받아와야함!!!!!!!!!!
     subject: 'Unowe 인증번호',
     text: emailBody // 이메일 본문
 };
