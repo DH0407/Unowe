@@ -79,6 +79,7 @@ body {
 }
 .logoArea .loginImg {
     width: 99%;
+    transition: opacity 1s ease;
 }
 /* ---------------------- 여기는 로그인 창 --------------------- */
 .loginInputArea {
@@ -91,6 +92,7 @@ body {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: opacity 0.7s ease; 
 }
 .loginForm-group {
     margin-bottom: 10%;
@@ -197,7 +199,7 @@ button:hover {
 .signinInputArea {
     position: absolute;
     left: 45%;
-    top: -38.3%;
+    top: -38.8%;
     width: 40%;
     height: 70%;
     padding: 2%;
@@ -206,6 +208,8 @@ button:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     max-height: 70%;
     overflow-y: auto; 
+    transition: opacity 0.7s linear; 
+    opacity: 0;
 }
 .signForm-group {
     margin-bottom: 10%;
@@ -382,6 +386,23 @@ button:hover {
     background-color: #e9e5e3;
 }
 
+.emailCheck {
+    position: absolute;
+    top: 81.4%;
+    right: 7%;
+    border: none;
+    height: 5%;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #E37B58;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 1.05em;
+}
+.emailCheck:hover {
+    background-color: #e9e5e3;
+}
+
 #toggle-signinPassword-visibility .signinPasswordOffIcon {
     position: absolute;
     right: 28%;
@@ -396,7 +417,8 @@ button:hover {
 }
 
 .signinInputArea::-webkit-scrollbar {
-    display: none; 
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 0 20px 20px 0;
 }
 
 /* ------------------------------------------------------- */
@@ -487,14 +509,3 @@ button:hover {
     transition: color 1s ease;  
 }
 
-.signinTextArea.moveUp .loginInputArea {
-    display: none; /* signinTextArea가 위에 있을 때 loginInputArea 숨김 */
-}
-
-.signinTextArea.moveDown .signinInputArea {
-    display: none; /* signinTextArea가 밑에 있을 때 signinInputArea 숨김 */
-}
-
-.signinTextArea.moveUp {
-    
-}
