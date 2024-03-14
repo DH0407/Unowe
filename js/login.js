@@ -141,8 +141,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function toggleTextColors() {
         if (signinTextArea.classList.contains('moveUp')) {
-            signinText.style.color = 'white';
-            loginText.style.color = '#999999';
+            signinText.style.color = '#999999';
+            loginText.style.color = 'white';
         } else {
             signinText.style.color = '';
             loginText.style.color = '';
@@ -180,6 +180,7 @@ function updateSigninInputPosition() {
         loginImg.style.opacity = '0';
     } else {
         loginImg.style.opacity = '1';
+        signinInputArea.style.top = '-38.8%';
     }
 }
 
@@ -212,7 +213,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var leftRectangle = document.querySelector('.leftRectangle');
     var bottomRectangle = document.querySelector('.bottomRectangle');
     var container = document.querySelector('.container');
-    var signinInputArea = document.querySelector('.signInputArea');
+    var signinInputArea = document.querySelector('.signinInputArea');
     
     signinTextArea.addEventListener('click', function () {
         toggleBackground();
@@ -226,6 +227,7 @@ document.addEventListener('DOMContentLoaded', function () {
             container.style.transition = 'background-color 1s ease';
             signinTextArea.style.transition = 'background-color 1s ease';
             loginTextArea.style.transition = 'background-color 1s ease';
+            
 
             // signTextArea가 위에 있을 때
             topRectangle.style.backgroundColor = '#E37B58';
@@ -238,9 +240,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             signinTextArea.style.width = '10%';
             signinTextArea.style.top = '44%';
-
-            signinInputArea.style.backgroundColor = 'rgba(227, 123, 88, 0.4)';
-
 
         } else {
             // signTextArea가 아래에 있을 때
