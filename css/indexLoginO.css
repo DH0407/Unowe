@@ -350,7 +350,6 @@ body {
     height: 100%;
   }
 }
-
 @keyframes ClientInformationMoveUp {
   0% {
     position: absolute;
@@ -493,8 +492,6 @@ body {
 .readMoreButton:hover {
   background-color: #FF6347; /* 호버시 배경색 변경 */
 }
-
-
 
  footer {
   position: absolute; /* 변경: position을 absolute로 설정 */
