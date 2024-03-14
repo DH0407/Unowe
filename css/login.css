@@ -14,7 +14,7 @@ body {
     left: 0;
     top: 0;
     width: 35%;
-    height: 46%;
+    height: 33%;
     background-color: #F1ECE2;
     border-radius: 0 0 90px 0;
 }
@@ -31,7 +31,7 @@ body {
     left: 0;
     bottom: 0%;
     width: 35%;
-    height: 41%;
+    height: 54%;
     background-color: #F1ECE2;
     border-radius: 0 90px 0 0;
 }
@@ -59,6 +59,7 @@ body {
     top: 46%;
     width: 14%;
     height: 13%;
+    
 }
 .signinText {
     position: absolute;
@@ -196,7 +197,7 @@ button:hover {
 .signinInputArea {
     position: absolute;
     left: 45%;
-    top: 5%;
+    top: -38.3%;
     width: 40%;
     height: 70%;
     padding: 2%;
@@ -455,7 +456,7 @@ button:hover {
 }
 
 .topRectangle, .bottomRectangle {
-    transition: height 1.5s ease; /* height 속성에 1초 동안의 트랜지션 효과를 적용 */
+    transition: height 1s ease-in-out; /* height 속성에 1초 동안의 트랜지션 효과를 적용 */
 }
 
 .signinTextArea.moveUp .topRectangle {
@@ -486,6 +487,14 @@ button:hover {
     transition: color 1s ease;  
 }
 
+.signinTextArea.moveUp .loginInputArea {
+    display: none; /* signinTextArea가 위에 있을 때 loginInputArea 숨김 */
+}
 
+.signinTextArea.moveDown .signinInputArea {
+    display: none; /* signinTextArea가 밑에 있을 때 signinInputArea 숨김 */
+}
 
-
+.signinTextArea.moveUp {
+    
+}
