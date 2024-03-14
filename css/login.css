@@ -117,6 +117,7 @@ input[type="email"].loginEmail {
     text-align: center;
     font-size: 130%;
     background-color: rgba(255, 255, 255, 0.4); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 input[type="email"].loginEmail::placeholder {
     text-align: center;
@@ -132,6 +133,7 @@ input[type="password"].loginPassword {
     text-align: center;
     font-size: 130%;
     background-color: rgba(255, 255, 255, 0.4); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 input[type="password"].loginPassword::placeholder {
     text-align: center;
@@ -234,7 +236,7 @@ input[type="text"].signinName {
     text-align: center;
     font-size: 130%;
     background-color: rgba(255, 255, 255, 0.4);
-    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .signinIdLabel {
     position: absolute;
@@ -255,7 +257,7 @@ input[type="text"].signinId {
     text-align: center;
     font-size: 130%;
     background-color: rgba(255, 255, 255, 0.4);
-    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .signinPasswordLabel {
     position: absolute;
@@ -275,7 +277,7 @@ input[type="password"].signinPassword {
     text-align: center;
     font-size: 130%;
     background-color: rgba(255, 255, 255, 0.4); 
-    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .signinPasswordCheckLabel {
     position: absolute;
@@ -295,7 +297,7 @@ input[type="password"].signinPasswordCheck {
     text-align: center;
     font-size: 130%;
     background-color: rgba(255, 255, 255, 0.4); 
-    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 #toggle-signinPassword-visibility {
     position: absolute;
@@ -333,7 +335,7 @@ input[type="email"].signinEmail {
     text-align: center;
     font-size: 130%;
     background-color: rgba(255, 255, 255, 0.4); 
-    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .signinCertificationLabel {
     position: absolute;
@@ -353,7 +355,7 @@ input[type="text"].signinCertification {
     text-align: center;
     font-size: 130%;
     background-color: rgba(255, 255, 255, 0.4); 
-    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .signinNicknameLabel {
     position: absolute;
@@ -373,7 +375,7 @@ input[type="text"].signinNickname {
     text-align: center;
     font-size: 130%;
     background-color: rgba(255, 255, 255, 0.4); 
-    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .signinInputArea button {
     position: absolute;
