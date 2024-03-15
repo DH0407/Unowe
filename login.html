@@ -39,7 +39,7 @@
         </div>
         <!-- ----------------회원가입 폼--------------- -->
         <div class="signinInputArea">
-            <form action="" method="post">
+            <form action="login.html" method="post" name="signinForm">
                 <div class="signinForm-group">
                     <label for="signinNameText" class="signinNameLabel">이름</label>
                     <input type="text" id="signinNameText" class="signinName" name="name" required>
@@ -76,7 +76,7 @@
                     <label for="signinNicknameText" class="signinNicknameLabel">닉네임 입력</label>
                     <input type="text" id="signinNicknameText" class="signinNickname" name="nickname" required>
                 </div>
-                <button type="submit">회원가입</button>
+                <input type="button" value="회원가입" onclick="checkEmailAndPassword()" class="signinBtn"></input>
             </form>
         </div>
         <div class="otherLoginArea">

@@ -29,9 +29,8 @@ function applyStylesToPasswordInput() {
     passwordInput.style.textAlign = "center";
     passwordInput.style.fontSize = "1.3em";
     passwordInput.style.backgroundColor = "rgba(255, 255, 255, 0.4)";
-
-    passwordInput.placeholder.style.textAlign = "center";
-    passwordInput.placeholder.style.fontSize = "76.923%";
+    passwordInput.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.5)";
+    loginPassword.placeholder.style.fontSize = "76.923%";
 }
 
 // 여긴 회원가입 아이콘 토글
@@ -74,6 +73,7 @@ function applyStylesToSigninPasswordInput() {
     passwordInput.style.textAlign = "center";
     passwordInput.style.fontSize = "1.3em";
     passwordInput.style.backgroundColor = "rgba(255, 255, 255, 0.4)";
+    passwordInput.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.5)";
 
     passwordInput_check.style.position = "absolute";
     passwordInput_check.style.top = "61%";
@@ -85,6 +85,7 @@ function applyStylesToSigninPasswordInput() {
     passwordInput_check.style.textAlign = "center";
     passwordInput_check.style.fontSize = "1.3em";
     passwordInput_check.style.backgroundColor = "rgba(255, 255, 255, 0.4)";
+    passwordInput_check.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.5)";
 }
 //---------------------------
 // 여기부턴 애니메이션

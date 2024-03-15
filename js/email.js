@@ -28,11 +28,12 @@ let emailBody = `아래의 코드를 인증화면에서 입력해주세요. \n \
 
 let emailSMTP = '${verificationCode}'; //인증 코드 저장. 나중에 인증코드랑 비교할 때 써야함
 
-
 // 메일 옵션 설정
+var toEmail = document.getElementById("signinEmailText").value;
+
 let mailOptions = {
     from: 'unoweteam@gmail.com', // 발신자 주소
-    to: 'byeolb96@gmail.com', // 수신자 주소 나중에 변수로 받아와야함!!!!!!!!!!
+    to: toEmail, // 수신자 주소 나중에 변수로 받아와야함!!!!!!!!!!
     subject: 'Unowe 인증번호',
     text: emailBody // 이메일 본문
 };
@@ -45,3 +46,27 @@ transporter.sendMail(mailOptions, (error, info) => {
         console.log('이메일 전송 성공:', info.response);
     }
 });
+
+function checkEmailAndPassword() {
+    // 이메일 인증번호 확인
+    var certificationInput = document.getElementById("signinCertificationText").value;
+    if (certificationInput !== emailSMTP) {
+        alert('인증번호가 다릅니다.');
+        document.getElementById("signinCertificationText").focus();
+        return;
+    }
+
+    // 비밀번호 확인
+    var passwordInput = document.getElementById("signinPassword").value;
+    var passwordCheckInput = document.getElementById("passwordCheck").value;
+    if (passwordInput !== passwordCheckInput) {
+        alert('비밀번호가 다릅니다.');
+        document.getElementById("passwordCheck").focus();
+        return;
+    }
+
+    var form = document.querySelector("form[name='signinForm']");
+    form.submit();
+}
+
+checkEmailAndPassword();
