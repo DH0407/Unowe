@@ -377,25 +377,6 @@ input[type="text"].signinNickname {
     background-color: rgba(255, 255, 255, 0.4); 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.signinBtn {
-    position: absolute;
-    right: 9%;
-    bottom: -45%;
-    width: 20%;
-    height: 10%;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #E37B58;
-    border: none;
-    border-radius: 30px;
-    font-size: 210%;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow:  0 0 7px rgba(0, 0, 0, 0.5);
-}
-.signinBtn:hover {
-    background-color: #e9e5e3;
-}
 
 .signinInputArea button {
     position: absolute;
@@ -411,6 +392,12 @@ input[type="text"].signinNickname {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+.signinInputArea button:hover {
+    background-color: #e9e5e3;
+}
+.signinBtn, .loginBtn {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .emailCheck {

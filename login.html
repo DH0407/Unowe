@@ -33,13 +33,13 @@
                         <img src="./img/passwordOff.webp" alt="" class="loginPasswordOffIcon">
                     </button>
                 </div>
-                <button type="submit">로그인</button>
+                <button type="submit" class="loginBtn">로그인</button>
                 <a href="#none" class="rememberPassword">비밀번호를 잊어버리셨습니까?</a>
             </form>
         </div>
         <!-- ----------------회원가입 폼--------------- -->
         <div class="signinInputArea">
-            <form action="login.html" method="post" name="signinForm">
+            <form action="/sendEmail" method="post" name="signinForm"> <!-- 수정된 부분 -->
                 <div class="signinForm-group">
                     <label for="signinNameText" class="signinNameLabel">이름</label>
                     <input type="text" id="signinNameText" class="signinName" name="name" required>
@@ -66,7 +66,7 @@
                 <div class="signinForm-group">
                     <label for="signinEmailText" class="signinEmailLabel">이메일 주소</label>
                     <input type="email" id="signinEmailText" class="signinEmail" name="Email" required>
-                    <input type="button" id="emailCheck" class="emailCheck" name="emailSend" value="인증번호 전송">
+                    <input type="button" id="emailCheck" class="emailCheck" name="emailSend" value="인증번호 전송" onclick="generateRandomCode()">
                 </div>
                 <div class="signinForm-group">
                     <label for="signinCertificationText" class="signinCertificationLabel">인증번호 입력</label>
@@ -76,7 +76,7 @@
                     <label for="signinNicknameText" class="signinNicknameLabel">닉네임 입력</label>
                     <input type="text" id="signinNicknameText" class="signinNickname" name="nickname" required>
                 </div>
-                <input type="button" value="회원가입" onclick="checkEmailAndPassword()" class="signinBtn"></input>
+                <button type="submit" class="signinBtn" onclick="checkEmailAndPassword()">회원가입</button>
             </form>
         </div>
         <div class="otherLoginArea">
@@ -86,5 +86,6 @@
         </div>
     </div>
     <script src="./js/login.js"></script>
+    <script src="./js/email.js"></script>
 </body>
 </html>
