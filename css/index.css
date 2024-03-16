@@ -406,7 +406,7 @@ body {
  }
  @keyframes imgNumber1Move3Right {
   0% {
-    transform: translateX(75vw);
+    transform: translateX(74vw);
     z-index: 1;
 
   }
@@ -422,7 +422,7 @@ body {
 
   }
   100% {
-    transform: translateX(75vw);
+    transform: translateX(74.14vw);
     z-index: 1;
   }
  }
@@ -439,7 +439,7 @@ body {
  }
  @keyframes imgNumber1Move3Left {
   0% {
-    transform: translateX(75vw);
+    transform: translateX(74.14vw);
     z-index: 2;
 
   }
@@ -471,7 +471,7 @@ body {
  }
  @keyframes imgNumber2Move3Right {
   0% {
-    transform: translateX(37.5vw);
+    transform: translateX(37vw);
     z-index: 1;
   }
   100% {
@@ -486,7 +486,7 @@ body {
 
   }
   100% {
-    transform: translateX(37.5vw);
+    transform: translateX(37vw);
     z-index: 1;
   }
  }
@@ -503,7 +503,7 @@ body {
  }
  @keyframes imgNumber2Move3Left {
   0% {
-    transform: translateX(37.5vw);
+    transform: translateX(37vw);
     z-index: 2;
 
   }
