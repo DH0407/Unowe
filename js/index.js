@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var img1 = document.getElementById('img1');
     var img2 = document.getElementById('img2');
     var img3 = document.getElementById('img3');
-    var lefttMoveButton = document.getElementById('lefttMoveButton');
+    var leftMoveButton = document.getElementById('lefttMoveButton');
     var rightMoveButton = document.getElementById('rightMoveButton');
 
-    var moveAdvertisementCheck = 1;
+    var moveAdvertisementCheck = 123;
 
     mainAreaMenuButton.addEventListener('click', function() {
         mainArea.classList.add('mainAreaMoveRight');
@@ -31,48 +31,148 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     rightMoveButton.addEventListener('click', function() {
-        if(moveAdvertisementCheck == 1){
-            img1.classList.add('imgNumber1Move1');
+        if(moveAdvertisementCheck == 123){
+            img1.classList.add('imgNumber1Move1Right');
+            img1.classList.remove('imgNumber1Move2Right');
+            img1.classList.remove('imgNumber1Move3Right');
+            img1.classList.remove('imgNumber1Move1Left');
+            img1.classList.remove('imgNumber1Move2Left');
+            img1.classList.remove('imgNumber1Move3Left');
+
+            img2.classList.remove('imgNumber2Move1Right');
+            img2.classList.add('imgNumber2Move2Right');
+            img2.classList.remove('imgNumber2Move3Right');
+            img2.classList.remove('imgNumber2Move1Left');
+            img2.classList.remove('imgNumber2Move2Left');
+            img2.classList.remove('imgNumber2Move3Left');
+
+            img3.classList.remove('imgNumber3Move1Right');
+            img3.classList.remove('imgNumber3Move2Right');
+            img3.classList.add('imgNumber3Move3Right');
+            img3.classList.remove('imgNumber3Move1Left');
+            img3.classList.remove('imgNumber3Move2Left');
+            img3.classList.remove('imgNumber3Move3Left');
+
+            moveAdvertisementCheck = 231
+        }else if(moveAdvertisementCheck == 231) {
+            img1.classList.remove('imgNumber1Move1Right');
+            img1.classList.add('imgNumber1Move2Right');
+            img1.classList.remove('imgNumber1Move3Right');
+            img1.classList.remove('imgNumber1Move1Left');
+            img1.classList.remove('imgNumber1Move2Left');
+            img1.classList.remove('imgNumber1Move3Left');
+
+            img2.classList.remove('imgNumber2Move1Right');
+            img2.classList.remove('imgNumber2Move2Right');
+            img2.classList.add('imgNumber2Move3Right');
+            img2.classList.remove('imgNumber2Move1Left');
+            img2.classList.remove('imgNumber2Move2Left');
+            img2.classList.remove('imgNumber2Move3Left');
+
+            img3.classList.add('imgNumber3Move1Right');
+            img3.classList.remove('imgNumber3Move2Right');
+            img3.classList.remove('imgNumber3Move3Right');
+            img3.classList.remove('imgNumber3Move1Left');
+            img3.classList.remove('imgNumber3Move2Left');
+            img3.classList.remove('imgNumber3Move3Left');
+
+            moveAdvertisementCheck = 312
+        }else if(moveAdvertisementCheck == 312) {
+            img1.classList.remove('imgNumber1Move1Right');
+            img1.classList.remove('imgNumber1Move2Right');
+            img1.classList.add('imgNumber1Move3Right');
+            img1.classList.remove('imgNumber1Move1Left');
+            img1.classList.remove('imgNumber1Move2Left');
+            img1.classList.remove('imgNumber1Move3Left');
+
+            img2.classList.add('imgNumber2Move1Right');
+            img2.classList.remove('imgNumber2Move2Right');
+            img2.classList.remove('imgNumber2Move3Right');
+            img2.classList.remove('imgNumber2Move1Left');
+            img2.classList.remove('imgNumber2Move2Left');
+            img2.classList.remove('imgNumber2Move3Left');
+
+            img3.classList.remove('imgNumber3Move1Right');
+            img3.classList.add('imgNumber3Move2Right');
+            img3.classList.remove('imgNumber3Move3Right');
+            img3.classList.remove('imgNumber3Move1Left');
+            img3.classList.remove('imgNumber3Move2Left');
+            img3.classList.remove('imgNumber3Move3Left');
+
+            moveAdvertisementCheck = 123
+        }
+    });
+
+    leftMoveButton.addEventListener('click', function() {
+        if(moveAdvertisementCheck == 123){
+            img1.classList.remove('imgNumber1Move1Right');
             img1.classList.remove('imgNumber1Move2');
             img1.classList.remove('imgNumber1Move3');
-
-            img2.classList.remove('imgNumber2Move1');
-            img2.classList.add('imgNumber2Move2');
-            img2.classList.remove('imgNumber2Move3');
-
-            img3.classList.remove('imgNumber3Move1');
-            img3.classList.remove('imgNumber3Move2');
-            img3.classList.add('imgNumber3Move3');
-
-            moveAdvertisementCheck = 2
-        }else if(moveAdvertisementCheck == 2) {
-            img1.classList.remove('imgNumber1Move1');
-            img1.classList.add('imgNumber1Move2');
-            img1.classList.remove('imgNumber1Move3');
+            img1.classList.add('imgNumber1Move1Left');
+            img1.classList.remove('imgNumber1Move2Left');
+            img1.classList.remove('imgNumber1Move3Left');
 
             img2.classList.remove('imgNumber2Move1');
             img2.classList.remove('imgNumber2Move2');
-            img2.classList.add('imgNumber2Move3');
-
-            img3.classList.add('imgNumber3Move1');
-            img3.classList.remove('imgNumber3Move2');
-            img3.classList.remove('imgNumber3Move3');
-
-            moveAdvertisementCheck = 3
-        }else if(moveAdvertisementCheck == 3) {
-            img1.classList.remove('imgNumber1Move1');
-            img1.classList.remove('imgNumber1Move2');
-            img1.classList.add('imgNumber1Move3');
-
-            img2.classList.add('imgNumber2Move1');
-            img2.classList.remove('imgNumber2Move2');
             img2.classList.remove('imgNumber2Move3');
+            img2.classList.remove('imgNumber2Move1Left');
+            img2.classList.add('imgNumber2Move2Left');
+            img2.classList.remove('imgNumber2Move3Left');
 
             img3.classList.remove('imgNumber3Move1');
-            img3.classList.add('imgNumber3Move2');
+            img3.classList.remove('imgNumber3Move2');
             img3.classList.remove('imgNumber3Move3');
+            img3.classList.remove('imgNumber3Move1Left');
+            img3.classList.remove('imgNumber3Move2Left');
+            img3.classList.add('imgNumber3Move3Left');
 
-            moveAdvertisementCheck = 1
+            moveAdvertisementCheck = 312
+        }else if(moveAdvertisementCheck == 231) {
+            img1.classList.remove('imgNumber1Move1');
+            img1.classList.remove('imgNumber1Move2');
+            img1.classList.remove('imgNumber1Move3');
+            img1.classList.remove('imgNumber1Move1Left');
+            img1.classList.add('imgNumber1Move2Left');
+            img1.classList.remove('imgNumber1Move3Left');
+
+            img2.classList.remove('imgNumber2Move1');
+            img2.classList.remove('imgNumber2Move2');
+            img2.classList.remove('imgNumber2Move3');
+            img2.classList.remove('imgNumber2Move1Left');
+            img2.classList.remove('imgNumber2Move2Left');
+            img2.classList.add('imgNumber2Move3Left');
+
+            img3.classList.remove('imgNumber3Move1');
+            img3.classList.remove('imgNumber3Move2');
+            img3.classList.remove('imgNumber3Move3');
+            img3.classList.add('imgNumber3Move1Left');
+            img3.classList.remove('imgNumber3Move2Left');
+            img3.classList.remove('imgNumber3Move3Left');
+
+            moveAdvertisementCheck = 123
+        }else if(moveAdvertisementCheck == 312) {
+            img1.classList.remove('imgNumber1Move1');
+            img1.classList.remove('imgNumber1Move2');
+            img1.classList.remove('imgNumber1Move3');
+            img1.classList.remove('imgNumber1Move1Left');
+            img1.classList.remove('imgNumber1Move2Left');
+            img1.classList.add('imgNumber1Move3Left');
+
+            img2.classList.remove('imgNumber2Move1');
+            img2.classList.remove('imgNumber2Move2');
+            img2.classList.remove('imgNumber2Move3');
+            img2.classList.add('imgNumber2Move1Left');
+            img2.classList.remove('imgNumber2Move2Left');
+            img2.classList.remove('imgNumber2Move3Left');
+
+            img3.classList.remove('imgNumber3Move1');
+            img3.classList.remove('imgNumber3Move2');
+            img3.classList.remove('imgNumber3Move3');
+            img3.classList.remove('imgNumber3Move1Left');
+            img3.classList.add('imgNumber3Move2Left');
+            img3.classList.remove('imgNumber3Move3Left');
+
+            moveAdvertisementCheck = 231
         }
     });
 
@@ -102,4 +202,10 @@ function onPageLoad() {
     if (loginCheck == "true") {
         location.href = '../indexLoginO.html';
     }
+}
+
+function loginFirstMsg() {
+    event.preventDefault();
+    alert('로그인후 이용가능합니다.');
+    location.href = './login.html';
 }
