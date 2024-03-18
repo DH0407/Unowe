@@ -1,49 +1,26 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const bodyParser = require('body-parser');
 
 const app = express();
 const port = 3000;
 
+// bodyParser를 사용하여 요청 본문을 파싱
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// POST 요청 처리
 app.post('/sendEmail', (req, res) => {
-    const toEmail = req.body.Email; // 클라이언트에서 전송한 이메일 주소
+    // 사용자가 입력한 이메일 주소 가져오기
+    const toEmail = req.body.Email;
 
-    // 이메일 전송 코드
-    const transporter = nodemailer.createTransport({
+    // transporter 생성
+    let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
             user: 'unoweteam@gmail.com', // 보내는 이메일 주소
             pass: 'cahu ddjp wtrw mqup' // Gmail 앱 비밀번호
         }
     });
-
-    const verificationCode = generateRandomCode();
-    const expirationTime = generateExpirationTime();
-    const emailBody = `아래의 코드를 인증화면에서 입력해주세요. \n \n 인증 코드 : ${verificationCode} \n \n 인증 코드는 3분 후 만료됩니다.`;
-
-    const mailOptions = {
-        from: 'unoweteam@gmail.com', // 발신자 주소
-        to: toEmail, // 수신자 주소
-        subject: 'Unowe 인증번호',
-        text: emailBody // 이메일 본문
-    };
-
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.error('이메일 전송 오류:', error);
-            res.status(500).send('이메일 전송 실패');
-        } else {
-            console.log('이메일 전송 성공:', info.response);
-            res.status(200).send('이메일 전송 성공');
-        }
-    });
-});
-
-app.listen(port, () => {
-    console.log(`서버가 http://localhost:${port} 에서 실행 중입니다.`);
-});
 
 // 6자리 숫자 코드 생성 함수
 function generateRandomCode() {
@@ -56,3 +33,37 @@ function generateExpirationTime() {
     expirationTime.setMinutes(expirationTime.getMinutes() + 3); // 현재 시간에서 3분 후로 설정
     return expirationTime;
 }
+
+// transporter 생성
+let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: 'unoweteam@gmail.com', // 보내는 이메일 주소
+        pass: 'kwqx eiye psdl cvdy' // Gmail 앱 비밀번호
+    }
+});
+
+// 이메일 본문에 포함될 인증 코드 생성
+let verificationCode = generateRandomCode();
+let expirationTime = generateExpirationTime();
+let emailBody = `아래의 코드를 인증화면에서 입력해주세요. \n \n 인증 코드 : ${verificationCode} \n \n 인증 코드는 3분 후 만료됩니다.`;
+
+let emailSMTP = '${verificationCode}'; //인증 코드 저장. 나중에 인증코드랑 비교할 때 써야함
+
+
+// 메일 옵션 설정
+let mailOptions = {
+    from: 'unoweteam@gmail.com', // 발신자 주소
+    to: 'byeolb96@gmail.com', // 수신자 주소 나중에 변수로 받아와야함!!!!!!!!!!
+    subject: 'Unowe 인증번호',
+    text: emailBody // 이메일 본문
+};
+
+// 이메일 전송
+transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+        console.error('이메일 전송 오류:', error);
+    } else {
+        console.log('이메일 전송 성공:', info.response);
+    }
+});
