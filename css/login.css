@@ -6,7 +6,7 @@ body {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: #E37B58;
+    background-color: rgb(228, 230, 217);
 }
 
 .topRectangle {
@@ -15,7 +15,7 @@ body {
     top: 0;
     width: 35%;
     height: 33%;
-    background-color: #F1ECE2;
+    background-color: rgb(192, 207, 178);
     border-radius: 0 0 90px 0;
 }
 .leftRectangle {
@@ -24,7 +24,7 @@ body {
     top: 0;
     width: 30%;
     height: 100%;
-    background-color: #F1ECE2;
+    background-color: rgb(192, 207, 178);
 }
 .bottomRectangle {
     position: absolute;
@@ -32,7 +32,7 @@ body {
     bottom: 0%;
     width: 35%;
     height: 54%;
-    background-color: #F1ECE2;
+    background-color: rgb(192, 207, 178);
     border-radius: 0 90px 0 0;
 }
 
@@ -42,7 +42,7 @@ body {
     top: 33%;
     width: 14%;
     height: 13%;
-    background-color: #E37B58;
+    background-color: rgb(228, 230, 217);
     border-radius: 90px 0 0 90px;
 }
 .loginText {
@@ -397,7 +397,7 @@ input[type="text"].signinNickname {
     background-color: #e9e5e3;
 }
 .signinBtn, .loginBtn {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
 }
 
 .emailCheck {
@@ -412,6 +412,7 @@ input[type="text"].signinNickname {
     font-weight: bold;
     transition: background-color 0.3s ease;
     font-size: 1.05em;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 .emailCheck:hover {
     background-color: #e9e5e3;

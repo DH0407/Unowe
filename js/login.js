@@ -30,7 +30,6 @@ function applyStylesToPasswordInput() {
     passwordInput.style.fontSize = "1.3em";
     passwordInput.style.backgroundColor = "rgba(255, 255, 255, 0.4)";
     passwordInput.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.5)";
-    loginPassword.placeholder.style.fontSize = "76.923%";
 }
 
 // 여긴 회원가입 아이콘 토글
@@ -231,13 +230,14 @@ document.addEventListener('DOMContentLoaded', function () {
             
 
             // signTextArea가 위에 있을 때
-            topRectangle.style.backgroundColor = '#E37B58';
-            leftRectangle.style.backgroundColor = '#E37B58';
-            bottomRectangle.style.backgroundColor = '#E37B58';
-            container.style.backgroundColor = '#E37B58';
-            signinTextArea.style.backgroundColor = '#E37B58';
-            container.style.backgroundColor = '#F1ECE2';
-            loginTextArea.style.backgroundColor = '#F1ECE2';
+            topRectangle.style.backgroundColor = 'rgb(228, 230, 217)';
+            leftRectangle.style.backgroundColor = 'rgb(228, 230, 217)';
+            bottomRectangle.style.backgroundColor = 'rgb(228, 230, 217)';
+            container.style.backgroundColor = 'rgb(139,168,136)';
+            signinTextArea.style.backgroundColor = 'rgb(228, 230, 217)';
+            container.style.backgroundColor = 'rgb(139,168,136)';
+            loginTextArea.style.backgroundColor = 'rgb(139,168,136)';
+
 
             signinTextArea.style.width = '10%';
             signinTextArea.style.top = '44%';
@@ -262,3 +262,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// 이메일 전송 버튼 클릭 시 이벤트 처리
+document.getElementById('emailCheck').addEventListener('click', function() {
+    // 이메일 입력 값 가져오기
+    var email = document.getElementById('signinEmailText').value;
+
+    // 서버로 GET 요청 보내기
+    fetch(`https://unowe.kro.kr:652/sendEmail?email=${email}`)
+        .then(response => response.text())
+        .then(data => {
+            console.log(data); // 서버에서 보낸 응답 로그
+            alert('인증번호가 이메일로 전송되었습니다.'); // 전송 완료 메시지 표시
+        })
+        .catch(error => {
+            console.error('에러 발생:', error); // 에러 메시지 표시
+            alert('인증번호 전송에 실패했습니다. 다시 시도해주세요.'); // 전송 실패 메시지 표시
+        });
+});
