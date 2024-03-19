@@ -30,10 +30,6 @@ body {
   width: inherit;
   height: inherit;  
 }
-.menuArea.menuAreaFixedHeight {
-  height: auto; /* 혹은 다른 원하는 높이로 설정하세요. */
-  position: fixed;
-}
 
 .button > a, button{
   left: 3%;
@@ -77,6 +73,7 @@ body {
   top: 1150px;
   background: no-repeat center center;
 }
+
 .imgeSlide {
   position: absolute;
   width: 70%;

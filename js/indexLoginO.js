@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var mainArea = document.getElementById('mainArea');
     var ClientInformationZoon = document.querySelector('.ClientInformationZoon');
     var readMoreButton = document.getElementById('readMoreButton');
-    var logoutButtonZoon = document.getElementById('logoutButtonZoon'); // 수정된 부분: 로그아웃 버튼 id
+    var logoutButtonZoon = document.getElementById('logoutButtonZoon');
 
     mainAreaMenuButton.addEventListener('click', function() {
         mainArea.classList.add('mainAreaMoveRight');
