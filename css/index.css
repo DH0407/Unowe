@@ -10,7 +10,7 @@ body {
   position: relative;
   width: 100%;
   display: flex;
-  height: 3000px; 
+  height: 240vh; 
   margin: 0;
   padding: 0;
 }
@@ -19,91 +19,74 @@ body {
   width: inherit;
   display: flex;
   position: absolute; /* 추가: relative 위치 설정 */
-  height: 1300px; 
+  height: 100vh; 
   margin: 0;
   padding: 0;
 }
 
 .menuArea {
   position: absolute;
-  background-color: #E37B58;
+  background-color: rgb(139,168,136);
   width: inherit;
   height: inherit;  
 }
 
-.button > a, button{
-  left: 3%;
+.button {
   position: absolute;
+  width: 9vw;
+  height: 100vh;
+}
+.button > a, .button > button, .mainArea > .mainAreaMenuButton{
+  position: absolute;
+  left: 3vw;
   border-radius: 20px;
-  height: 60px;
-  width: 60px;  
+  height: 3vw;
+  width: 3vw;
+  background-size: cover; /* 배경 이미지를 요소에 맞게 조정 */
 }
 .menuAreaButton {
   top: 5%;
   border: none;
   transition: opacity 1s;
   background: url('../img/menu.png') no-repeat center center; /* 이미지를 배경으로 설정 */
-  background-size: cover; /* 배경 이미지를 요소에 맞게 조정 */
 }
 .menuAreaButton:hover {
   cursor: pointer;
 }
 
 .msgButton {
-  top: 260px;
-  background: no-repeat center center;
+  top: 20%;
+  background: url('../img/icons8-통신-50.png') no-repeat center center;
 }
 .friendButton {
-  top: 350px;
-  background: no-repeat center center;
+  top: 30%;
+  background: url('../img/icons8-상업-개발-관리-48.png') no-repeat center center;
 }
 .button3 {
-  top: 450px;
-  background: no-repeat center center; 
+  top: 40%;
+  background: url('../img/icons8-텍스트-파일-편집-50.png') no-repeat center center; 
 }
 .acornButton {
-  top: 550px;
-  background: no-repeat center center; 
+  top: 50%;
+  background: url('../img/icons8-너트-64.png') no-repeat center center; 
 }
 .settingButton {
-  top: 650px;
-  background: no-repeat center center;
+  top: 60%;
+  background: url('../img/icons8-설정-50.png') no-repeat center center;
 }
 .helpButton {
-  top: 1150px;
-  background: no-repeat center center;
+  top: 90%;
+  background: url('../img/icons8-도움-50.png') no-repeat center center;
 }
 
 .imgeSlide {
   position: absolute;
-  width: 70%;
-  height: 700px;
-  top: 40%;
-  left: 20%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.imges{
+  width: 70vw;
+  height: 70%;
+  left: 15vw;
+  background: url('../img/header.png');
+  background-size: cover;
   z-index: 2;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3.5em;
-  text-align: center;
-  line-height: 300px;
-
-}
-.imges img {
-  position: absolute;
-  width: 80vw;
-  height: 100vw;
 }
 
 .mainArea {
@@ -112,8 +95,8 @@ body {
   top : 0;
   width: 70%;
   height: 100%;
-  background-color: #F1ECE2;
-  box-shadow: 0 0 10px rgb(0, 0, 0);
+  background-color: rgb(228, 230, 217);
+  box-shadow: 0 0 1vh rgb(0, 0, 0);
 }
 .mainArea.mainAreaMoveRight {
   animation: mainAreaMoveRight 1s ease-in-out forwards;
@@ -127,13 +110,13 @@ body {
   }
   100% {
       transform: translateX(13%);
-      border-radius: 100px 0 0 100px;
+      border-radius: 5vw 0 0 5vw;
   }
 }
 @keyframes mainAreaMoveLeft {
   0% {
       transform: translateX(12%);
-      border-radius: 100px 0 0 100px;
+      border-radius: 5vw 0 0 5vw;
   }
   100% {
       transform: translateX(0);
@@ -142,13 +125,9 @@ body {
 }
 .mainAreaMenuButton {
   opacity: 1;
-  position: absolute;
-  border-radius: 20px;
   top: 5%;  
-  left: 3%;
-  height: 60px;
-  width: 60px;
   transition: opacity 1s; /* 투명도 변화에 대한 트랜지션 설정 */
+  background: url('../img/menu.png') no-repeat center center;
 }
 .mainAreaMenuButton:hover {
   cursor: pointer;
@@ -164,17 +143,15 @@ body {
   top: 0;
   width: 32%;
   height: 100%;
-  background-color: #F1ECE2;
+  background-color: rgb(228, 230, 217);
 }
 .loginZoon {
-    z-index: 2;
-    z-index: 2;
     position: fixed;
     background-color: #f7e2a8;
-    border-radius: 50px 0 0 50px;
+    border-radius: 5vh 0 0 5vh;
     width: 20vw;
-    left: calc(100% - 0px);
-    height: 170px;
+    height: 15vh;
+    right: -20vw;
 }
 .loginZoon.loginZoonMoveLeft {
   animation: loginZoonMoveLeft 1s ease-in-out forwards;
@@ -212,23 +189,23 @@ body {
 
  .loginButton {
   position: absolute;
-  background-color: #E37B58;
+  background-color: rgb(139,168,136);
   border: none;
   width: 15vw;
-  height: 100px;
-  top: 35px;
-  left: 20%;
-  border-radius: 25px;
+  height: 60%;
+  top: 20%;
+  left: 15%;
+  border-radius: 3vh;
 
   color: white;
-  font-size: 3em;
+  font-size: 3vw;
   font-weight: bolder;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 1vh black;
  }
  .loginButton:hover {
   cursor: pointer;
   box-shadow: none;
-  background-color: #b45839;
+  background-color: rgb(117, 141, 114);
 }
 
  /* ----------------------------------------------------------- */
@@ -238,62 +215,61 @@ body {
   background-color: gray;
   width: inherit;
   display: flex;
-  height: 1300px; 
-  top: 1300px;
+  height: 100vh; 
+  top: 100vh;
 
   margin: 0;
   padding: 0;
  }
- .top {
+ /* -------------------------------------------------------------- */
+.top, .bottom {
   position: inherit;
   border-radius: 100%;
+  background-color:rgb(228, 230, 217);
   width: inherit;
   height: 14%;
-  top: 0;
   z-index: 3;
-
-  background-color:gray;
+}
+ .top {
+  top: 0;
   box-shadow: 0 50px 200px rgba(255, 255, 255, 0.4);
  }
- .topBox {
-  position: absolute;
+ .bottom{
+  bottom: 0;
+
+ }
+ .topBox, .bottomBox {
+  position: inherit;
   width: inherit;
   height: 50%;
-  z-index: 4;
-  background-color: gray;
+  background-color: rgb(228, 230, 217);
  }
- .bottom{
-  position: absolute;
-  border-radius: 100%;
-  width: inherit;
-  height: 14%;
+ .topBox {
+  top: 0;
+ }
+ .bottomBox {
   bottom: 0;
-  z-index: 3;
-
-  background-color:gray;
  }
 
+ .shadowBoxZoon > .shadowBoxLeft, .shadowBoxZoon > .shadowBoxRight {
+  position: absolute;
+  width: calc(50% - 12.5vw);
+  height: 86vh;
+  top: 7vh;
+  background-color: white;
+  opacity: 0.5;
+  z-index: 3;
+}
  .shadowBoxZoon {
   position: absolute;
-  top: 100px;
-  width: 100%;
-  height: 1100px;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.8);
+  width: inherit;
+  height: inherit;
+  background-color: rgba(255, 255, 255, 0.8);
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1;
-
-}
-.shadowBoxZoon > .shadowBoxLeft, .shadowBoxZoon > .shadowBoxRight {
-  position: absolute;
-  width: calc(50% - 12.5vw);
-  height: inherit;
-  background-color: black;
-  opacity: 0.5;
-  z-index: 3;
 }
 
 .shadowBoxRight {
@@ -303,15 +279,15 @@ body {
  .imgsZoon {
   position: absolute;
   width: 100%;
-  height: 800px;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
  }
  .img2, .img3, .imgsZoon > img{
   width: 25vw;
-  height: 1100px;
-  top: 150px;
+  height: 86vh;
+  top: 10vh;
  }
   .img1 {
   background-color: blueviolet;
@@ -620,15 +596,15 @@ body {
 
  footer {
   position: absolute;
-  bottom: 0;
+  bottom: 0vh;
+  height: 40vh;
   left: 0;
-  width: calc(100%);
+  width: inherit;
   text-align: center;
-  line-height: 200px;
+  line-height: 20vh;
   background-color: #1c1c1c;
-  box-shadow: 0 10px 100px black;
-  font-size: 1.2em;
-  z-index: 10;
+  box-shadow: 0 3vw 20vw black;
+  font-size: 1.2vw;
 
   color: white;
   margin: 0;
@@ -639,170 +615,6 @@ footer > a {
   color: white;
   font-weight: bold;
 }
-
-@media screen and (min-width: 2300px) {
-  .imges img {
-    position: absolute;
-    width: 80vw;
-    height: 80vw;
-  }
-}
-@media screen and (min-width: 3505px) {
-  .imges img {
-    position: absolute;
-    width: 80vw;
-    height: 50vw;
-  }
-}
-@media screen and (min-width: 3500px) {
-  .imges img {
-    position: absolute;
-    width: 80vw;
-    height: 40vw;
-  }
-}
-@media screen and (min-width: 5000px) {
-  @keyframes imgNumber1Move1Right {
-    0% {
-      transform: translateX(0vh);
-      z-index: 2;
-  
-    }
-    100% {
-      transform: translateX(37.5vw);
-      z-index: 2;
-    }
-   }
-   @keyframes imgNumber1Move2Right {
-    0% {
-      transform: translateX(37.5vw);
-      z-index: 2;
-  
-    }
-    100% {
-      transform: translateX(75vw);
-      z-index: 2;
-    }
-   }
-   @keyframes imgNumber1Move3Right {
-    0% {
-      transform: translateX(75vw);
-      z-index: 1;
-  
-    }
-    100% {
-      transform: translateX(0);
-      z-index: 1;
-    }
-   }
-   @keyframes imgNumber1Move1Left {
-    0% {
-      transform: translateX(0);
-      z-index: 1;
-  
-    }
-    100% {
-      transform: translateX(75vw);
-      z-index: 1;
-    }
-   }
-   @keyframes imgNumber1Move3Left {
-    0% {
-      transform: translateX(75vw);
-      z-index: 2;
-  
-    }
-    100% {
-      transform: translateX(37.5vw);
-      z-index: 2;
-    }
-   }
-  
-   @keyframes imgNumber2Move2Right {
-    0% {
-      transform: translateX(0);
-      z-index: 2;
-    }
-    100% {
-      transform: translateX(37.5vw);
-      z-index: 2;
-    }
-   }
-   @keyframes imgNumber2Move3Right {
-    0% {
-      transform: translateX(37.5vw);
-      z-index: 1;
-    }
-    100% {
-      transform: translateX(-37.5vw);
-      z-index: 1;
-    }
-   }
-   @keyframes imgNumber2Move2Left {
-    0% {
-      transform: translateX(0);
-      z-index: 2;
-  
-    }
-    100% {
-      transform: translateX(-37.5vw);
-      z-index: 2;
-    }
-   }
-   @keyframes imgNumber2Move3Left {
-    0% {
-      transform: translateX(37.5vw);
-      z-index: 2;
-  
-    }
-    100% {
-      transform: translateX(0);
-      z-index: 2;
-    }
-   }
-
-   @keyframes imgNumber3Move1Right {
-    0% {
-      transform: translateX(-75vw);
-      z-index: 2;
-  
-    }
-    100% {
-      transform: translateX(-37.5vw);
-      z-index: 2;
-    }
-   }
-   @keyframes imgNumber3Move2Left {
-    0% {
-      transform: translateX(-37.5vw);
-      z-index: 2;
-  
-    }
-    100% {
-      transform: translateX(-75vw);
-      z-index: 2;
-    }
-   }
-   @keyframes imgNumber3Move3Left {
-    0% {
-      transform: translateX(0);
-      z-index: 2;
-  
-    }
-    100% {
-      transform: translateX(-37.5vw);
-      z-index: 2;
-    }
-   }
-
-   .imges img {
-    position: absolute;
-    width: 80vw;
-    height: 45vw;
-  }
-}
-
-
 
 
 
