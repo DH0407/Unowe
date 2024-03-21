@@ -1,7 +1,20 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
+const cors = require('cors');
 
 const app = express();
+app.use(cors({
+    origin: function (origin, callback) {
+      // 허용할 도메인을 정의
+      const allowedOrigins = ['http://127.0.0.1:5500', 'http://localhost:5500'];
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    }
+  }));
+
 // const port = 3000;
 
 // 이메일 전송 함수
@@ -41,7 +54,7 @@ function sendEmail(email) {
 
 // 랜덤한 6자리 숫자 생성 함수
 function generateRandomCode() {
-    return Math.floor(100000 + Math.random() * 900000); // 100000부터 999999 사이의 랜덤한 숫자 생성
+    return Math.floor(100000 + Math.random() * 999999); // 100000부터 999999 사이의 랜덤한 숫자 생성
 }
 
 function generateExpirationTime() {
@@ -63,6 +76,7 @@ app.get('/sendEmail', (req, res) => {
 
     res.send('이메일 전송 완료'); // 응답 보내기
 });
+
 
 // 서버 시작
 // app.listen(port, () => {
