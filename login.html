@@ -29,7 +29,7 @@
                     <label for="password" class="loginPasswordLabel">Password</label>
                     <input type="password" id="loginPassword" class="loginPassword" name="password" placeholder="Enter your password" required>
                     <button type="button" id="toggle-loginPassword-visibility"
-                    onclick="togglePasswordVisibility(); togglePasswordImage();">
+                    onclick="togglePasswordVisibility();">
                         <img src="./img/passwordOff.webp" alt="" class="loginPasswordOffIcon">
                     </button>
                 </div>
@@ -66,7 +66,7 @@
                 <div class="signinForm-group">
                     <label for="signinEmailText" class="signinEmailLabel">이메일 주소</label>
                     <input type="email" id="signinEmailText" class="signinEmail" name="Email" required>
-                    <input type="button" id="emailCheck" class="emailCheck" name="emailSend" value="인증번호 전송" onclick="generateRandomCode()">
+                    <input type="button" id="emailCheck" class="emailCheck" name="emailSend" value="인증번호 전송">
                 </div>
                 <div class="signinForm-group">
                     <label for="signinCertificationText" class="signinCertificationLabel">인증번호 입력</label>
@@ -86,6 +86,5 @@
         </div>
     </div>
     <script src="./js/login.js"></script>
-    <script src="./js/email.js"></script>
 </body>
 </html>
