@@ -5,29 +5,101 @@ body {
 .container {
     position: relative;
     width: 100%;
-    height: 97vh;
+    height: 90vh;
     background-color: #D2C4B2;
+    box-shadow: 0 0.3vw 1vw rgba(0, 0, 0, 0.3);
 }
 .loginText {
     position: absolute;
+    bottom: 72%;
     left: 44%;
     width: 13vw;
     height: 10vh;
     text-align: center;
     line-height: 10vh;
-    font-size: 6vw;
+    font-size: 5vw;
     font-weight: bold;
     color: white;
+    text-shadow: 0 0.3vw 1vw rgba(0, 0, 0, 0.3);
 }
 .loginInputArea {
     position: absolute;
-    width: 20%;
-    top: 26%;
-    width: 60vw;
-    left: calc(50vw - 30vw);
-    height: 54vh;
+    top: 24%;
+    left: calc(50vw - 25.5vw);
+    width: 53vw;
+    height: 59vh;
     background-color: #886F5C;
-    border-radius: 0 9vw 0 9vw;
+    border-radius: 0 6vw 0 6vw;
+    box-shadow: 0 0.3vw 1vw rgba(0, 0, 0, 0.3); 
+}
+.idInput {
+    position: absolute;
+    top: 27%;
+    left: 12%;
+    width: 35vw;
+    height: 6vh;
+    background: none;
+    border: none;
+    border-bottom: 0.15vw solid black;
+    font-size: 1.4vw;
+    padding-left: 4vw;
+    color: white;
+}
+.idInput::placeholder {
+    color: white;
+    font-size: 1.4vw;
+}
+.password {
+    position: absolute;
+    top: 53%;
+    left: 12%;
+    width: 35vw;
+    height: 6vh;
+    background: none;
+    border: none;
+    border-bottom: 0.15vw solid black;
+    font-size: 1.4vw;
+    padding-left: 4vw;
+    color: white;
+}
+.password::placeholder {
+    color: white;
+    font-size: 1.4vw;
+}
+.idImg {
+    position: absolute;
+    top: 30%;
+    left: 13%;
+    width: 1.62vw;
+}
+.passwordImg {
+    position: absolute;
+    top: 54%;
+    left: 12.78%;
+    width: 2vw;
+}
+.passwordOnImg {
+    position: absolute;
+    top: 55%;
+    left: 79.5%;
+    width: 2vw;
+}
+.submitButton {
+    position: absolute;
+    bottom: 18%;
+    left: calc(50vw - 4vw);
+    width: 9vw;
+    height: 8vh;
+    font-size: 1.7vw;
+    color: #886F5C;
+    font-weight: bold;
+    border-radius: 3vw;
+    border: none;
+    box-shadow: 0 0.3vw 1vw rgba(0, 0, 0, 0.3); 
+    /* text-shadow: 0.2vw 0.2vw 0.7vw rgba(0, 0, 0, 0.3); */
+}
+.submitButton:hover {
+    background-color: #cecdcd;
 }
 .orSettings {
     position: absolute;
@@ -36,11 +108,12 @@ body {
     width: 100%;
     height: 10vh;
     background-color: #886F5C;
+    font-weight: bold;
 }
 .orSettings pre{
     color: white;
     text-align: center;
-    font-size: 1.7vw;
+    font-size: 1.4vw;
     line-height: 5vh;
 }
 .orSettings pre a {

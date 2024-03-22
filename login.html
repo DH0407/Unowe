@@ -7,13 +7,20 @@
     <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
+    <div class="orSettings"><pre><a href="#none">아이디 찾기</a> |  <a href="#none">비밀번호 찾기</a>     <a href="#none">회원가입</a></pre>
+    </div>
     <div class="container">
         <p class="loginText">Login</p>
-        <div class="loginInputArea">
-            <input type="text" name="id" class="password" placeholder="ID">
-            <input type="password" name="password" id="password" class="password" placeholder="Password">
-        </div>
-        <div class="orSettings"><pre><a href="#none">아이디 찾기</a> | <a href="#none">비밀번호 찾기</a>     <a href="#none">회원가입</a></pre></div>
+        <form>
+            <div class="loginInputArea">
+                <input type="text" name="id" class="idInput" placeholder="ID" required>
+                <input type="password" name="password" id="password" class="password" placeholder="Password" required>
+                <img src="./img/passwordOff.png" alt="" class="passwordOnImg" onclick="togglePasswordVisibility()" id="toggle-password-visibility">
+                <img src="./img/idImg.png" alt="" class="idImg">
+                <img src="./img/passwordImg.png" alt="" class="passwordImg">
+            </div>
+            <input type="submit" value="LOGIN" class="submitButton"> 
+        </form>
     </div>
     <script src="./js/login.js"></script>
 </body>
