@@ -19,7 +19,7 @@ body {
   position: absolute;
   width: inherit;
   height: 100vh;
-  background-color: #D2C4B2;
+  background-color: #886F5C;
 }
 /* -------------------------button------------------------------ */
 .button {
@@ -86,12 +86,11 @@ body {
  width: 15vw;
  height: 10%;
  left: 10vw;
- top: 2%;
+ top: 2vh;
  z-index: 2;
 
- text-align: center;
- line-height: 120px;
- font-size: 5em;
+ line-height: 6vw;
+ font-size: 4vw;
  color: black;
  font-weight: bold;
  text-decoration: none;
@@ -117,26 +116,38 @@ body {
   z-index: 3;
   border: 1px solid black;
  }
- /* -------------------------------startButton----------------------- */
-.startButton{
+ /* -------------------------------startButtonZoon----------------------- */
+.startButtonZoon {
   position: absolute;
-  width: 25vw;
-  height: 10%;
-  top: 80%;
-  left: 27.5vw;
+  background-color: white;
+  width: 20vw;
+  height: 13%;
+  top: 77%;
+  left: 30vw;
   z-index: 3;
-  border: 1px solid black;
+  border-radius: 2vw;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.6)
+}
+ .startButton{
+  position: absolute;
+  left: 33%;
+  top: 20%;
+  z-index: 3;
+  font-size: 3vw;
+  font-weight: bold;
+  text-decoration: none;
+  color: #4D2E27;
  }
 
 /*  */
 
 .mainArea {
-  position: absolute;
   left: 0;
   top : 0;
   width: 70%;
   height: 100%;
-  background-color: white;
+  background-color: #D2C4B2;
+  box-shadow: 0 0 1vh rgb(0, 0, 0);
 }
 .mainArea.mainAreaMoveRight {
   animation: mainAreaMoveRight 1s ease-in-out forwards;
@@ -169,7 +180,7 @@ body {
   opacity: 1;
   position: absolute;
   border-radius: 20px;
-  top: 60px;  
+  top: 5%;  
   left: 3%;
   height: 60px;
   width: 60px;
@@ -188,7 +199,7 @@ body {
   top: 0;
   width: 30%;
   height: 100%;
-  background-color: white;
+  background-color: #D2C4B2;
 }
 
 /* -------------------------------imgeSlide----------------------- */
