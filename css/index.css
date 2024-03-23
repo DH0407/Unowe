@@ -1,57 +1,53 @@
-/* Container */
+
 body {
   margin: 0;
   padding: 0;
-  flex-direction: column;
-  min-height: 1350px;
 }
-
+/* -----------------------bigContainer-------------------- */
 .bigcontainer{
   position: relative;
   width: 100%;
-  display: flex;
-  height: 240vh; 
+  height: 240vh;
   margin: 0;
   padding: 0;
 }
-
+/* -----------------------Container-------------------- */
 .container {
+  position: absolute;
   width: inherit;
-  display: flex;
-  position: absolute; /* 추가: relative 위치 설정 */
-  height: 100vh; 
+  height: 100vh;
   margin: 0;
   padding: 0;
 }
+.menuArea, .button, .button > a, .button > button, .imgeSlide, .mainArea, .mainAreaMenuButton, .subArea {
+  position: inherit;
+}
+/* -----------------------menuArea---------------------------------- */
 
 .menuArea {
-  position: absolute;
-  background-color: rgb(139,168,136);
   width: inherit;
-  height: inherit;  
+  height: inherit;
+  background-color: #D2C4B2;
 }
+/* -------------------------button------------------------------ */
 
 .button {
-  position: absolute;
   width: 9vw;
   height: 100vh;
 }
 .button > a, .button > button, .mainArea > .mainAreaMenuButton{
-  position: absolute;
   left: 3vw;
-  border-radius: 20px;
+  border-radius: 0vw;
   height: 3vw;
   width: 3vw;
-  background-size: cover; /* 배경 이미지를 요소에 맞게 조정 */
+  background-size: cover;
+  cursor: pointer;
 }
 .menuAreaButton {
   top: 5%;
   border: none;
   transition: opacity 1s;
   background: url('../img/menu.png') no-repeat center center; /* 이미지를 배경으로 설정 */
-}
-.menuAreaButton:hover {
-  cursor: pointer;
 }
 
 .msgButton {
@@ -78,24 +74,25 @@ body {
   top: 90%;
   background: url('../img/icons8-도움-50.png') no-repeat center center;
 }
+/* ------------------------imgeSlide------------------------------- */
 
 .imgeSlide {
-  position: absolute;
   width: 70vw;
-  height: 70%;
+  height: 50%;
+  top: 25%;
   left: 15vw;
-  background: url('../img/header.png');
+  background: url('../img/header.png') no-repeat center 35%;
   background-size: cover;
   z-index: 2;
 }
+/* -----------------------mainArea--------------------------------- */
 
 .mainArea {
-  position: absolute;
   left: 0;
   top : 0;
   width: 70%;
   height: 100%;
-  background-color: rgb(228, 230, 217);
+  background-color: white;
   box-shadow: 0 0 1vh rgb(0, 0, 0);
 }
 .mainArea.mainAreaMoveRight {
@@ -136,18 +133,19 @@ body {
   opacity: 0; /* 숨김 상태에서는 투명하게 */
   pointer-events: none; /* 이벤트를 비활성화하여 숨겨진 상태에서의 클릭 이벤트를 방지 */
 }
-
+/* -------------------------subArea-------------------------------- */
 .subArea {
-  position: absolute;
   right: 0;
   top: 0;
   width: 32%;
   height: 100%;
-  background-color: rgb(228, 230, 217);
+  background-color: white;
 }
+/* -------------------------loginZoon-------------------------------- */
+
 .loginZoon {
     position: fixed;
-    background-color: #f7e2a8;
+    background-color: #D2C4B2;
     border-radius: 5vh 0 0 5vh;
     width: 20vw;
     height: 15vh;
@@ -159,7 +157,6 @@ body {
 .loginZoon.loginZoonMoveRight {
   animation: loginZoonMoveRight 1s ease-in-out forwards;
 }
-
 @keyframes loginZoonMoveLeft {
   0% {
     position: absolute;
@@ -189,7 +186,7 @@ body {
 
  .loginButton {
   position: absolute;
-  background-color: rgb(139,168,136);
+  background-color: #886F5C;
   border: none;
   width: 15vw;
   height: 60%;
@@ -205,14 +202,13 @@ body {
  .loginButton:hover {
   cursor: pointer;
   box-shadow: none;
-  background-color: rgb(117, 141, 114);
+  background-color: #6a5341;
 }
-
- /* ----------------------------------------------------------- */
+ /* ------------------------container2----------------------------- */
 
  .container2 {
   position: absolute;
-  background-color: gray;
+  background-color: white;
   width: inherit;
   display: flex;
   height: 100vh; 
@@ -221,18 +217,17 @@ body {
   margin: 0;
   padding: 0;
  }
- /* -------------------------------------------------------------- */
+ /* -------------------------top--bottom---------------------------- */
 .top, .bottom {
   position: inherit;
   border-radius: 100%;
-  background-color:rgb(228, 230, 217);
+  background-color: white;
   width: inherit;
   height: 14%;
   z-index: 3;
 }
  .top {
   top: 0;
-  box-shadow: 0 50px 200px rgba(255, 255, 255, 0.4);
  }
  .bottom{
   bottom: 0;
@@ -242,7 +237,7 @@ body {
   position: inherit;
   width: inherit;
   height: 50%;
-  background-color: rgb(228, 230, 217);
+  background-color: white;
  }
  .topBox {
   top: 0;
@@ -250,7 +245,7 @@ body {
  .bottomBox {
   bottom: 0;
  }
-
+ /* -------------------------shadowBoxZoon---------------------------- */
  .shadowBoxZoon > .shadowBoxLeft, .shadowBoxZoon > .shadowBoxRight {
   position: absolute;
   width: calc(50% - 12.5vw);
@@ -275,7 +270,7 @@ body {
 .shadowBoxRight {
   right: 0;
 }
-
+/* ---------------------------imgsZoon------------------------------ */
  .imgsZoon {
   position: absolute;
   width: 100%;
@@ -552,8 +547,7 @@ body {
     z-index: 2;
   }
  }
-
-
+/* ---------------------container2ButtomZoon------------------------ */
  .container2ButtomZoon {
   z-index: 4;
   position: absolute;
@@ -581,6 +575,8 @@ body {
   border: none;
   opacity: 0.5;
   box-shadow: 0 0 100px black;
+  background-color: black;
+  color: white;
  }
  .rightMoveButton {
   position: absolute;
@@ -592,8 +588,10 @@ body {
   border: none;
   opacity: 0.5;
   box-shadow: 0 0 100px black;
+  background-color: black;
+  color: white;
  }
-
+/* ----------------------------footer------------------------------- */
  footer {
   position: absolute;
   bottom: 0vh;
