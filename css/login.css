@@ -20,7 +20,7 @@ body {
     font-size: 5vw;
     font-weight: bold;
     color: white;
-    text-shadow: 0 0.3vw 1vw rgba(0, 0, 0, 0.3);
+    text-shadow: 0.1vw 1vw 0.7vw rgba(0, 0, 0, 0.5);
 }
 .loginInputArea {
     position: absolute;
@@ -30,7 +30,7 @@ body {
     height: 59vh;
     background-color: #886F5C;
     border-radius: 0 6vw 0 6vw;
-    box-shadow: 0 0.3vw 1vw rgba(0, 0, 0, 0.3); 
+    box-shadow: 0.1vw 2vw 0.8vw rgba(0, 0, 0, 0.3); 
 }
 .idInput {
     position: absolute;

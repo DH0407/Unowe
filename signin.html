@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/signin.css">
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <div class="signinArea">
+                <p class="titleText">Unowe</p>
+                <p class="titleText2">회원가입</p>
+                <div class="line"></div>
+                <p class="idText">아이디</p>
+                <input type="text" name="id" class="idInput">
+                <input type="button" class="idCheckBtn" value="중복확인">
+                <p class="passwordText">비밀번호</p>
+                <input type="password" name="password" class="passwordTextInput" id="password">
+                <img src="./img/passwordOff.png" alt="" class="passwordOffImg" onclick="togglePasswordVisibility()" id="toggle-password-visibility">
+                <p class="passwordCheckText">비밀번호 확인 <span>*</span></p>
+                <input type="password" name="passwordCheck" class="passwordCheckTextInput">
+                <img src="./img/passwordOff.png" alt="" class="passwordCheckOffImg" onclick="togglePasswordVisibility()" id="toggle-passwordCheck-visibility">
+                <p class="emailText">이메일</p>
+                <input type="email" name="email" class="emailTextInput">
+                <input type="button" class="emailCheckBtn" value="중복확인">
+                <p class="certified">인증번호</p>
+                <input type="text" name="certified" class="certifiedTextInput">
+                <p class="nickName">닉네임</p>
+                <input type="text" name="nickName" class="nickNameTextInput">
+                <div class="noneLookDiv"></div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
