@@ -7,7 +7,7 @@ body {
 .bigcontainer{
   position: relative;
   width: 100%;
-  height: 240vh;
+  height: 221vh;
   margin: 0;
   padding: 0;
 }
@@ -53,14 +53,6 @@ body {
 .msgButton {
   top: 20%;
   background: url('../img/icons8-통신-50.png') no-repeat center center;
-}
-.friendButton {
-  top: 30%;
-  background: url('../img/icons8-상업-개발-관리-48.png') no-repeat center center;
-}
-.button3 {
-  top: 40%;
-  background: url('../img/icons8-텍스트-파일-편집-50.png') no-repeat center center; 
 }
 .acornButton {
   top: 50%;
@@ -592,26 +584,41 @@ body {
   color: white;
  }
 /* ----------------------------footer------------------------------- */
- footer {
+footer {
   position: absolute;
-  bottom: 0vh;
-  height: 40vh;
-  left: 0;
+  bottom: 0;
   width: inherit;
-  text-align: center;
-  line-height: 20vh;
-  background-color: #1c1c1c;
-  box-shadow: 0 3vw 20vw black;
-  font-size: 1.2vw;
-
-  color: white;
-  margin: 0;
-  padding: 0;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 1);
 }
-footer > a {
+footer > .footer {
+  position: absolute;
+  left: 2.5vw;
+  font-size: 1.3vw;
+  text-align: left;
+  color: black;
+}
+footer > .footer > a {
+  color: black;
   text-decoration: none;
-  color: white;
-  font-weight: bold;
+}
+footer > .footer > a:hover {
+  color: black;
+}
+footer > nav {
+  position: absolute;
+  right: 0;
+  font-size: 1.3vw;
+  width: 50vw;
+  display: flex;
+  justify-content: space-around;
+}
+footer > nav > a {
+ color: black;
+ text-decoration: none;
 }
 
 
