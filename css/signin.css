@@ -27,7 +27,7 @@ body {
 .titleText {
     position: absolute;
     bottom: 73%;
-    left: calc(50vw - 19vw);
+    left: calc(50vw - 18vw);
     font-size: 4vw;
     color: #4D2E27;
     font-weight: bold;
@@ -36,7 +36,7 @@ body {
 .titleText2 {
     position: absolute;
     bottom: 66%;
-    left: calc(50vw - 16vw);
+    left: calc(50vw - 15vw);
     font-size: 2vw;
     color: #4D2E27;
 }
@@ -221,11 +221,112 @@ body {
     padding-left: 1vw;
     padding-top: 0.2vw; 
 }
+.nickNameCheckBtn {
+    position: absolute;
+    top: 130%;
+    left: calc(50vw + 9vw);
+    width: 8vw;
+    height: 8vh;
+    font-size: 1.2vw;
+    color: #4D2E27;
+    background: none;
+    border: 0.2vw solid #4D2E27;
+    border-radius: 0.7vw;
+    box-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.5);
+}
+.nickNameCheckBtn:hover {
+    background-color: #c7b492;
+}
+
+.line2 {
+    position: absolute;
+    top: 156%;
+    left: calc(50vw - 42vw);
+    width: 60vw;
+    border: 0.15vw solid #4D2E27;
+}
+
+.agreeText {
+    position: absolute;
+    top: 170%;
+    left: calc(50vw - 30vw);
+    font-size: 1.6vw;
+    color: #4D2E27;
+}
+.allCheck {
+    position: absolute;
+    top: 174.5%;
+    left: 37vw;
+}
+input[type="checkbox"] {
+    width: 3vw;
+    height: 3vh;
+}
+.allAgreeText {
+    position: absolute;
+    top: 173.2%;
+    left: 43vw;
+    font-size: 2vw;
+    color: #4D2E27;
+    font-weight: bold;
+}
+.utilizationCheck {
+    position: absolute;
+    top: 189%;
+    left: 37vw;
+}
+.utilizationCheckText {
+    position: absolute;
+    top: 186.7%;
+    left: 43vw;
+    font-size: 1.3vw;
+    color: #4D2E27;
+}
+.individualCheck {
+    position: absolute;
+    top: 198%;
+    left: 37vw;
+}
+.individualCheckText {
+    position: absolute;
+    top: 195.9%;
+    left: 43vw;
+    font-size: 1.3vw;
+    color: #4D2E27;
+}
+.marketingCheck {
+    position: absolute;
+    top: 207%;
+    left: 37vw;
+}
+.marketingCheckText {
+    position: absolute;
+    top: 204.7%;
+    left: 43vw;
+    font-size: 1.3vw;
+    color: #4D2E27;
+}
+.submitButton {
+    position: absolute;
+    top: 220%;
+    left: 42vw;
+    width: 19vw;
+    height: 9vh;
+    border-radius: 0.8vw;
+    font-size: 1.3vw;
+    border: none;
+    background-color: #886F5C;
+    color: white;
+}
+.submitButton:hover {
+    background-color: #825b53;
+}
+
 .noneLookDiv {
     position: absolute;
-    top: 141%;
-    left: 50vw;
-    width: 2vw;
+    top: 240%;
+    left: 1vw;
+    width: 1.6vw;
     height: 2vh;
     background-color: #D2C4B2;
 }
