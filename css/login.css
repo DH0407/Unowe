@@ -3,232 +3,120 @@ body {
 }
 
 .container {
-    position: fixed;
+    position: relative;
     width: 100%;
-    height: 100vh;
-    background-color: #E37B58;
+    height: 90vh;
+    background-color: #D2C4B2;
+    box-shadow: 0 0.3vw 1vw rgba(0, 0, 0, 0.3);
 }
-
-.topRectangle {
+.loginText {
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 35%;
-    height: 33%;
-    background-color: #F1ECE2;
-    border-radius: 0 0 90px 0;
-}
-.leftRectangle {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 26%;
-    height: 100%;
-    background-color: #F1ECE2;
-}
-.bottomRectangle {
-    position: absolute;
-    left: 0;
-    bottom: 0%;
-    width: 35%;
-    height: 54%;
-    background-color: #F1ECE2;
-    border-radius: 0 90px 0 0;
-}
-
-.loginTextArea {
-    position: absolute;
-    left: 23%;
-    top: 33%;
-    width: 14%;
-    height: 13%;
-    background-color: #E37B58;
-    border-radius: 90px 0 0 90px;
-}
-.loginTextArea .loginText {
-    position: absolute;
-    left: 20%;
-    font-size: 210%;
+    bottom: 72%;
+    left: 44%;
+    width: 13vw;
+    height: 10vh;
+    text-align: center;
+    line-height: 10vh;
+    font-size: 5vw;
+    font-weight: bold;
     color: white;
-    font-weight: bold;
+    text-shadow: 0.1vw 1vw 0.7vw rgba(0, 0, 0, 0.5);
 }
-.signinTextArea {
+.loginInputArea {
     position: absolute;
-    left: 23%;
-    top: 47%;
-    width: 14%;
-    height: 13%;
+    top: 24%;
+    left: calc(50vw - 25.5vw);
+    width: 53vw;
+    height: 59vh;
+    background-color: #886F5C;
+    border-radius: 0 6vw 0 6vw;
+    box-shadow: 0.1vw 2vw 0.8vw rgba(0, 0, 0, 0.3); 
 }
-.signinTextArea .signinText {
+.idInput {
     position: absolute;
-    left: 20%;
-    font-size: 210%;
-    color: #999999;
-    font-weight: bold;
-}
-
-.logoArea {
-    position: absolute;
-    left: 52%;
-    top: -2%;
-    width: 30%;
-    height: 34%;
-}
-.logoArea .loginImg {
-    width: 99%;
-}
-
-.inputArea {
-    position: absolute;
-    left: 45%;
-    top: 40%;
-    width: 40%;
-    height: 35%;
-    padding: 2%;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-.form-group {
-    margin-bottom: 10%;
-}
-label {
-    display: block;
-    font-weight: bold;
-    padding-bottom: 2%;
-    font-size: 120%;
-    text-align: center;
-}
-.passwordLabel {
-    position: absolute;
-    top: 43%;
-    left: 45%;
-}
-input[type="email"] {
-    width: 95%;
-    padding: 2.5%;
+    top: 27%;
+    left: 12%;
+    width: 35vw;
+    height: 6vh;
+    background: none;
     border: none;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 130%;
-    background-color: rgba(255, 255, 255, 0.4); 
+    border-bottom: 0.15vw solid black;
+    font-size: 1.4vw;
+    padding-left: 4vw;
+    color: white;
 }
-input[type="email"]::placeholder {
-    text-align: center;
-    font-size: 76.923%;
+.idInput::placeholder {
+    color: white;
+    font-size: 1.4vw;
 }
-input[type="password"] {
+.password {
+    position: absolute;
+    top: 53%;
+    left: 12%;
+    width: 35vw;
+    height: 6vh;
+    background: none;
+    border: none;
+    border-bottom: 0.15vw solid black;
+    font-size: 1.4vw;
+    padding-left: 4vw;
+    color: white;
+}
+.password::placeholder {
+    color: white;
+    font-size: 1.4vw;
+}
+.idImg {
+    position: absolute;
+    top: 30%;
+    left: 13%;
+    width: 1.62vw;
+}
+.passwordImg {
+    position: absolute;
+    top: 54%;
+    left: 12.78%;
+    width: 2vw;
+}
+.passwordOnImg {
     position: absolute;
     top: 55%;
-    width: 85.5%;
-    padding: 2.5%;
+    left: 79.5%;
+    width: 2vw;
+}
+.submitButton {
+    position: absolute;
+    bottom: 18%;
+    left: calc(50vw - 4vw);
+    width: 9vw;
+    height: 8vh;
+    font-size: 1.7vw;
+    color: #886F5C;
+    font-weight: bold;
+    border-radius: 3vw;
     border: none;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 130%;
-    background-color: rgba(255, 255, 255, 0.4); 
+    box-shadow: 0 0.3vw 1vw rgba(0, 0, 0, 0.3); 
+    /* text-shadow: 0.2vw 0.2vw 0.7vw rgba(0, 0, 0, 0.3); */
 }
-input[type="password"]::placeholder {
-    text-align: center;
-    font-size: 76.923%;
+.submitButton:hover {
+    background-color: #cecdcd;
 }
-#toggle-password-visibility {
+.orSettings {
     position: absolute;
-    top: 56%;
-    right: 7%;
-    width: 12%;
-    background: none;
-    cursor: pointer;
-}
-.inputArea button {
-    position: absolute;
-    right: 9%;
-    bottom: 7%;
-    width: 15%;
-    height: 15%;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #E37B58;
-    border: none;
-    border-radius: 30px;
-    font-size: 210%;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-button:hover {
-    background-color: #e9e5e3;
-}
-.rememberPassword {
-    position: absolute;
-    left: 6%;
-    bottom: 12%;
-    color: #E37B58;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 130%;
-    padding-bottom: 5px;
-    font-weight: bold;
-}
-.rememberArea {
-    position: absolute;
-    left: 6%;
-    bottom: 7.7%;
-    background-color: white;
-    width: 30%;
-    height: 12%;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.rememberArea:hover {
-    background-color: #e9e5e3;
-}
-#toggle-password-visibility .passwordOffIcon {
-    position: absolute;
-    right: 10%;
-    top: 18%;
-    width: 35%;
-}
-
-.otherLoginArea {
-    position: absolute;
-    left: 35%;
     bottom: 0;
-    width: 65%;
-    height: 9%;
-    background-color: #D9D9D9;
-}
-.orLogin {
-    position: absolute;
-    left: 18%;
-    top: 25%;
-    width: 20%;
-    height: 50%;
-    font-size: 160%;
-    text-align: center;
-    color: white;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: #886F5C;
     font-weight: bold;
 }
-.google {
-    position: absolute;
-    left: 40%;
-    top: 25%;
-    width: 20%;
-    height: 50%;
-    font-size: 160%;
-    text-align: center;
+.orSettings pre{
     color: white;
-    font-weight: bold;
-}
-.facebook {
-    position: absolute;
-    left: 62%;
-    top: 25%;
-    width: 20%;
-    height: 50%;
-    font-size: 160%;
     text-align: center;
-    color: white;
-    font-weight: bold;
+    font-size: 1.4vw;
+    line-height: 5vh;
 }
-
+.orSettings pre a {
+    text-decoration: none;
+    color: white;
+}
