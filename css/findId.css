@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #886F5C;
+}
+
+.findArea {
+    position: absolute;
+    top: 7%;
+    left: calc(50vw - 38vw);
+    width: 76vw;
+    height: 85vh;
+    background-color: #D2C4B2;
+    border-radius: 5vw 0 5vw 0;
+    box-shadow: 0.1vw 1vw 0.8vw rgba(0, 0, 0, 0.3);
+    max-height: 85vh;
+    overflow-y: auto;
+}
+.findIdTextArea {
+    position: absolute;
+    top: 15%;
+    left: 10vw;
+    width: 13vw;
+    font-size: 1.6vw;
+    color: #4D2E27;
+    padding-left: 4.6vw;
+    font-weight: bold;
+    border-bottom: 0.12vw solid #4D2E27;
+}
+.findPasswordTextArea {
+    position: absolute;
+    top: 15%;
+    left: 30vw;
+    width: 14vw;
+    font-size: 1.6vw;
+    color: #886F5C;
+    padding-left: 4vw;
+    border-bottom: 0.12vw solid #886F5C;
+}
+.emailInput {
+    position: absolute;
+    top: 45%;
+    left: 10vw;
+    width: 37.5vw;
+    height: 8vh;
+    background-color: #D2C4B2;
+    border: none;
+    border-bottom: 0.15vw solid black;
+    font-size: 1.4vw;
+    padding: 1vw 0 0 1vw;
+}
+.certifiedInput {
+    position: absolute;
+    top: 62%;
+    left: 10vw;
+    width: 37.5vw;
+    height: 8vh;
+    background-color: #D2C4B2;
+    border: none;
+    border-bottom: 0.15vw solid black;
+    font-size: 1.4vw;
+    padding: 1vw 0 0 1vw;
+}
