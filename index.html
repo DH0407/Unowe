@@ -1,0 +1,45 @@
+@ -1,44 +0,0 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unowe에 접속한 걸 환영합니다!</title>
+</head>
+<body>
+  <h1>WebSocket Chat</h1>
+  <div id="chat-window" style="height: 300px; overflow-y: scroll;"></div>
+  <input type="text" id="username" placeholder="Your name">
+  <input type="text" id="message" placeholder="Type your message...">
+  <button onclick="sendMessage()">Send</button>
+
+  <script>
+    const socket = new WebSocket('ws://110.15.29.199:80');
+    const chatWindow = document.getElementById('chat-window');
+    const usernameInput = document.getElementById('username');
+    const messageInput = document.getElementById('message');
+
+    socket.onopen = function(event) {
+      console.log('WebSocket connected');
+    };
+
+    socket.onmessage = function(event) {
+      const data = JSON.parse(event.data);
+      const messageElement = document.createElement('div');
+      messageElement.innerHTML = `<strong>${data.username}:</strong> ${data.message.replace(/\n/g, '<br>')}`;
+      chatWindow.appendChild(messageElement);
+      chatWindow.scrollTop = chatWindow.scrollHeight;
+    };
+
+    function sendMessage() {
+      const username = usernameInput.value.trim() || 'Anonymous';
+      const message = messageInput.value.trim();
+      if (message !== '') {
+        const data = { username, message };
+        socket.send(JSON.stringify(data));
+        messageInput.value = ''; // Clear input field after sending
+      }
+    }
+  </script>
+</body>
+</html>
