@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.continer {
+    width: 100vw;
+    height: 100vh;
+}
+header {
+    width: inherit;
+    height: 15%;
+    background-color: #fad9dc;
+
+    display: flex;
+    justify-content: space-between;
+}
+.header-logo {
+    width: 20%;
+    height: 100%;
+
+    border: 1px solid black;
+}
+header > nav {
+    width: 20%;
+    height: 100%;
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+
+}
+header > nav > a {
+    color: white;
+    font-size: 5vw;
+    text-decoration: none;
+}
