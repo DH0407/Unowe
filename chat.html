@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unowe에 접속한 걸 환영합니다!</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .chat-container {
+      width: 300px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .chat-header {
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .chat-window {
+      height: calc(100% - 200px);
+      overflow-y: scroll;
+      margin-bottom: 10px;
+    }
+    .message-container {
+      margin-bottom: 5px;
+      clear: both;
+    }
+    .message-container .message {
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    .message-container .own-message {
+      background-color: #e6f2ff;
+      float: right;
+      margin-bottom: 5px;
+    }
+    .message-container .other-message {
+      background-color: #f2f2f2;
+      float: left;
+      margin-bottom: 5px;
+    }
+    .input-container {
+      display: flex;
+      align-items: center;
+    }
+    .input-container input[type="text"] {
+      flex: 1;
+      margin-right: 5px;
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 100px; /* 수정된 부분 */
+    }
+    .input-container button {
+      padding: 5px 20px; /* 수정된 부분 */
+      border-radius: 5px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      width: 80px; /* 수정된 부분 */
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">채팅방</div>
+    <div class="chat-window" id="chat-window"></div>
+    <div class="input-container">
+      <input type="text" id="username" placeholder="닉네임 입력">
+      <input type="text" id="message" placeholder="메시지 입력">
+      <button onclick="sendMessage()">전송</button>
+    </div>
+  </div>
+
+  <script>
+    const socket = new WebSocket('ws://110.15.29.199:80');
+    const chatWindow = document.getElementById('chat-window');
+    const usernameInput = document.getElementById('username');
+    const messageInput = document.getElementById('message');
+
+    socket.onopen = function(event) {
+      console.log('WebSocket connected');
+    };
+
+    socket.onmessage = function(event) {
+      const data = JSON.parse(event.data);
+      const messageElement = document.createElement('div');
+      const messageClass = data.ownMessage ? 'own-message' : 'other-message';
+      messageElement.classList.add('message-container');
+      messageElement.innerHTML = `<div class="message ${messageClass}"><strong>${data.username}</strong><br>${data.message}</div>`;
+      chatWindow.appendChild(messageElement);
+      chatWindow.scrollTop = chatWindow.scrollHeight;
+    };
+
+    function sendMessage() {
+      const username = usernameInput.value.trim() || 'Anonymous';
+      const message = messageInput.value.trim();
+      if (message !== '') {
+        const data = { username, message, ownMessage: true };
+        socket.send(JSON.stringify(data));
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('message-container');
+        messageElement.innerHTML = `<div class="message own-message"><strong>${username}</strong><br>${message}</div>`;
+        chatWindow.appendChild(messageElement);
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+        messageInput.value = '';
+      }
+    }
+  </script>
+</body>
+</html>
