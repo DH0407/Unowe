@@ -1,17 +1,37 @@
-@ -1,44 +0,0 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Unowe에 접속한 걸 환영합니다!</title>
+  <style>
+    .message-container {
+      margin-bottom: 5px;
+      clear: both; /* 메시지 컨테이너를 왼쪽 또는 오른쪽에 정렬하기 위해 필요 */
+    }
+    .message-container .message {
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    .message-container .own-message {
+      background-color: #e6f2ff; /* 우측 정렬된 메시지 배경색 */
+      float: right;
+      margin-bottom: 5px;
+    }
+    .message-container .other-message {
+      background-color: #f2f2f2; /* 좌측 정렬된 메시지 배경색 */
+      float: left;
+      margin-bottom: 5px;
+    }
+  </style>
 </head>
 <body>
-  <h1>WebSocket Chat</h1>
-  <div id="chat-window" style="height: 300px; overflow-y: scroll;"></div>
-  <input type="text" id="username" placeholder="Your name">
-  <input type="text" id="message" placeholder="Type your message...">
-  <button onclick="sendMessage()">Send</button>
+  <h1>웹소켓 테스트</h1>
+  <div id="chat-window" style="height: 300px; overflow-y: scroll; width: 300px;"></div>
+  <input type="text" id="username" placeholder="이름 입력">
+  <input type="text" id="message" placeholder="메시지 입력">
+  <button onclick="sendMessage()">전송</button>
 
   <script>
     const socket = new WebSocket('ws://110.15.29.199:80');
@@ -26,18 +46,25 @@
     socket.onmessage = function(event) {
       const data = JSON.parse(event.data);
       const messageElement = document.createElement('div');
-      messageElement.innerHTML = `<strong>${data.username}:</strong> ${data.message.replace(/\n/g, '<br>')}`;
+      const messageClass = data.ownMessage ? 'own-message' : 'other-message';
+      messageElement.classList.add('message-container');
+      messageElement.innerHTML = `<div class="message ${messageClass}"><strong>${data.username} :</strong> ${data.message}</div>`;
       chatWindow.appendChild(messageElement);
-      chatWindow.scrollTop = chatWindow.scrollHeight;
+      chatWindow.scrollTop = chatWindow.scrollHeight; // 스크롤을 항상 아래로 이동
     };
 
     function sendMessage() {
       const username = usernameInput.value.trim() || 'Anonymous';
       const message = messageInput.value.trim();
       if (message !== '') {
-        const data = { username, message };
+        const data = { username, message, ownMessage: true };
         socket.send(JSON.stringify(data));
-        messageInput.value = ''; // Clear input field after sending
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('message-container');
+        messageElement.innerHTML = `<div class="message own-message"><strong>${username} :</strong> ${message}</div>`;
+        chatWindow.appendChild(messageElement);
+        chatWindow.scrollTop = chatWindow.scrollHeight; // 스크롤을 항상 아래로 이동
+        messageInput.value = '';
       }
     }
   </script>
