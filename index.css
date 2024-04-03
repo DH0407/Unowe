@@ -1,6 +1,10 @@
 body {
     margin: 0;
     padding: 0;
+
+    background-image: url('./img/유노이index배경.png');
+    background-size: cover;
+    background-repeat: no-repeat; /* 배경 이미지 반복 없이 설정 */
 }
 .continer {
     width: 100vw;
@@ -8,7 +12,7 @@ body {
 }
 header {
     width: inherit;
-    height: 15%;
+    height: 10%;
     background-color: #fad9dc;
 
     display: flex;
@@ -36,4 +40,8 @@ header > nav > a {
     color: white;
     font-size: 5vw;
     text-decoration: none;
+}
+
+section {
+
 }
