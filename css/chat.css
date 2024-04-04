@@ -4,7 +4,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: white;
+    background-color: #fce3e3;
   }
   .chat-container {
     position: relative;
@@ -87,7 +87,6 @@ body {
     display: inline-block;
   }
 
-
   #username {
     position: absolute;
     bottom: 3.5vw;
@@ -112,7 +111,7 @@ body {
     color: white;
     font-size: 1vw;
     padding-left: 3vw;
-    background-color: rgb(37, 34, 34);
+    background-color: #f4d8db;
   }
   .input-container input[type="text"]:focus {
         outline: none;
@@ -123,8 +122,20 @@ body {
     width: 20%;
     height: 100%;
     border: none;
-    background-color: #fad9dc;
+    background-color: #f8cfcf;
     color: black;
     font-size: 1vw;
     cursor: pointer;
+  }
+
+
+
+
+
+  .sent-message {
+    background-color: lightblue;
+  }
+  
+  .received-message {
+    background-color: lightgreen;
   }

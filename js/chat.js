@@ -1,40 +1,51 @@
 const socket = new WebSocket('ws://110.15.29.199:80');
-const chatWindow = document.getElementById('chat-window');
-const usernameInput = document.getElementById('username');
-const messageInput = document.getElementById('message');
+let chatWindow = document.getElementById('chat-window');
 
 socket.onopen = function(event) {
   console.log('WebSocket connected');
+  // 클라이언트가 접속할 때 이전 메시지를 가져오도록 요청
+  socket.send(JSON.stringify({ action: 'getMessages' }));
+  // 1초마다 메시지 갱신
+  setInterval(requestMessages, 1000);
 };
 
 socket.onmessage = function(event) {
+  console.log('Received:', event.data);
   const data = JSON.parse(event.data);
-  const messageElement = document.createElement('div');
-  const messageClass = data.ownMessage ? 'own-message' : 'other-message';
-  
-  messageElement.classList.add('message-container');
-  messageElement.innerHTML = `<div class="message ${messageClass}"><strong>${data.username}</strong><br>${data.message}</div>`;
-  chatWindow.appendChild(messageElement);
-  chatWindow.scrollTop = chatWindow.scrollHeight;
-
-  // 채팅방 헤더 업데이트
-  document.getElementById('chat-header').innerText = `${data.username}의 채팅`;
+  if (!data.error) {
+    displayMessages(data);
+  } else {
+    console.error('Error from server:', data.error);
+  }
 };
 
 function sendMessage() {
+  const usernameInput = document.getElementById('username');
+  const messageInput = document.getElementById('message');
   const username = usernameInput.value.trim() || 'Anonymous';
   const message = messageInput.value.trim();
   if (message !== '') {
-    const data = { username, message, ownMessage: true };
+    const data = { action: 'sendMessage', username, message };
     socket.send(JSON.stringify(data));
-    const messageElement = document.createElement('div');
-    messageElement.classList.add('own-container');
-    messageElement.innerHTML = `<div class="message own-message">
-                                    <div class="username">${username}</div>
-                                    <div class="massage">${message}</div>
-                                </div>`;
-    chatWindow.appendChild(messageElement);
-    chatWindow.scrollTop = chatWindow.scrollHeight;
     messageInput.value = '';
   }
+}
+
+function requestMessages() {
+  socket.send(JSON.stringify({ action: 'getMessages' }));
+}
+
+function displayMessages(messages) {
+  chatWindow.innerHTML = ''; // 이전에 있던 메시지를 모두 삭제 
+  messages.forEach(message => {
+    const messageElement = document.createElement('div');
+    messageElement.innerText = `${message.username}: ${message.message}`;
+    if (message.isSent) {
+      messageElement.classList.add('sent-message');
+    } else {
+      messageElement.classList.add('received-message');
+    }
+    chatWindow.appendChild(messageElement);
+  });
+  chatWindow.scrollTop = chatWindow.scrollHeight; // 스크롤을 항상 아래로 이동
 }
