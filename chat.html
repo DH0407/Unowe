@@ -56,7 +56,7 @@
     }
 
     function displayMessages(messages) {
-      chatWindow.innerHTML = ''; // 이전에 있던 메시지를 모두 삭제
+      chatWindow.innerHTML = ''; // 이전에 있던 메시지를 모두 삭제 
       messages.forEach(message => {
         const messageElement = document.createElement('div');
         messageElement.innerText = `${message.username}: ${message.message}`;
