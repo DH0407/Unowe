@@ -80,3 +80,11 @@ body {
     cursor: pointer;
     width: 80px; /* 수정된 부분 */
   }
+  .sent-message {
+    background-color: lightblue;
+  }
+  
+  .received-message {
+    background-color: lightgreen;
+  }
+  
