@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    background-image: url('./img/유노이index배경.png');
+    background-size: cover;
+    background-repeat: no-repeat; /* 배경 이미지 반복 없이 설정 */
+}
+.continer {
+    width: 100vw;
+    height: 100vh;
+}
+header {
+    width: inherit;
+    height: 7%;
+    background-color: #fad9dc;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-logo {
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-logo > a > img {
+    margin-left: 2vw;
+    width: 10vw;
+    filter: drop-shadow(-3px 10px 3px rgba(0, 0, 0, 0.2));
+
+}
+.header-logo > .cake {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-logo > .cake > img{
+    width: 3vw;
+    filter: drop-shadow(-3px 10px 3px rgba(0, 0, 0, 0.2));
+}
+header > nav {
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+
+}
+header > nav > a {
+    color: black;
+    font-size: 1vw;
+    text-decoration: none;
+}
+
+section {
+
+}
