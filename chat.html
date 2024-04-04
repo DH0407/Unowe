@@ -94,6 +94,8 @@
 
     socket.onopen = function(event) {
       console.log('WebSocket connected');
+      // 클라이언트가 접속할 때 이전 메시지를 가져오도록 요청
+      socket.send(JSON.stringify({ action: 'getMessages' }));
     };
 
     socket.onmessage = function(event) {
@@ -122,6 +124,26 @@
         chatWindow.scrollTop = chatWindow.scrollHeight;
         messageInput.value = '';
       }
+    }
+
+    function displayMessages(messages) {
+      // 기존 메시지를 삭제하지 않고 새로운 메시지를 추가
+      messages.forEach(message => {
+        const messageElement = document.createElement('div');
+        messageElement.innerText = `${message.username}: ${message.message}`;
+        
+        // 발신 메시지와 수신 메시지를 구분하여 스타일 적용
+        if (message.isOwnMessage) {
+          messageElement.classList.add('own-message');
+          messageElement.style.textAlign = 'right'; // 발신 메시지는 오른쪽 정렬
+        } else {
+          messageElement.classList.add('other-message');
+          messageElement.style.textAlign = 'left'; // 수신 메시지는 왼쪽 정렬
+        }
+
+        chatWindow.appendChild(messageElement);
+      });
+      chatWindow.scrollTop = chatWindow.scrollHeight; // 항상 스크롤을 아래로 이동
     }
   </script>
 </body>
