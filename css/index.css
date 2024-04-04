@@ -38,7 +38,7 @@ header {
 }
 .header-logo > a > img {
     margin-top: -0.2vw;
-    margin-left: 2vw;
+    margin-left: 4vw;
     width: 100%;
     filter: drop-shadow(-0.1vw 0.3vw 0.1vw rgba(0, 0, 0, 0.3));
 }
