@@ -77,7 +77,7 @@
 </head>
 <body>
   <div class="chat-container">
-    <div class="chat-header">채팅방</div>
+    <div class="chat-header" id="chat-header">User Name의 채팅</div>
     <div class="chat-window" id="chat-window"></div>
     <div class="input-container">
       <input type="text" id="username" placeholder="닉네임 입력">
@@ -104,6 +104,9 @@
       messageElement.innerHTML = `<div class="message ${messageClass}"><strong>${data.username}</strong><br>${data.message}</div>`;
       chatWindow.appendChild(messageElement);
       chatWindow.scrollTop = chatWindow.scrollHeight;
+
+      // 채팅방 헤더 업데이트
+      document.getElementById('chat-header').innerText = `${data.username}의 채팅`;
     };
 
     function sendMessage() {
