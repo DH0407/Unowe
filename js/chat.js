@@ -39,7 +39,13 @@ function displayMessages(messages) {
   chatWindow.innerHTML = ''; // 이전에 있던 메시지를 모두 삭제 
   messages.forEach(message => {
     const messageElement = document.createElement('div');
-    messageElement.innerText = `${message.username}: ${message.message}`;
+    messageElement.innerHTML = `<div class="message-max-continer">
+                                    <div class="massge-continer">
+                                        <div class="userName"> ${message.username}</div>
+                                        <div class="userMassge"> ${message.message}</div>
+                                    </div>
+                                </div>
+                                `;
     if (message.isSent) {
       messageElement.classList.add('sent-message');
     } else {

@@ -8,7 +8,7 @@ body {
   }
   .chat-container {
     position: relative;
-    width: 40vw;
+    width: 100vw;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -96,7 +96,7 @@ body {
     margin-left: -1vw;
     width: 100%;
     height: 5%;
-    bottom: 0;
+    bottom: 5vw;
 
     display: flex;
     justify-content: space-between;
@@ -116,6 +116,10 @@ body {
   .input-container input[type="text"]:focus {
         outline: none;
   }
+  #username {
+    position: absolute;
+    bottom: 10vw;
+  }
   .input-container button {
     position: absolute;
     right: 0;
@@ -131,11 +135,57 @@ body {
 
 
 
-
-  .sent-message {
-    background-color: lightblue;
+  /* 내가쓴 메시지 */
+  .sent-message { 
+    width: 100%;
+    float: right;
+    margin-bottom: 1vw;
   }
+  .sent-message .message-max-continer {
+    width: 50%;
+    height: 100%;
+    float: right;
+  }
+  .sent-message .message-max-continer > .massge-continer {
+    background-color: skyblue;
+    border-radius: 0.5vw;
+    display: inline-block;
+    float: right;
+  }
+  .sent-message .message-max-continer > .massge-continer > .userName {
+    width: 100%;
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.5vw;
+  }
+  .sent-message .message-max-continer > .massge-continer > .userMassge {
+    font-size: 1.3vw;
+  }
+
   
+  /* 받아온 메시지 */
   .received-message {
-    background-color: lightgreen;
+    width: 100%;
+    float: left;
+    margin-bottom: 1vw;
+  }
+  .received-message .message-max-continer {
+    width: 50%;
+    height: 100%;
+    float: left;
+  }
+  .received-message .message-max-continer > .massge-continer {
+    background-color: limegreen;
+    border-radius: 0.5vw;
+    display: inline-block;
+    float: left;
+  }
+  .received-message .message-max-continer > .massge-continer > .userName {
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.5vw;
+  }
+  .received-message .message-max-continer > .massge-continer > .userMassge {
+    font-size: 1.3vw;
   }
