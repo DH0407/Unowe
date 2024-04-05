@@ -3,10 +3,6 @@ let chatWindow = document.getElementById('chat-window');
 
 socket.onopen = function(event) {
   console.log('WebSocket connected');
-  // 클라이언트가 접속할 때 이전 메시지를 가져오도록 요청
-  socket.send(JSON.stringify({ action: 'getMessages' }));
-  // 1초마다 메시지 갱신
-  setInterval(requestMessages, 1000);
 };
 
 socket.onmessage = function(event) {
@@ -29,10 +25,6 @@ function sendMessage() {
     socket.send(JSON.stringify(data));
     messageInput.value = '';
   }
-}
-
-function requestMessages() {
-  socket.send(JSON.stringify({ action: 'getMessages' }));
 }
 
 function displayMessages(messages) {
