@@ -1,191 +1,134 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #fce3e3;
-  }
-  .chat-container {
-    position: relative;
-    width: 100vw;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #fad9dc;
-    border-radius: 5px;
-    padding: 0 1vw;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  .chat-header {
-    position: absolute;
-    width: calc(100% - 2vw);
-    height: 3vw;
-    line-height: 100%;
-    top: 0;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #fce3e3;
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.chat-container {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fad9dc;
+  border-radius: 5px;
+  padding: 0 1vw;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-    border: 1px solid black;
-  }
-  .headerNmae {
-    width: 100%;
-    font-size: 2vw;
-    text-align: center;
-  }
-  .chat-window {
-    position: absolute;
-    width: calc(100% - 2vw);
-    height: calc(100% - 8vw);
-    top: 3.3vw;
-    overflow-y: scroll;
+.chat-header {
+  position: absolute;
+  width: calc(100% - 2vw);
+  height: 3vw;
+  line-height: 100%;
+  top: 0;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  font-size: 2vw;
+  text-align: center;
+}
 
-    margin-bottom: 10px;
-    border: 1px solid black;
-  }
-  .chat-window::-webkit-scrollbar {
-    display: none;
-  }
+.chat-window {
+  position: absolute;
+  width: calc(100% - 2vw);
+  height: calc(100% - 8vw);
+  top: 3.3vw;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
 
-  .own-container {
-    float: right;
-    width: 100%;
-    margin-bottom: 1vw;
-  }
-  .own-container .own-message {
-    max-width: 50%;
-    word-wrap: break-word; 
-    background-color: #e6f2ff;
-    float: right;
-    margin-bottom: 5px;
-  }
-  .own-container .own-message .username {
-    width: 100%;
-    text-align: right;
-  }
+.chat-window::-webkit-scrollbar {
+  display: none;
+}
 
-  .message-container {
-    width: 100%;
-    margin-bottom: 5px;
-    clear: both;
-    margin-bottom: 4vw;
-  }
-  .message-container .other-message {
-    max-width: 50%;
-    background-color: #f2f2f2;
-    float: left;
-    margin-bottom: 5px;
-  }
-  .message-container .message , .own-container  .message {
-    font-size: 1vw;
-    padding: 5px 10px;
-    border-radius: 0.5vw;
-    display: inline-block;
-  }
+.own-container {
+  float: right;
+  width: 100%;
+  margin-bottom: 1vw;
+}
 
-  #username {
-    position: absolute;
-    bottom: 3.5vw;
-  }
-  .input-container {
-    position: absolute;
-    margin-left: -1vw;
-    width: 100%;
-    height: 5%;
-    bottom: 5vw;
+.own-container .own-message {
+  max-width: 50%;
+  word-wrap: break-word; 
+  background-color: #e6f2ff; /* 변경: 보낸 메시지 배경색 */
+  float: right;
+  margin-bottom: 5px;
+}
 
-    display: flex;
-    justify-content: space-between;
+.own-container .own-message .username {
+  width: 100%;
+  text-align: right;
+}
 
-    background-color: rgb(37, 34, 34);
-  }
-  .input-container input[type="text"] {
-    position: absolute;
-    width: 80%;
-    height: 100%;
-    border: none;
-    color: white;
-    font-size: 1vw;
-    padding-left: 3vw;
-    background-color: #f4d8db;
-  }
-  .input-container input[type="text"]:focus {
-        outline: none;
-  }
-  #username {
-    position: absolute;
-    bottom: 10vw;
-  }
-  .input-container button {
-    position: absolute;
-    right: 0;
-    width: 20%;
-    height: 100%;
-    border: none;
-    background-color: #f8cfcf;
-    color: black;
-    font-size: 1vw;
-    cursor: pointer;
-  }
+.message-container {
+  width: 100%;
+  margin-bottom: 5px;
+  clear: both;
+  margin-bottom: 4vw;
+}
 
+.message-container .other-message {
+  max-width: 50%;
+  background-color: #f2f2f2; /* 변경: 받은 메시지 배경색 */
+  float: left;
+  margin-bottom: 5px;
+}
 
+.message-container .message,
+.own-container .message {
+  font-size: 1vw;
+  padding: 5px 10px;
+  border-radius: 0.5vw;
+  display: inline-block;
+}
 
+#username {
+  position: absolute;
+  bottom: 3.5vw;
+}
 
-  /* 내가쓴 메시지 */
-  .sent-message { 
-    width: 100%;
-    float: right;
-    margin-bottom: 1vw;
-  }
-  .sent-message .message-max-continer {
-    width: 50%;
-    height: 100%;
-    float: right;
-  }
-  .sent-message .message-max-continer > .massge-continer {
-    background-color: skyblue;
-    border-radius: 0.5vw;
-    display: inline-block;
-    float: right;
-  }
-  .sent-message .message-max-continer > .massge-continer > .userName {
-    width: 100%;
-    text-align: right;
-    font-weight: bold;
-    font-size: 1.5vw;
-  }
-  .sent-message .message-max-continer > .massge-continer > .userMassge {
-    font-size: 1.3vw;
-  }
+.input-container {
+  position: absolute;
+  margin-left: -1vw;
+  width: 100%;
+  height: 5%;
+  bottom: 5vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(37, 34, 34);
+}
 
-  
-  /* 받아온 메시지 */
-  .received-message {
-    width: 100%;
-    float: left;
-    margin-bottom: 1vw;
-  }
-  .received-message .message-max-continer {
-    width: 50%;
-    height: 100%;
-    float: left;
-  }
-  .received-message .message-max-continer > .massge-continer {
-    background-color: limegreen;
-    border-radius: 0.5vw;
-    display: inline-block;
-    float: left;
-  }
-  .received-message .message-max-continer > .massge-continer > .userName {
-    width: 100%;
-    text-align: left;
-    font-weight: bold;
-    font-size: 1.5vw;
-  }
-  .received-message .message-max-continer > .massge-continer > .userMassge {
-    font-size: 1.3vw;
-  }
+.input-container input[type="text"] {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  border: none;
+  color: white;
+  font-size: 1vw;
+  padding-left: 3vw;
+  background-color: #f4d8db;
+}
+
+.input-container input[type="text"]:focus {
+  outline: none;
+}
+
+.input-container button {
+  position: absolute;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  border: none;
+  background-color: #f8cfcf;
+  color: black;
+  font-size: 1vw;
+  cursor: pointer;
+}
