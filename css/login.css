@@ -3,11 +3,6 @@ body {
     padding: 0;
     width: 100vw;
     height: 100vh;
-
-    background-image: url('../img/유노이index배경.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; /* 배경 이미지 반복 없이 설정 */
 }
 .continer {
     width: 100vw;
@@ -86,4 +81,4 @@ section > img{
     top: 18%;
     left: 13vw;
     width: 71vw;
-}   
+}    
