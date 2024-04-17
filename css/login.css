@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
 
-    background-image: url('../img/아무것도없는\ 배경\ 2.png');
+    background-image: url('../img/후보.gif');
     background-size: cover;
     background-repeat: no-repeat;  /* 배경 이미지 반복 없이 설정 */
 }
@@ -69,6 +69,13 @@ header > nav > a {
     color: black;
     font-size: 1vw;
     text-decoration: none;
+}
+section > img:nth-child(1) {
+    position: absolute;
+    width: 100vw;
+    height: 93vh;
+    top: 7%;
+    left: 0;
 }
 section > img {
     position: absolute;
