@@ -1,13 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    width: 100vw;
-    height: 100vh;
-
-    background-image: url('../img/유노이index배경.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; /* 배경 이미지 반복 없이 설정 */
 }
 .continer {
     width: 100vw;
@@ -25,7 +18,6 @@ header {
 .header-logo {
     width: 20%;
     height: 100%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,7 +25,6 @@ header {
 .header-logo > a {
     width: 50%;
     height: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,7 +64,6 @@ header > nav > a {
     font-size: 1vw;
     text-decoration: none;
 }
-
 section > img:nth-child(1) {
     position: absolute;
     width: 100vw;
